@@ -126,28 +126,32 @@ export default function DocsPage({ onBack }) {
   ];
 
   return (
-    <div style={{
-      "--heading": "#1a1a2e",
-      "--text": "#2d2d44",
-      "--sub": "#6b7094",
-      "--border": "#e2e4ef",
-      "--card-bg": "#f5f6fb",
-      "--hover-bg": "#eef0f8",
-      "--accent": "#5C6BC0",
-      "--accent-bg": "#5C6BC015",
+    <div className="riwayat-root" style={{
       fontFamily: "'DM Sans', sans-serif",
       minHeight: "100vh",
       padding: "32px 20px",
-      background: "linear-gradient(180deg, #fafbff 0%, #f0f1f8 100%)",
+      background: "linear-gradient(180deg, var(--bg-top), var(--bg-bottom))",
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=Amiri:wght@400;700&display=swap');
+        .riwayat-root {
+          --heading: #1a1a2e;
+          --text: #2d2d44;
+          --sub: #6b7094;
+          --border: #e2e4ef;
+          --card-bg: #f5f6fb;
+          --hover-bg: #eef0f8;
+          --accent: #5C6BC0;
+          --accent-bg: rgba(92, 107, 192, 0.08);
+          --bg-top: #fafbff;
+          --bg-bottom: #f0f1f8;
+        }
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(16px); }
           to { opacity: 1; transform: translateY(0); }
         }
         @media (prefers-color-scheme: dark) {
-          :root {
+          .riwayat-root {
             --heading: #e8eaf6;
             --text: #c5cae9;
             --sub: #9499b7;
@@ -155,7 +159,9 @@ export default function DocsPage({ onBack }) {
             --card-bg: #1e2038;
             --hover-bg: #252845;
             --accent: #7C8ADB;
-            --accent-bg: #7C8ADB18;
+            --accent-bg: rgba(124, 138, 219, 0.09);
+            --bg-top: #13142a;
+            --bg-bottom: #1a1b33;
           }
         }
       `}</style>
