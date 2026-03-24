@@ -994,15 +994,27 @@ export default function RiwayatIdentifier({ onDocs }) {
       {/* Footer */}
       <div style={{
         textAlign: "center",
-        marginTop: 40,
         fontSize: 11,
         color: "var(--sub)",
         opacity: 0.6,
         maxWidth: 400,
         margin: "40px auto 0",
-        lineHeight: 1.5
+        lineHeight: 1.8
       }}>
-        Covers the major riwayat from the 10 canonical Qira'at. Some rarer turuq or sub-transmissions may not be fully distinguished.
+        <div>Covers the major riwayat from the 10 canonical Qira'at. Some rarer turuq or sub-transmissions may not be fully distinguished.</div>
+        <a
+          href="https://www.linkedin.com/in/wasique-iqbal/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "var(--sub)",
+            textDecoration: "none",
+            borderBottom: "1px solid var(--border)",
+            transition: "color 0.2s"
+          }}
+          onMouseEnter={e => e.target.style.color = "var(--accent)"}
+          onMouseLeave={e => e.target.style.color = "var(--sub)"}
+        >Contact the developer</a>
       </div>
     </div>
   );
