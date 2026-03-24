@@ -713,7 +713,7 @@ function QuestionCard({ question, onSelect, onSkip, questionIndex, totalQuestion
 
 // ── Main component ────────────────────────────────────────────────────
 
-export default function RiwayatIdentifier() {
+export default function RiwayatIdentifier({ onDocs }) {
   const [started, setStarted] = useState(false);
   const [candidates, setCandidates] = useState(RIWAYAT);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -909,6 +909,28 @@ export default function RiwayatIdentifier() {
           >
             Start Identifying
           </button>
+
+          {onDocs && (
+            <button
+              onClick={onDocs}
+              style={{
+                display: "block",
+                margin: "14px auto 0",
+                background: "none",
+                border: "none",
+                color: "var(--sub)",
+                fontSize: 14,
+                fontWeight: 600,
+                cursor: "pointer",
+                fontFamily: "'DM Sans', sans-serif",
+                padding: "6px 0"
+              }}
+              onMouseEnter={e => e.target.style.color = "var(--accent)"}
+              onMouseLeave={e => e.target.style.color = "var(--sub)"}
+            >
+              Learn more about the Qira'at &rarr;
+            </button>
+          )}
         </div>
       ) : (
         <>
