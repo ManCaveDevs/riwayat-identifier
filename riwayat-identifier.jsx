@@ -16,9 +16,9 @@ const RIWAYAT = [
     qari: "Nafi' al-Madani",
     rawi: "'Uthman ibn Sa'id (Warsh)",
     region: "North Africa — Morocco, Algeria, parts of Libya, West Africa",
-    traits: ["Taqlil (partial imalah) on Alifs", "Frequent tashil and ibdal of Hamzahs", "Thin Ra' in specific positions", "Long madd munfasil (up to 6 harakaat)", "Naql — transferring Hamzah's vowel to preceding letter"],
+    traits: ["Taqlil (partial imalah) on Alifs", "Frequent tashil and ibdal of Hamzahs", "Thin Ra' in specific positions", "Long madd munfasil (6 harakaat)", "Basmalah, sakt, or wasl between surahs", "Naql — transferring Hamzah's vowel to preceding letter"],
     color: "#FF7043",
-    imalah: "partial", maaliki: "maaliki", madd: "long", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "thin", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "partial", maaliki: "maaliki", madd: "long", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "thin", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Qalun 'an Nafi'",
@@ -169,18 +169,18 @@ const RIWAYAT = [
     qari: "Khalaf ibn Hisham al-Bazzar",
     rawi: "Ishaq",
     region: "Historically Baghdad (Iraq)",
-    traits: ["Maaliki with long Alif", "Long madd munfasil", "The 10th Qari'", "Distinct from Khalaf 'an Hamzah", "Idgham kabir in specific positions"],
+    traits: ["Maaliki with long Alif", "Medium madd munfasil", "The 10th Qari'", "Heavy imalah like Hamzah", "No basmalah between surahs", "Idgham kabir in specific positions"],
     color: "#EF5350",
-    imalah: "none", maaliki: "maaliki", madd: "long", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "yes", haKinayah: "standard"
   },
   {
     name: "Khalaf al-'Ashir (Idris)",
     qari: "Khalaf ibn Hisham al-Bazzar",
     rawi: "Idris",
     region: "Historically Baghdad (Iraq)",
-    traits: ["Maaliki with long Alif", "Long madd munfasil", "The 10th Qari'", "Distinct from Khalaf 'an Hamzah", "No idgham kabir"],
+    traits: ["Maaliki with long Alif", "Medium madd munfasil", "The 10th Qari'", "Heavy imalah like Hamzah", "No basmalah between surahs", "No idgham kabir"],
     color: "#E57373",
-    imalah: "none", maaliki: "maaliki", madd: "long", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
   }
 ];
 
