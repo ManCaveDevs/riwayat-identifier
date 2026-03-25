@@ -147,61 +147,67 @@ function FeatureRow({ featureKey, value }) {
 }
 
 function RiwayahCard({ r }) {
-  const [expanded, setExpanded] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <div style={{
       background: "var(--card-bg)", border: "1.5px solid var(--border)",
-      borderRadius: 12, padding: "16px 18px"
+      borderRadius: 12, overflow: "hidden"
     }}>
-      <div style={{ marginBottom: 8 }}>
-        <div style={{ fontSize: 16, fontWeight: 700, color: "var(--heading)", marginBottom: 2 }}>
-          {r.name}
+      {/* Accordion header — always visible */}
+      <button
+        onClick={() => setOpen(!open)}
+        style={{
+          width: "100%", background: "none", border: "none",
+          padding: "14px 18px", cursor: "pointer", textAlign: "left",
+          display: "flex", justifyContent: "space-between", alignItems: "center",
+          fontFamily: "'DM Sans', sans-serif"
+        }}
+      >
+        <div>
+          <div style={{ fontSize: 16, fontWeight: 700, color: "var(--heading)", marginBottom: 2 }}>
+            {r.name}
+          </div>
+          <div style={{ fontSize: 12, color: "var(--sub)" }}>{r.region}</div>
         </div>
-        <div style={{ fontSize: 12, color: "var(--sub)", marginBottom: 6 }}>{r.region}</div>
-      </div>
+        <span style={{
+          fontSize: 18, color: "var(--sub)", transition: "transform 0.2s",
+          transform: open ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0, marginLeft: 12
+        }}>&#9662;</span>
+      </button>
 
-      {/* Feature grid */}
-      <div style={{ marginBottom: r.notes ? 8 : 0 }}>
-        {Object.keys(FEATURE_LABELS).map(key => (
-          <FeatureRow key={key} featureKey={key} value={r.features[key]} />
-        ))}
-        {EXTRA_FEATURES[r.id] && Object.keys(EXTRA_FEATURE_LABELS).map(key => {
-          const val = EXTRA_FEATURES[r.id][key];
-          if (!val || val === "no") return null;
-          const f = EXTRA_FEATURE_LABELS[key];
-          return (
-            <div key={key} style={{
-              display: "flex", justifyContent: "space-between", alignItems: "baseline",
-              padding: "6px 0", borderBottom: "1px solid var(--border)", gap: 8
-            }}>
-              <span style={{ fontSize: 13, color: "var(--sub)", flexShrink: 0 }}>{f.label}</span>
-              <span style={{ fontSize: 13, fontWeight: 600, color: "var(--text)", textAlign: "right" }}>
-                {f.values[val] || val}
-              </span>
-            </div>
-          );
-        })}
-      </div>
+      {/* Accordion body */}
+      {open && (
+        <div style={{ padding: "0 18px 16px" }}>
+          {/* Feature grid */}
+          <div>
+            {Object.keys(FEATURE_LABELS).map(key => (
+              <FeatureRow key={key} featureKey={key} value={r.features[key]} />
+            ))}
+            {EXTRA_FEATURES[r.id] && Object.keys(EXTRA_FEATURE_LABELS).map(key => {
+              const val = EXTRA_FEATURES[r.id][key];
+              if (!val || val === "no") return null;
+              const f = EXTRA_FEATURE_LABELS[key];
+              return (
+                <div key={key} style={{
+                  display: "flex", justifyContent: "space-between", alignItems: "baseline",
+                  padding: "6px 0", borderBottom: "1px solid var(--border)", gap: 8
+                }}>
+                  <span style={{ fontSize: 13, color: "var(--sub)", flexShrink: 0 }}>{f.label}</span>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: "var(--text)", textAlign: "right" }}>
+                    {f.values[val] || val}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
 
-      {/* Notes toggle */}
-      {r.notes && (
-        <>
-          <button
-            onClick={() => setExpanded(!expanded)}
-            style={{
-              background: "none", border: "none", fontSize: 12, color: "var(--accent)",
-              cursor: "pointer", padding: "6px 0", fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 600
-            }}
-          >
-            {expanded ? "Hide notes" : "Show notes"}
-          </button>
-          {expanded && (
-            <p style={{ fontSize: 12, color: "var(--sub)", margin: "4px 0 0 0", lineHeight: 1.6 }}>
+          {/* Notes */}
+          {r.notes && (
+            <p style={{ fontSize: 12, color: "var(--sub)", margin: "12px 0 0 0", lineHeight: 1.6, fontStyle: "italic" }}>
               {r.notes}
             </p>
           )}
-        </>
+        </div>
       )}
     </div>
   );
