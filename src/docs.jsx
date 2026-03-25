@@ -116,7 +116,7 @@ const FEATURES = [
   }
 ];
 
-export default function DocsPage({ onBack, darkMode }) {
+export default function DocsPage({ onBack, darkMode, toggleDark }) {
   const [activeTab, setActiveTab] = useState("about");
 
   const tabs = [
@@ -163,6 +163,36 @@ export default function DocsPage({ onBack, darkMode }) {
           to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
+
+      {/* Dark mode toggle */}
+      {toggleDark && (
+        <button
+          onClick={toggleDark}
+          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          style={{
+            position: "fixed",
+            top: 16,
+            right: 16,
+            width: 36,
+            height: 36,
+            borderRadius: "50%",
+            border: "1.5px solid var(--border)",
+            background: "var(--card-bg)",
+            color: "var(--sub)",
+            fontSize: 16,
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 100,
+            transition: "all 0.2s ease"
+          }}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--text)"; }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--sub)"; }}
+        >
+          {darkMode ? "\u2600" : "\u263E"}
+        </button>
+      )}
 
       <div style={{ maxWidth: 620, margin: "0 auto" }}>
         {/* Header */}

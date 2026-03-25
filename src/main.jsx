@@ -5,6 +5,12 @@ import DocsPage from './docs.jsx';
 
 function App() {
   const [page, setPage] = useState(window.location.hash === '#docs' ? 'docs' : 'home');
+  const [darkMode, setDarkMode] = useState(() => {
+    if (localStorage.getItem("riwayat-dark") !== null) {
+      return localStorage.getItem("riwayat-dark") === "true";
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
 
   useEffect(() => {
     const onHash = () => setPage(window.location.hash === '#docs' ? 'docs' : 'home');
@@ -12,18 +18,17 @@ function App() {
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
 
-  // Shared dark mode state so docs page inherits it
-  const isDark = () => {
-    if (localStorage.getItem("riwayat-dark") !== null) {
-      return localStorage.getItem("riwayat-dark") === "true";
-    }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const toggleDark = () => {
+    setDarkMode(prev => {
+      localStorage.setItem("riwayat-dark", String(!prev));
+      return !prev;
+    });
   };
 
   if (page === 'docs') {
-    return <DocsPage onBack={() => { window.location.hash = ''; }} darkMode={isDark()} />;
+    return <DocsPage onBack={() => { window.location.hash = ''; }} darkMode={darkMode} toggleDark={toggleDark} />;
   }
-  return <RiwayatIdentifier onDocs={() => { window.location.hash = 'docs'; }} />;
+  return <RiwayatIdentifier onDocs={() => { window.location.hash = 'docs'; }} darkMode={darkMode} toggleDark={toggleDark} />;
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -755,25 +755,12 @@ function QuestionCard({ question, onSelect, onSkip, answeredCount, totalCandidat
 
 // ── Main component ────────────────────────────────────────────────────
 
-export default function RiwayatIdentifier({ onDocs }) {
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined" && localStorage.getItem("riwayat-dark") !== null) {
-      return localStorage.getItem("riwayat-dark") === "true";
-    }
-    return typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  });
+export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
   const [started, setStarted] = useState(false);
   const [candidates, setCandidates] = useState(RIWAYAT);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [history, setHistory] = useState([]); // [{candidates, questionIndex}]
   const [finished, setFinished] = useState(false);
-
-  const toggleDark = () => {
-    setDarkMode(prev => {
-      localStorage.setItem("riwayat-dark", String(!prev));
-      return !prev;
-    });
-  };
 
   // Find next relevant question starting from a given index
   const findNextQuestion = (startIndex, currentCandidates) => {
