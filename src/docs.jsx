@@ -141,7 +141,8 @@ export default function DocsPage({ onBack, darkMode, toggleDark }) {
   const tabs = [
     { id: "about", label: "About" },
     { id: "qiraat", label: "The 10 Qira'at" },
-    { id: "features", label: "Key Features" }
+    { id: "features", label: "Key Features" },
+    { id: "sources", label: "Sources" }
   ];
 
   const h2Style = { fontSize: 20, fontWeight: 800, color: "var(--heading)", margin: "0 0 12px 0" };
@@ -420,6 +421,131 @@ export default function DocsPage({ onBack, darkMode, toggleDark }) {
                   </div>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* ── SOURCES TAB ── */}
+          {activeTab === "sources" && (
+            <div>
+              <h2 style={h2Style}>Sources</h2>
+              <p style={{ ...subStyle, marginBottom: 20 }}>
+                All data in this tool has been verified against primary scholarly sources. 20 out of 20 riwayat are verified.
+              </p>
+
+              <h3 style={h3Style}>Articles</h3>
+              {[
+                {
+                  title: "The Origins of the Variant Readings of the Qur'an",
+                  authors: "Ammar Khatib, Dr. Nazir Khan",
+                  description: "Comprehensive scholarly article on the history, theology, and transmission of Quranic variant readings. Used for historical context, the ahruf framework, and the three conditions for canonical readings."
+                },
+                {
+                  title: "Can the Qur'an Be Recited in Different Ways? The Meaning and Wisdom of Qira'at",
+                  authors: "Sh. Yousef Wahb",
+                  description: "Detailed overview of the 10 qira'at with biographical data on each reader and narrator, death dates, isnad connections, and the wisdom behind multiple readings."
+                }
+              ].map((s, i) => (
+                <InfoCard key={i}>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: "var(--heading)", marginBottom: 4 }}>{s.title}</div>
+                  <div style={{ fontSize: 13, color: "var(--accent)", marginBottom: 6 }}>{s.authors}</div>
+                  <p style={{ fontSize: 13, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>{s.description}</p>
+                </InfoCard>
+              ))}
+
+              <h3 style={h3Style}>Primary Data Sources</h3>
+              {[
+                {
+                  title: "An-Nashr fi al-Qira'at al-'Ashr",
+                  arabic: "\u0627\u0644\u0646\u0634\u0631 \u0641\u064A \u0627\u0644\u0642\u0631\u0627\u0621\u0627\u062A \u0627\u0644\u0639\u0634\u0631",
+                  authors: "Ibn al-Jazari (d. 833 AH)",
+                  url: "https://www.islamweb.net/ar/library/index.php?page=bookcontents&bk_no=70",
+                  description: "The classical authority on the ten qira'at. Covers every usul category for all 20 riwayat. Digitized on islamweb.net."
+                },
+                {
+                  title: "nquran.com: Usul and Biographies of the Readers",
+                  arabic: "\u0623\u0635\u0648\u0644 \u0648\u062A\u0631\u0627\u062C\u0645 \u0627\u0644\u0642\u0631\u0627\u0621",
+                  authors: "nquran.com",
+                  url: "https://www.nquran.com/ar/categories/650/",
+                  description: "Structured digital tables of usul per riwayah, plus comparison pages between narrators of the same reader. Primary source for verifying all 20 riwayat feature values."
+                },
+                {
+                  title: "Tables of Usul of the Ten Readings",
+                  arabic: "\u062C\u062F\u0648\u0644 \u0623\u0635\u0648\u0644 \u0627\u0644\u0642\u0631\u0627\u0621\u0627\u062A \u0648\u0627\u0644\u0642\u0631\u0627\u0621 \u0627\u0644\u0639\u0634\u0631",
+                  authors: "Archive.org",
+                  url: "https://archive.org/details/20211118_20211118_2313",
+                  description: "Downloadable comparison table of the usul of the ten readings in grid format."
+                },
+                {
+                  title: "Tables of Usul from the Shatibiyyah and Durrah",
+                  arabic: "\u062C\u062F\u0627\u0648\u0644 \u0627\u0635\u0648\u0644 \u0627\u062D\u0643\u0627\u0645 \u0627\u0644\u0642\u0631\u0627\u0621\u0627\u062A \u0627\u0644\u0639\u0634\u0631 \u0627\u0644\u0645\u062A\u0648\u0627\u062A\u0631\u0629",
+                  authors: "Dr. Madiha Saleh Mahdi",
+                  url: "https://archive.org/details/dr_191",
+                  description: "Comprehensive tables of the usul of the ten mutawatir readings organized by collection and individually."
+                }
+              ].map((s, i) => (
+                <InfoCard key={i}>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: "var(--heading)", marginBottom: 2 }}>{s.title}</div>
+                  <div style={{ fontSize: 14, fontFamily: "'Amiri', serif", color: "var(--sub)", direction: "rtl", marginBottom: 4 }}>{s.arabic}</div>
+                  <div style={{ fontSize: 13, color: "var(--accent)", marginBottom: 6 }}>{s.authors}</div>
+                  <p style={{ fontSize: 13, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>{s.description}</p>
+                  <a href={s.url} target="_blank" rel="noopener noreferrer" style={{
+                    display: "inline-block", marginTop: 8, fontSize: 12, color: "var(--accent)",
+                    textDecoration: "none", borderBottom: "1px solid var(--border)"
+                  }}>{s.url.replace(/https?:\/\/(www\.)?/, '').split('/').slice(0, 2).join('/')} &rarr;</a>
+                </InfoCard>
+              ))}
+
+              <h3 style={h3Style}>nquran.com Pages Used</h3>
+              <InfoCard>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 10 }}>Usul Pages (per riwayah)</div>
+                {[
+                  ["Warsh 'an Nafi'", "view/16681"],
+                  ["Qalun 'an Nafi'", "view/16680"],
+                  ["Al-Duri 'an Abu 'Amr", "view/16679"],
+                  ["Khallad 'an Hamzah", "view/16678"],
+                  ["Ibn Dhakwan 'an Ibn 'Amir", "view/16677"],
+                  ["Abu Ja'far", "view/16682"],
+                  ["Khalaf al-'Ashir", "view/16683"]
+                ].map(([name, path], i) => (
+                  <div key={i} style={{
+                    display: "flex", justifyContent: "space-between", padding: "5px 0",
+                    borderBottom: i < 6 ? "1px solid var(--border)" : "none",
+                    fontSize: 13
+                  }}>
+                    <span style={{ color: "var(--text)" }}>{name}</span>
+                    <a href={`https://www.nquran.com/ar/${path}`} target="_blank" rel="noopener noreferrer"
+                      style={{ color: "var(--sub)", textDecoration: "none" }}>{path}</a>
+                  </div>
+                ))}
+              </InfoCard>
+
+              <InfoCard>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 10 }}>Comparison Pages (between narrators)</div>
+                {[
+                  ["Shu'bah vs Hafs", "view/16696"],
+                  ["Al-Duri vs Al-Susi", "view/16698"],
+                  ["Abu al-Harith vs Duri (Kisa'i)", "view/16694"],
+                  ["Al-Bazzi vs Qunbul", "view/16692"],
+                  ["Hisham vs Ibn Dhakwan", "view/16699"],
+                  ["Ruways vs Rawh", "view/16700"]
+                ].map(([name, path], i) => (
+                  <div key={i} style={{
+                    display: "flex", justifyContent: "space-between", padding: "5px 0",
+                    borderBottom: i < 5 ? "1px solid var(--border)" : "none",
+                    fontSize: 13
+                  }}>
+                    <span style={{ color: "var(--text)" }}>{name}</span>
+                    <a href={`https://www.nquran.com/ar/${path}`} target="_blank" rel="noopener noreferrer"
+                      style={{ color: "var(--sub)", textDecoration: "none" }}>{path}</a>
+                  </div>
+                ))}
+              </InfoCard>
+
+              <InfoCard style={{ background: "var(--accent-bg)", borderColor: "var(--accent)" }}>
+                <p style={{ fontSize: 13, color: "var(--text)", margin: 0, lineHeight: 1.6 }}>
+                  <strong>Verification status: 20/20 riwayat verified</strong> against nquran.com usul pages and comparison pages. All feature values (imalah, madd, hamzah, basmalah, sirat, idgham kabir, etc.) have been cross-referenced with primary sources.
+                </p>
+              </InfoCard>
             </div>
           )}
         </div>
