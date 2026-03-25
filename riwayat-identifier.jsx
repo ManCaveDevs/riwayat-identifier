@@ -962,7 +962,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, t
           </button>
 
           <p
-            onClick={() => { window.location.hash = 'docs/qiraat'; }}
+            onClick={() => { window.history.pushState(null, null, '/riwayat-identifier/docs/qiraat'); window.dispatchEvent(new PopStateEvent('popstate')); }}
             style={{
               fontSize: 13,
               color: "var(--sub)",

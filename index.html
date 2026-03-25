@@ -9,6 +9,23 @@
     </style>
   </head>
   <body>
+    <script>
+      // Decode redirect from 404.html (GitHub Pages SPA workaround)
+      (function() {
+        var q = window.location.search;
+        if (q.length > 2 && q[1] === '/') {
+          var decoded = q.slice(2).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          });
+          var path = decoded[0];
+          window.history.replaceState(null, null,
+            window.location.pathname + (path ? path : '') +
+            (decoded.length > 1 ? '?' + decoded.slice(1).join('&') : '') +
+            window.location.hash
+          );
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
