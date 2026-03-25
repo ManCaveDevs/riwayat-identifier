@@ -26,7 +26,7 @@ const RIWAYAT = [
     qari: "Nafi' al-Madani",
     rawi: "'Isa ibn Mina (Qalun)",
     region: "Libya, Tunisia, parts of Qatar",
-    traits: ["Maliki (short)", "Short madd munfasil (2 harakaat)", "No imalah", "Same Qari' as Warsh but very different sound", "Silat Mim al-Jam' (connecting plural mim with a short vowel)"],
+    traits: ["Maliki (short)", "Short madd munfasil (2 harakaat)", "No imalah", "Tashil on double hamzahs", "Same Qari' as Warsh but very different sound", "Silat Mim al-Jam' (connecting plural mim with a short vowel)"],
     color: "#66BB6A",
     imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
@@ -62,9 +62,9 @@ const RIWAYAT = [
     qari: "Hamzah al-Zayyat",
     rawi: "Khallad ibn Khalid",
     region: "Historically Kufa (Iraq)",
-    traits: ["Heavy imalah on many words", "Ishmam on al-Sirat in Fatihah", "No basmalah option between surahs", "Long madd munfasil (6 harakaat)"],
+    traits: ["Heavy imalah on many words", "Ishmam on al-Sirat in Fatihah", "Comprehensive idgham kabir", "No basmalah option between surahs", "Long madd munfasil (6 harakaat)"],
     color: "#4CAF50",
-    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "yes", haKinayah: "standard"
   },
   {
     name: "Abu al-Harith 'an Al-Kisa'i",
