@@ -114,10 +114,10 @@
         "ra": "standard",
         "extraYa": "no",
         "imalahScope": "none",
-        "idghamKabir": "yes",
+        "idghamKabir": "no",
         "haKinayah": "standard"
       },
-      "notes": "Basmalah has 3 options. Madd munfasil = 4 harakaat. Extensive idgham kabir (dhal of idh into 8 letters, dal of qad into 8 letters, etc.). Imalah on feminine alifs, after ra', in 11 surahs' final verses."
+      "notes": "Basmalah has 3 options. Madd munfasil = 4 harakaat. No idgham kabir (reads with clarity per nquran 16698 — idgham kabir is Susi's distinction). Imalah on feminine alifs, after ra', in 11 surahs' final verses."
     },
     {
       "id": 5,
@@ -248,10 +248,10 @@
       "verified": true,
       "verifiedSource": "nquran.com/ar/view/16699 (Hisham vs Ibn Dhakwan comparison)",
       "features": {
-        "imalah": "none",
+        "imalah": "partial",
         "maaliki": "maliki",
         "madd": "medium",
-        "basmalah": "always",
+        "basmalah": "not_always",
         "hamzah": "softened",
         "takbir": "no",
         "sirat": "sad",
@@ -261,7 +261,7 @@
         "idghamKabir": "yes",
         "haKinayah": "standard"
       },
-      "notes": "Tashil on some double-hamzahs. Idgham of dhal (idh) and dal (qad) into following letters. Reads with fath (no imalah). Per nquran comparison: Hisham has idgham where Ibn Dhakwan has idhar."
+      "notes": "Tashil on some double-hamzahs. Idgham of dhal (idh) and dal (qad) into following letters. Selective imalah on specific words per Tayyibah (less extensive than Ibn Dhakwan). Basmalah has options (shared qari rule with Ibn Dhakwan). Per nquran comparison: Hisham has idgham where Ibn Dhakwan has idhar."
     },
     {
       "id": 11,
@@ -272,7 +272,7 @@
       "verified": true,
       "verifiedSource": "nquran.com/ar/view/16677",
       "features": {
-        "imalah": "none",
+        "imalah": "partial",
         "maaliki": "maliki",
         "madd": "medium",
         "basmalah": "not_always",

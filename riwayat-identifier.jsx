@@ -35,9 +35,9 @@ const RIWAYAT = [
     qari: "Abu 'Amr ibn al-'Ala'",
     rawi: "Hafs ibn 'Umar al-Duri",
     region: "Sudan, parts of West Africa, Somalia",
-    traits: ["Partial imalah (taqlil) on some Alifs", "Idgham kabir (merging identical adjacent letters)", "Some hamzah softening", "Medium madd munfasil (4-5 harakaat)"],
+    traits: ["Partial imalah (taqlil) on some Alifs", "Some hamzah softening", "Medium madd munfasil (4-5 harakaat)"],
     color: "#42A5F5",
-    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Al-Susi 'an Abu 'Amr",
@@ -91,7 +91,7 @@ const RIWAYAT = [
     region: "Historically Damascus (Syria)",
     traits: ["Maliki (short)", "Medium madd munfasil", "Tashil on some double-Hamzahs", "Idgham of dhal and dal into following letters", "Ha' al-Kinayah treated distinctly"],
     color: "#FFA726",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
   },
   {
     name: "Ibn Dhakwan 'an Ibn 'Amir",
@@ -100,7 +100,7 @@ const RIWAYAT = [
     region: "Historically Damascus (Syria)",
     traits: ["Maliki (short)", "Medium madd munfasil", "Clear Hamzahs with no tashil", "Distinctive word forms shared with Hisham", "Closer to Hafs in many rulings"],
     color: "#5C9BD4",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Al-Bazzi 'an Ibn Kathir",

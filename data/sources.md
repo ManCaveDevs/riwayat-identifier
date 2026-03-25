@@ -82,3 +82,7 @@
 | 2026-03-25 | Ibn Dhakwan | basmalah | always | not_always | nquran 16677: 3 options (bismillah, pause, connection) |
 | 2026-03-25 | Khallad | sirat | sad | ishmam | nquran 16678: ishmam in Umm al-Kitab (Fatihah), consistent with Khalaf |
 | 2026-03-25 | Ibn Dhakwan | notes | Shatibiyyah reasoning | Tayyibah data | Removed Shatibiyyah reference, documented Tayyibah imalah positions |
+| 2026-03-25 | Al-Duri Abu Amr | idghamKabir | yes | no | nquran 16698: "Duri = reads with clarity", idgham kabir is Susi's distinction |
+| 2026-03-25 | Hisham | basmalah | always | not_always | nquran 16699: not listed as difference from Ibn Dhakwan, shared qari rule |
+| 2026-03-25 | Hisham | imalah | none | partial | nquran 16699: selective imalah on specific words per Tayyibah |
+| 2026-03-25 | Ibn Dhakwan | imalah | none | partial | nquran 16677: extensive imalah kubra on limited positions via al-Suri tariq |
