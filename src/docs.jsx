@@ -136,8 +136,8 @@ function InfoCard({ children, style }) {
   );
 }
 
-export default function DocsPage({ onHome, onDocs, darkMode, toggleDark }) {
-  const [activeTab, setActiveTab] = useState("about");
+export default function DocsPage({ onHome, onDocs, darkMode, toggleDark, initialTab }) {
+  const [activeTab, setActiveTab] = useState(initialTab || "about");
 
   const tabs = [
     { id: "about", label: "About" },

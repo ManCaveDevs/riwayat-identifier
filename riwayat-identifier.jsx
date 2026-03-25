@@ -962,7 +962,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
           </button>
 
           <p
-            onClick={onDocs}
+            onClick={() => { window.location.hash = 'docs/qiraat'; }}
             style={{
               fontSize: 13,
               color: "var(--sub)",

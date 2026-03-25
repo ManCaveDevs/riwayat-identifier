@@ -4,7 +4,14 @@ import RiwayatIdentifier from '../riwayat-identifier.jsx';
 import DocsPage from './docs.jsx';
 
 function App() {
-  const [page, setPage] = useState(window.location.hash === '#docs' ? 'docs' : 'home');
+  const parseHash = () => {
+    const h = window.location.hash;
+    if (h.startsWith('#docs')) return { page: 'docs', tab: h.split('/')[1] || null };
+    return { page: 'home', tab: null };
+  };
+
+  const [page, setPage] = useState(() => parseHash().page);
+  const [docsTab, setDocsTab] = useState(() => parseHash().tab);
   const [darkMode, setDarkMode] = useState(() => {
     if (localStorage.getItem("riwayat-dark") !== null) {
       return localStorage.getItem("riwayat-dark") === "true";
@@ -13,7 +20,11 @@ function App() {
   });
 
   useEffect(() => {
-    const onHash = () => setPage(window.location.hash === '#docs' ? 'docs' : 'home');
+    const onHash = () => {
+      const { page, tab } = parseHash();
+      setPage(page);
+      setDocsTab(tab);
+    };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
@@ -29,7 +40,7 @@ function App() {
   const goDocs = () => { window.location.hash = 'docs'; };
 
   if (page === 'docs') {
-    return <DocsPage onHome={goHome} onDocs={goDocs} darkMode={darkMode} toggleDark={toggleDark} />;
+    return <DocsPage onHome={goHome} onDocs={goDocs} darkMode={darkMode} toggleDark={toggleDark} initialTab={docsTab} />;
   }
   return <RiwayatIdentifier onHome={goHome} onDocs={goDocs} darkMode={darkMode} toggleDark={toggleDark} />;
 }
