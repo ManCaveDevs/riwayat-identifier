@@ -351,12 +351,15 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
           <button
             onClick={() => { setCompareMode(!compareMode); if (compareMode) setSelected([]); }}
             style={{
-              padding: "6px 14px", borderRadius: 8, fontSize: 12, fontWeight: 600,
+              padding: "8px 16px", borderRadius: 8, fontSize: 13, fontWeight: 700,
               fontFamily: "'DM Sans', sans-serif", cursor: "pointer", transition: "all 0.2s",
-              background: compareMode ? "var(--accent)" : "transparent",
-              color: compareMode ? "var(--accent-fg)" : "var(--sub)",
-              border: compareMode ? "none" : "1.5px solid var(--border)"
+              background: compareMode ? "var(--accent)" : "var(--accent)",
+              color: "var(--accent-fg)",
+              border: "none",
+              boxShadow: compareMode ? "none" : "0 2px 8px rgba(0,0,0,0.12)"
             }}
+            onMouseEnter={e => e.target.style.opacity = "0.85"}
+            onMouseLeave={e => e.target.style.opacity = "1"}
           >{compareMode ? "Exit Compare" : "Compare"}</button>
         </div>
         <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 16px 0", lineHeight: 1.6 }}>
