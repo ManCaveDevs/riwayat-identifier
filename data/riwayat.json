@@ -84,7 +84,7 @@
         "maaliki": "maliki",
         "madd": "short",
         "basmalah": "always",
-        "hamzah": "clear",
+        "hamzah": "softened",
         "takbir": "no",
         "sirat": "sad",
         "ra": "standard",
@@ -93,7 +93,7 @@
         "idghamKabir": "no",
         "haKinayah": "standard"
       },
-      "notes": "Madd munfasil = qasr (2) or tawassut (4). No imalah except هار with imalah kubra. Silat mim al-jam' optional. Hamzahs fully pronounced (tahqiq)."
+      "notes": "Madd munfasil = qasr (2) or tawassut (4). No imalah except هار with imalah kubra. Silat mim al-jam' optional. Has tashil on double hamzahs (same-word: tashil 2nd with idkhal; cross-word: drops 1st or tashil), but single hamzahs are mostly tahqiq."
     },
     {
       "id": 4,
@@ -131,7 +131,7 @@
         "imalah": "partial",
         "maaliki": "maliki",
         "madd": "medium",
-        "basmalah": "always",
+        "basmalah": "not_always",
         "hamzah": "softened",
         "takbir": "no",
         "sirat": "sad",
@@ -182,14 +182,14 @@
         "basmalah": "not_always",
         "hamzah": "clear",
         "takbir": "no",
-        "sirat": "sad",
+        "sirat": "ishmam",
         "ra": "standard",
         "extraYa": "no",
         "imalahScope": "standard",
         "idghamKabir": "yes",
         "haKinayah": "standard"
       },
-      "notes": "nquran says ishmam in Fatihah only + pure Sad elsewhere. For identifier purposes we use 'sad' as primary since ishmam is shared with Khalaf. No sakt before hamzah (unlike Khalaf). Comprehensive idgham. Madd = 6 harakaat (ishba')."
+      "notes": "Ishmam on al-Sirat in Umm al-Kitab (Fatihah) only, sad elsewhere. Both Khalaf and Khallad share ishmam in Fatihah. No sakt before hamzah (unlike Khalaf). Comprehensive idgham kabir. Madd = 6 harakaat (ishba')."
     },
     {
       "id": 8,
@@ -275,7 +275,7 @@
         "imalah": "none",
         "maaliki": "maliki",
         "madd": "medium",
-        "basmalah": "always",
+        "basmalah": "not_always",
         "hamzah": "clear",
         "takbir": "no",
         "sirat": "sad",
@@ -285,7 +285,7 @@
         "idghamKabir": "no",
         "haKinayah": "standard"
       },
-      "notes": "nquran shows basmalah with 3 options and some imalah, but these are from Tayyibah turuq. For Shatibiyyah (most common), basmalah is standard and imalah is minimal/none. Madd munfasil = 4 harakaat. Sakt before hamzah in some positions."
+      "notes": "Basmalah has 3 options per Tayyibah. Has imalah kubra on limited positions via al-Suri tariq (specific words with final alif-raa, certain past-tense verbs), but not systematic enough to be audibly distinctive. Madd munfasil = 4 harakaat."
     },
     {
       "id": 12,
@@ -325,7 +325,7 @@
         "madd": "medium",
         "basmalah": "always",
         "hamzah": "clear",
-        "takbir": "yes",
+        "takbir": "no",
         "sirat": "sin",
         "ra": "standard",
         "extraYa": "no",
@@ -333,7 +333,7 @@
         "idghamKabir": "no",
         "haKinayah": "standard"
       },
-      "notes": "al-Sirat with Sin. Takbir between surahs. Connects hamzahs in certain double-hamzah constructions."
+      "notes": "al-Sirat with Sin. No takbir (only Bazzi has takbir per nquran). Connects hamzahs in certain double-hamzah constructions."
     },
     {
       "id": 14,

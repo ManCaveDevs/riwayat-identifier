@@ -76,3 +76,9 @@
 | 2026-03-25 | Khallad 'an Hamzah | maaliki | maaliki | maliki | Hamzah reads Maliki (short) |
 | 2026-03-25 | Ruways | maaliki | maaliki | maliki | Ya'qub reads Maliki (short) |
 | 2026-03-25 | Rawh | maaliki | maaliki | maliki | Ya'qub reads Maliki (short) |
+| 2026-03-25 | Al-Susi | basmalah | always | not_always | nquran 16698: basmalah not listed as Duri/Susi difference, both share Abu 'Amr's 3 options |
+| 2026-03-25 | Qunbul | takbir | yes | no | nquran 16692: only Bazzi transmits takbir, not Qunbul |
+| 2026-03-25 | Qalun | hamzah | clear | softened | nquran 16680: has tashil on double hamzahs (same-word and cross-word) |
+| 2026-03-25 | Ibn Dhakwan | basmalah | always | not_always | nquran 16677: 3 options (bismillah, pause, connection) |
+| 2026-03-25 | Khallad | sirat | sad | ishmam | nquran 16678: ishmam in Umm al-Kitab (Fatihah), consistent with Khalaf |
+| 2026-03-25 | Ibn Dhakwan | notes | Shatibiyyah reasoning | Tayyibah data | Removed Shatibiyyah reference, documented Tayyibah imalah positions |

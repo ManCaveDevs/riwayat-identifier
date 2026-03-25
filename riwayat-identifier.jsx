@@ -28,7 +28,7 @@ const RIWAYAT = [
     region: "Libya, Tunisia, parts of Qatar",
     traits: ["Maliki (short)", "Short madd munfasil (2 harakaat)", "No imalah", "Same Qari' as Warsh but very different sound", "Silat Mim al-Jam' (connecting plural mim with a short vowel)"],
     color: "#66BB6A",
-    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Al-Duri 'an Abu 'Amr",
@@ -46,7 +46,7 @@ const RIWAYAT = [
     region: "Historically Basra (Iraq)",
     traits: ["Partial imalah (taqlil) on specific words", "Extensive idgham kabir (identical + similar letters)", "Ibdal of quiescent hamzahs", "Medium madd munfasil"],
     color: "#26A69A",
-    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
   },
   {
     name: "Khalaf 'an Hamzah",
@@ -62,9 +62,9 @@ const RIWAYAT = [
     qari: "Hamzah al-Zayyat",
     rawi: "Khallad ibn Khalid",
     region: "Historically Kufa (Iraq)",
-    traits: ["Heavy imalah on many words", "Pure Sad in al-Sirat", "No basmalah option between surahs", "Long madd munfasil (6 harakaat)"],
+    traits: ["Heavy imalah on many words", "Ishmam on al-Sirat in Fatihah", "No basmalah option between surahs", "Long madd munfasil (6 harakaat)"],
     color: "#4CAF50",
-    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Abu al-Harith 'an Al-Kisa'i",
@@ -100,7 +100,7 @@ const RIWAYAT = [
     region: "Historically Damascus (Syria)",
     traits: ["Maliki (short)", "Medium madd munfasil", "Clear Hamzahs with no tashil", "Distinctive word forms shared with Hisham", "Closer to Hafs in many rulings"],
     color: "#5C9BD4",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Al-Bazzi 'an Ibn Kathir",
@@ -116,9 +116,9 @@ const RIWAYAT = [
     qari: "'Abdullah ibn Kathir al-Makki",
     rawi: "Muhammad ibn 'Abd al-Rahman (Qunbul)",
     region: "Historically Mecca",
-    traits: ["Maliki (short)", "Takbir between surahs in Juz' 'Amma", "al-Sirat with Sin", "Connects Hamzahs (reads certain double-hamzahs differently)"],
+    traits: ["Maliki (short)", "al-Sirat with Sin", "Connects Hamzahs (reads certain double-hamzahs differently)"],
     color: "#FFD54F",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "yes", sirat: "sin", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sin", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Shu'bah 'an 'Asim",
