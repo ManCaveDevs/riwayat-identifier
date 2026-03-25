@@ -355,7 +355,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
         <div style={{ animation: "fadeSlideUp 0.4s ease-out" }}>
           <h2 style={{ fontSize: 20, fontWeight: 800, color: "var(--heading)", margin: "0 0 8px 0" }}>Key Farsh Differences</h2>
           <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 16px 0", lineHeight: 1.6 }}>
-            Select examples of word-level differences between readings. Unlike usul, these apply to specific verses, not the entire Quran. Each example involves multiple readers.
+            Unlike usul, farsh differences apply to specific verses, not the entire Quran. Only about <strong>0.9%</strong> of the Quran's words have an alternative reading, but that still amounts to hundreds of individual differences across all 20 riwayat. Below are select examples showing how these word-level variations add layers of meaning.
           </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
