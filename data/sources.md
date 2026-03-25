@@ -71,3 +71,8 @@
 | 2026-03-24 | Hisham | idghamKabir | no | yes | nquran 16699 (dhal/dal idgham) |
 | 2026-03-24 | Ruways | hamzah | clear | softened | nquran 16700 (tashil + naql) |
 | 2026-03-24 | Ruways | idghamKabir | no | yes | nquran 16700 (idgham in specific positions) |
+| 2026-03-25 | Warsh | maaliki | maaliki | maliki | Nafi' reads Maliki (short) — this is farsh, not usul |
+| 2026-03-25 | Khalaf 'an Hamzah | maaliki | maaliki | maliki | Hamzah reads Maliki (short) |
+| 2026-03-25 | Khallad 'an Hamzah | maaliki | maaliki | maliki | Hamzah reads Maliki (short) |
+| 2026-03-25 | Ruways | maaliki | maaliki | maliki | Ya'qub reads Maliki (short) |
+| 2026-03-25 | Rawh | maaliki | maaliki | maliki | Ya'qub reads Maliki (short) |

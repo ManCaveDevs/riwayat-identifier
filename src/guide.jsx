@@ -33,10 +33,6 @@ const FEATURE_LABELS = {
     label: "Imalah", arabic: "\u0625\u0645\u0627\u0644\u0629",
     values: { none: "None", partial: "Partial (taqlil)", heavy: "Full (imalah kubra)" }
   },
-  maaliki: {
-    label: "Maaliki / Maliki", arabic: "\u0645\u064E\u0627\u0644\u0650\u0643\u0650 / \u0645\u064E\u0644\u0650\u0643\u0650",
-    values: { maaliki: "Maaliki (\u0645\u064E\u0627\u0644\u0650\u0643\u0650 long)", maliki: "Maliki (\u0645\u064E\u0644\u0650\u0643\u0650 short)" }
-  },
   madd: {
     label: "Madd Munfasil", arabic: "\u0645\u062F \u0645\u0646\u0641\u0635\u0644",
     values: { short: "Short (2 harakaat)", medium: "Medium (4 harakaat)", long: "Long (6 harakaat)" }
@@ -362,7 +358,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
             onMouseLeave={e => e.target.style.opacity = "1"}
           >{compareMode ? "Exit Compare" : "Compare"}</button>
         </div>
-        <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 36px 0", lineHeight: 1.6 }}>
+        <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 24px 0", lineHeight: 1.6 }}>
           {compareMode
             ? <>Select up to <strong>4 riwayat</strong> to compare their usul side by side. {selected.length > 0 && `(${selected.length} selected)`}</>
             : <>Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more.</>
@@ -478,6 +474,17 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
 
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
+              {
+                ref: "Al-Fatihah 1:4",
+                type: "Word form",
+                majority: "\u0645\u064E\u0644\u0650\u0643\u0650",
+                majorityLatin: "Maliki (King)",
+                majorityReaders: "Nafi', Ibn Kathir, Abu 'Amr, Ibn 'Amir, Hamzah, Abu Ja'far, Ya'qub",
+                variant: "\u0645\u064E\u0627\u0644\u0650\u0643\u0650",
+                variantLatin: "Maaliki (Owner/Master)",
+                variantReaders: "'Asim, Al-Kisa'i, Khalaf al-'Ashir",
+                note: "The most well-known farsh difference. Both meanings describe Allah — He is both the King and the Owner of the Day of Judgment."
+              },
               {
                 ref: "Al-Baqarah 2:219",
                 type: "Consonant alternation",

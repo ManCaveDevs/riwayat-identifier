@@ -19,7 +19,7 @@ const RIWAYAT = [
     region: "North Africa: Morocco, Algeria, parts of Libya, West Africa",
     traits: ["Taqlil (partial imalah) on Alifs", "Frequent tashil and ibdal of Hamzahs", "Thin Ra' in specific positions", "Long madd munfasil (6 harakaat)", "Basmalah, sakt, or wasl between surahs", "Naql (transferring Hamzah's vowel to preceding letter)"],
     color: "#FF7043",
-    imalah: "partial", maaliki: "maaliki", madd: "long", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "thin", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "thin", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Qalun 'an Nafi'",
@@ -55,7 +55,7 @@ const RIWAYAT = [
     region: "Historically Kufa (Iraq)",
     traits: ["Heavy imalah on many words", "Ishmam on al-Sirat", "No basmalah option between surahs", "Sakt (pause) on certain hamzahs when stopping"],
     color: "#E8B931",
-    imalah: "heavy", maaliki: "maaliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Khallad 'an Hamzah",
@@ -64,7 +64,7 @@ const RIWAYAT = [
     region: "Historically Kufa (Iraq)",
     traits: ["Heavy imalah on many words", "Pure Sad in al-Sirat", "No basmalah option between surahs", "Long madd munfasil (6 harakaat)"],
     color: "#4CAF50",
-    imalah: "heavy", maaliki: "maaliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Abu al-Harith 'an Al-Kisa'i",
@@ -154,7 +154,7 @@ const RIWAYAT = [
     region: "Historically Basra (Iraq)",
     traits: ["Maaliki with long Alif", "Additional Ya' on certain words", "Medium madd", "Idgham kabir in specific positions", "Hamzah tashil and naql", "Ha' al-kinayah with sila"],
     color: "#7E57C2",
-    imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "yes", haKinayah: "with_sila"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "yes", haKinayah: "with_sila"
   },
   {
     name: "Ya'qub al-Hadrami (Rawh)",
@@ -163,7 +163,7 @@ const RIWAYAT = [
     region: "Historically Basra (Iraq)",
     traits: ["Maaliki with long Alif", "Additional Ya' on certain words", "Medium madd", "Standard ha' al-kinayah", "Fewer ishmam cases than Ruways"],
     color: "#9575CD",
-    imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Khalaf al-'Ashir (Ishaq)",

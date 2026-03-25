@@ -57,7 +57,7 @@
       "verifiedSource": "nquran.com/ar/view/16681",
       "features": {
         "imalah": "partial",
-        "maaliki": "maaliki",
+        "maaliki": "maliki",
         "madd": "long",
         "basmalah": "not_always",
         "hamzah": "softened",
@@ -153,7 +153,7 @@
       "verifiedSource": "nquran.com/ar/view/16678 (Khallad page, shared Hamzah usul) + An-Nashr imalah chapter",
       "features": {
         "imalah": "heavy",
-        "maaliki": "maaliki",
+        "maaliki": "maliki",
         "madd": "long",
         "basmalah": "not_always",
         "hamzah": "clear",
@@ -177,7 +177,7 @@
       "verifiedSource": "nquran.com/ar/view/16678",
       "features": {
         "imalah": "heavy",
-        "maaliki": "maaliki",
+        "maaliki": "maliki",
         "madd": "long",
         "basmalah": "not_always",
         "hamzah": "clear",
@@ -417,7 +417,7 @@
       "verifiedSource": "nquran.com/ar/view/16700 (Ruways vs Rawh comparison)",
       "features": {
         "imalah": "none",
-        "maaliki": "maaliki",
+        "maaliki": "maliki",
         "madd": "medium",
         "basmalah": "always",
         "hamzah": "softened",
@@ -441,7 +441,7 @@
       "verifiedSource": "nquran.com/ar/view/16700 (Ruways vs Rawh comparison)",
       "features": {
         "imalah": "none",
-        "maaliki": "maaliki",
+        "maaliki": "maliki",
         "madd": "medium",
         "basmalah": "always",
         "hamzah": "clear",
