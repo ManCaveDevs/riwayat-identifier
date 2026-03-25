@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBar from "./NavBar.jsx";
 
 const QIRAAT = [
@@ -138,6 +138,10 @@ function InfoCard({ children, style }) {
 
 export default function DocsPage({ onHome, onDocs, darkMode, toggleDark, initialTab }) {
   const [activeTab, setActiveTab] = useState(initialTab || "about");
+
+  useEffect(() => {
+    if (initialTab) setActiveTab(initialTab);
+  }, [initialTab]);
 
   const tabs = [
     { id: "about", label: "About" },

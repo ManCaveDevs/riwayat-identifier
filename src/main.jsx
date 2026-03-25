@@ -4,14 +4,16 @@ import RiwayatIdentifier from '../riwayat-identifier.jsx';
 import DocsPage from './docs.jsx';
 
 function App() {
-  const parseHash = () => {
-    const h = window.location.hash;
-    if (h.startsWith('#docs')) return { page: 'docs', tab: h.split('/')[1] || null };
-    return { page: 'home', tab: null };
+  const parseHash = (hash) => {
+    if (hash.startsWith('#docs')) return 'docs';
+    return 'home';
   };
-
-  const [page, setPage] = useState(() => parseHash().page);
-  const [docsTab, setDocsTab] = useState(() => parseHash().tab);
+  const parseDocsTab = (hash) => {
+    const match = hash.match(/^#docs\/(.+)/);
+    return match ? match[1] : null;
+  };
+  const [page, setPage] = useState(parseHash(window.location.hash));
+  const [docsTab, setDocsTab] = useState(parseDocsTab(window.location.hash));
   const [darkMode, setDarkMode] = useState(() => {
     if (localStorage.getItem("riwayat-dark") !== null) {
       return localStorage.getItem("riwayat-dark") === "true";
@@ -21,9 +23,8 @@ function App() {
 
   useEffect(() => {
     const onHash = () => {
-      const { page, tab } = parseHash();
-      setPage(page);
-      setDocsTab(tab);
+      setPage(parseHash(window.location.hash));
+      setDocsTab(parseDocsTab(window.location.hash));
     };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
