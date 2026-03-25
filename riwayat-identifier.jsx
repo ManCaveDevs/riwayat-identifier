@@ -1078,6 +1078,19 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
         lineHeight: 1.8
       }}>
         <div>Covers the major riwayat from the 10 canonical Qira'at. Some rarer turuq or sub-transmissions may not be fully distinguished.</div>
+        {onDocs && (
+          <button
+            onClick={onDocs}
+            style={{
+              background: "none", border: "none", color: "var(--sub)",
+              fontSize: 11, cursor: "pointer", fontFamily: "'DM Sans', sans-serif",
+              padding: "4px 0", marginTop: 4, textDecoration: "underline",
+              opacity: 0.8
+            }}
+            onMouseEnter={e => e.target.style.opacity = "1"}
+            onMouseLeave={e => e.target.style.opacity = "0.8"}
+          >Docs &middot; Sources</button>
+        )}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, marginTop: 4 }}>
           <span>Built by Wasique Iqbal</span>
           <span style={{ fontSize: 14 }}>&rarr;</span>
