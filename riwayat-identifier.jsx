@@ -43,9 +43,9 @@ const RIWAYAT = [
     qari: "Abu 'Amr ibn al-'Ala'",
     rawi: "Abu Shu'ayb al-Susi",
     region: "Historically Basra (Iraq)",
-    traits: ["Partial imalah (taqlil) on specific words", "Idgham kabir — key distinguishing feature", "Less hamzah changes than Al-Duri", "Medium madd munfasil"],
+    traits: ["Partial imalah (taqlil) on specific words", "Extensive idgham kabir (identical + similar letters)", "Ibdal of quiescent hamzahs", "Medium madd munfasil"],
     color: "#26A69A",
-    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
   },
   {
     name: "Khalaf 'an Hamzah",
@@ -88,9 +88,9 @@ const RIWAYAT = [
     qari: "'Abdullah ibn 'Amir al-Dimashqi",
     rawi: "Hisham ibn 'Ammar",
     region: "Historically Damascus (Syria)",
-    traits: ["Maliki (short)", "Medium madd munfasil", "Tashil on some double-Hamzahs", "Unique word choices in several ayat", "Ha' al-Kinayah treated distinctly"],
+    traits: ["Maliki (short)", "Medium madd munfasil", "Tashil on some double-Hamzahs", "Idgham of dhal and dal into following letters", "Ha' al-Kinayah treated distinctly"],
     color: "#FFA726",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
   },
   {
     name: "Ibn Dhakwan 'an Ibn 'Amir",
@@ -151,9 +151,9 @@ const RIWAYAT = [
     qari: "Ya'qub ibn Ishaq",
     rawi: "Ruways",
     region: "Historically Basra (Iraq)",
-    traits: ["Maaliki with long Alif", "Additional Ya' on certain words", "Medium madd", "Ishmam on word-final vowels when stopping", "Ha' al-kinayah with sila"],
+    traits: ["Maaliki with long Alif", "Additional Ya' on certain words", "Medium madd", "Idgham kabir in specific positions", "Hamzah tashil and naql", "Ha' al-kinayah with sila"],
     color: "#7E57C2",
-    imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "with_sila"
+    imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "yes", haKinayah: "with_sila"
   },
   {
     name: "Ya'qub al-Hadrami (Rawh)",

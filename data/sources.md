@@ -44,20 +44,17 @@
 ### Verified against An-Nashr (imalah chapter):
 - Hamzah, Al-Kisa'i, Khalaf al-'Ashir: confirmed heavy imalah
 
-### Not yet individually verified (based on classical scholarship):
-- Hafs 'an 'Asim
-- Shu'bah 'an 'Asim
-- Al-Susi 'an Abu 'Amr
-- Khalaf 'an Hamzah
-- Abu al-Harith 'an Al-Kisa'i
-- Al-Duri 'an Al-Kisa'i
-- Hisham 'an Ibn 'Amir
-- Al-Bazzi 'an Ibn Kathir
-- Qunbul 'an Ibn Kathir
-- Ya'qub (Ruways)
-- Ya'qub (Rawh)
-- Ibn Wardan 'an Abu Ja'far
-- Ibn Jammaz 'an Abu Ja'far
+### Verified via nquran.com comparison pages (الفروق بين القراءات):
+| Page ID | Comparison | Riwayat verified |
+|---------|-----------|-----------------|
+| 16696 | Shu'bah vs Hafs | Hafs, Shu'bah |
+| 16698 | Al-Duri vs Al-Susi | Al-Susi |
+| 16694 | Abu al-Harith vs Duri (Kisa'i) | Abu al-Harith, Al-Duri 'an Al-Kisa'i |
+| 16692 | Al-Bazzi vs Qunbul | Al-Bazzi, Qunbul |
+| 16699 | Hisham vs Ibn Dhakwan | Hisham |
+| 16700 | Ruways vs Rawh | Ruways, Rawh |
+
+### Verification status: 20/20 verified
 
 ## Corrections Log
 
@@ -70,3 +67,7 @@
 | 2026-03-24 | Khalaf al-'Ashir (Idris) | basmalah | always | not_always | nquran 16683 |
 | 2026-03-24 | Khalaf al-'Ashir (Idris) | imalah | none | heavy | nquran 16683 |
 | 2026-03-24 | Khalaf al-'Ashir (Idris) | madd | long | medium | nquran 16683 |
+| 2026-03-24 | Al-Susi | hamzah | clear | softened | nquran 16698 (Susi does ibdal) |
+| 2026-03-24 | Hisham | idghamKabir | no | yes | nquran 16699 (dhal/dal idgham) |
+| 2026-03-24 | Ruways | hamzah | clear | softened | nquran 16700 (tashil + naql) |
+| 2026-03-24 | Ruways | idghamKabir | no | yes | nquran 16700 (idgham in specific positions) |

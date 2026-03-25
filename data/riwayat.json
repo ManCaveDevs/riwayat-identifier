@@ -29,8 +29,8 @@
       "qari": "'Asim ibn Abi al-Najud",
       "rawi": "Hafs ibn Sulayman",
       "region": "Most of the Muslim world — Saudi Arabia, Egypt, South/Southeast Asia, Turkey",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16696 (Shu'bah vs Hafs comparison) + nquran.com/ar/view/16701 (Hafs from Tayyibah)",
       "features": {
         "imalah": "none",
         "maaliki": "maaliki",
@@ -125,14 +125,14 @@
       "qari": "Abu 'Amr ibn al-'Ala'",
       "rawi": "Abu Shu'ayb al-Susi",
       "region": "Historically Basra (Iraq)",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16698 (Duri vs Susi comparison)",
       "features": {
         "imalah": "partial",
         "maaliki": "maliki",
         "madd": "medium",
         "basmalah": "always",
-        "hamzah": "clear",
+        "hamzah": "softened",
         "takbir": "no",
         "sirat": "sad",
         "ra": "standard",
@@ -141,7 +141,7 @@
         "idghamKabir": "yes",
         "haKinayah": "standard"
       },
-      "notes": "Shares idgham kabir with Al-Duri. Less hamzah changes than Al-Duri. Partial imalah on specific words."
+      "notes": "Extensive idgham kabir (identical + similar letters). Ibdal of quiescent hamzahs. More extensive imalah application than Duri in some positions. Per nquran comparison: Susi does idgham while Duri reads with idhar."
     },
     {
       "id": 6,
@@ -149,8 +149,8 @@
       "qari": "Hamzah al-Zayyat",
       "rawi": "Khalaf ibn Hisham",
       "region": "Historically Kufa (Iraq)",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16678 (Khallad page, shared Hamzah usul) + An-Nashr imalah chapter",
       "features": {
         "imalah": "heavy",
         "maaliki": "maaliki",
@@ -197,8 +197,8 @@
       "qari": "'Ali ibn Hamzah al-Kisa'i",
       "rawi": "Al-Layth ibn Khalid (Abu al-Harith)",
       "region": "Historically Kufa (Iraq)",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16694 (Abu al-Harith vs Duri comparison) + An-Nashr imalah chapter",
       "features": {
         "imalah": "heavy",
         "maaliki": "maaliki",
@@ -221,8 +221,8 @@
       "qari": "'Ali ibn Hamzah al-Kisa'i",
       "rawi": "Hafs ibn 'Umar al-Duri",
       "region": "Historically Kufa (Iraq)",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16694 (Abu al-Harith vs Duri comparison) + An-Nashr imalah chapter",
       "features": {
         "imalah": "heavy",
         "maaliki": "maaliki",
@@ -245,8 +245,8 @@
       "qari": "'Abdullah ibn 'Amir al-Dimashqi",
       "rawi": "Hisham ibn 'Ammar",
       "region": "Historically Damascus (Syria)",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16699 (Hisham vs Ibn Dhakwan comparison)",
       "features": {
         "imalah": "none",
         "maaliki": "maliki",
@@ -258,10 +258,10 @@
         "ra": "standard",
         "extraYa": "no",
         "imalahScope": "none",
-        "idghamKabir": "no",
+        "idghamKabir": "yes",
         "haKinayah": "standard"
       },
-      "notes": "Tashil on some double-hamzahs. Unique word choices in several ayat. Ha' al-Kinayah treated distinctly."
+      "notes": "Tashil on some double-hamzahs. Idgham of dhal (idh) and dal (qad) into following letters. Reads with fath (no imalah). Per nquran comparison: Hisham has idgham where Ibn Dhakwan has idhar."
     },
     {
       "id": 11,
@@ -293,8 +293,8 @@
       "qari": "'Abdullah ibn Kathir al-Makki",
       "rawi": "Ahmad ibn Muhammad (Al-Bazzi)",
       "region": "Historically Mecca",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16692 (Bazzi vs Qunbul comparison)",
       "features": {
         "imalah": "none",
         "maaliki": "maliki",
@@ -317,8 +317,8 @@
       "qari": "'Abdullah ibn Kathir al-Makki",
       "rawi": "Muhammad ibn 'Abd al-Rahman (Qunbul)",
       "region": "Historically Mecca",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16692 (Bazzi vs Qunbul comparison)",
       "features": {
         "imalah": "none",
         "maaliki": "maliki",
@@ -341,8 +341,8 @@
       "qari": "'Asim ibn Abi al-Najud",
       "rawi": "Shu'bah ibn 'Ayyash",
       "region": "Historically Kufa (Iraq) — less common today",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16696 (Shu'bah vs Hafs comparison)",
       "features": {
         "imalah": "none",
         "maaliki": "maaliki",
@@ -413,23 +413,23 @@
       "qari": "Ya'qub ibn Ishaq",
       "rawi": "Ruways",
       "region": "Historically Basra (Iraq)",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16700 (Ruways vs Rawh comparison)",
       "features": {
         "imalah": "none",
         "maaliki": "maaliki",
         "madd": "medium",
         "basmalah": "always",
-        "hamzah": "clear",
+        "hamzah": "softened",
         "takbir": "no",
         "sirat": "sad",
         "ra": "standard",
         "extraYa": "yes",
         "imalahScope": "none",
-        "idghamKabir": "no",
+        "idghamKabir": "yes",
         "haKinayah": "with_sila"
       },
-      "notes": "Additional Ya' on certain words. Ishmam on word-final vowels when stopping. Ha' al-kinayah with sila in more positions than Rawh."
+      "notes": "Idgham kabir in specific positions. Hamzah tashil on second of doubles + naql. Additional Ya' on certain words. Ha' al-kinayah with sila. Per nquran comparison: Ruways does idgham while Rawh reads with clarity."
     },
     {
       "id": 18,
@@ -437,8 +437,8 @@
       "qari": "Ya'qub ibn Ishaq",
       "rawi": "Rawh",
       "region": "Historically Basra (Iraq)",
-      "verified": false,
-      "verifiedSource": null,
+      "verified": true,
+      "verifiedSource": "nquran.com/ar/view/16700 (Ruways vs Rawh comparison)",
       "features": {
         "imalah": "none",
         "maaliki": "maaliki",
