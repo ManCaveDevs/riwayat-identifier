@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import NavBar from "./src/NavBar.jsx";
 
 // ── All 20 riwayat with their feature values ──────────────────────────
 const RIWAYAT = [
@@ -755,7 +756,7 @@ function QuestionCard({ question, onSelect, onSkip, answeredCount, totalCandidat
 
 // ── Main component ────────────────────────────────────────────────────
 
-export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
+export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark }) {
   const [started, setStarted] = useState(false);
   const [candidates, setCandidates] = useState(RIWAYAT);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -830,7 +831,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
     <div className={`riwayat-root${darkMode ? " dark" : ""}`} style={{
       fontFamily: "'DM Sans', sans-serif",
       minHeight: "100vh",
-      padding: "32px 20px",
+      padding: "60px 20px 32px",
       background: "linear-gradient(180deg, var(--bg-top), var(--bg-bottom))",
     }}>
       <style>{`
@@ -876,33 +877,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
         }
       `}</style>
 
-      {/* Dark mode toggle */}
-      <button
-        onClick={toggleDark}
-        aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-        style={{
-          position: "fixed",
-          top: 16,
-          right: 16,
-          width: 36,
-          height: 36,
-          borderRadius: "50%",
-          border: "1.5px solid var(--border)",
-          background: "var(--card-bg)",
-          color: "var(--sub)",
-          fontSize: 16,
-          cursor: "pointer",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          zIndex: 100,
-          transition: "all 0.2s ease"
-        }}
-        onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--text)"; }}
-        onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--sub)"; }}
-      >
-        {darkMode ? "\u2600" : "\u263E"}
-      </button>
+      <NavBar activePage="home" onHome={onHome} onDocs={onDocs} darkMode={darkMode} toggleDark={toggleDark} />
 
       {/* Hero / Header */}
       {!started ? (
@@ -986,27 +961,6 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
             Start Identifying
           </button>
 
-          {onDocs && (
-            <button
-              onClick={onDocs}
-              style={{
-                display: "block",
-                margin: "14px auto 0",
-                background: "none",
-                border: "none",
-                color: "var(--sub)",
-                fontSize: 14,
-                fontWeight: 600,
-                cursor: "pointer",
-                fontFamily: "'DM Sans', sans-serif",
-                padding: "6px 0"
-              }}
-              onMouseEnter={e => e.target.style.color = "var(--accent)"}
-              onMouseLeave={e => e.target.style.color = "var(--sub)"}
-            >
-              Learn more about the Qira'at &rarr;
-            </button>
-          )}
         </div>
       ) : (
         <>
@@ -1078,19 +1032,6 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
         lineHeight: 1.8
       }}>
         <div>Covers the major riwayat from the 10 canonical Qira'at. Some rarer turuq or sub-transmissions may not be fully distinguished.</div>
-        {onDocs && (
-          <button
-            onClick={onDocs}
-            style={{
-              background: "none", border: "none", color: "var(--sub)",
-              fontSize: 11, cursor: "pointer", fontFamily: "'DM Sans', sans-serif",
-              padding: "4px 0", marginTop: 4, textDecoration: "underline",
-              opacity: 0.8
-            }}
-            onMouseEnter={e => e.target.style.opacity = "1"}
-            onMouseLeave={e => e.target.style.opacity = "0.8"}
-          >Docs &middot; Sources</button>
-        )}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, marginTop: 4 }}>
           <span>Built by Wasique Iqbal</span>
           <span style={{ fontSize: 14 }}>&rarr;</span>

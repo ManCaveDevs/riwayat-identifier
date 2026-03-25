@@ -1,4 +1,5 @@
 import { useState } from "react";
+import NavBar from "./NavBar.jsx";
 
 const QIRAAT = [
   {
@@ -135,7 +136,7 @@ function InfoCard({ children, style }) {
   );
 }
 
-export default function DocsPage({ onBack, darkMode, toggleDark }) {
+export default function DocsPage({ onHome, onDocs, darkMode, toggleDark }) {
   const [activeTab, setActiveTab] = useState("about");
 
   const tabs = [
@@ -154,7 +155,7 @@ export default function DocsPage({ onBack, darkMode, toggleDark }) {
     <div className={`riwayat-root${darkMode ? " dark" : ""}`} style={{
       fontFamily: "'DM Sans', sans-serif",
       minHeight: "100vh",
-      padding: "32px 20px",
+      padding: "60px 20px 32px",
       background: "linear-gradient(180deg, var(--bg-top), var(--bg-bottom))",
     }}>
       <style>{`
@@ -191,28 +192,12 @@ export default function DocsPage({ onBack, darkMode, toggleDark }) {
         }
       `}</style>
 
-      {toggleDark && (
-        <button
-          onClick={toggleDark}
-          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-          style={{
-            position: "fixed", top: 16, right: 16, width: 36, height: 36,
-            borderRadius: "50%", border: "1.5px solid var(--border)",
-            background: "var(--card-bg)", color: "var(--sub)", fontSize: 16,
-            cursor: "pointer", display: "flex", alignItems: "center",
-            justifyContent: "center", zIndex: 100, transition: "all 0.2s ease"
-          }}
-          onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--text)"; }}
-          onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--sub)"; }}
-        >
-          {darkMode ? "\u2600" : "\u263E"}
-        </button>
-      )}
+      <NavBar activePage="docs" onHome={onHome} onDocs={onDocs} darkMode={darkMode} toggleDark={toggleDark} />
 
       <div style={{ maxWidth: 620, margin: "0 auto" }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 28, animation: "fadeSlideUp 0.4s ease-out" }}>
-          <div onClick={onBack} style={{
+          <div onClick={onHome} style={{
             fontSize: 28, fontFamily: "'Amiri', serif", fontWeight: 700,
             color: "var(--heading)", marginBottom: 2, direction: "rtl", cursor: "pointer"
           }}>{"\u0628\u0650\u0623\u064E\u064A\u0651\u0650 \u0631\u0650\u0648\u064E\u0627\u064A\u064E\u0629\u064D\u061F"}</div>
@@ -552,7 +537,7 @@ export default function DocsPage({ onBack, darkMode, toggleDark }) {
 
         {/* Back to tool */}
         <div style={{ textAlign: "center", marginTop: 32 }}>
-          <button onClick={onBack} style={{
+          <button onClick={onHome} style={{
             padding: "12px 28px", background: "var(--accent)", color: "var(--accent-fg)",
             border: "none", borderRadius: 10, fontSize: 15, fontWeight: 700,
             cursor: "pointer", fontFamily: "'DM Sans', sans-serif", transition: "opacity 0.2s"

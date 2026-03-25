@@ -25,10 +25,13 @@ function App() {
     });
   };
 
+  const goHome = () => { window.location.hash = ''; };
+  const goDocs = () => { window.location.hash = 'docs'; };
+
   if (page === 'docs') {
-    return <DocsPage onBack={() => { window.location.hash = ''; }} darkMode={darkMode} toggleDark={toggleDark} />;
+    return <DocsPage onHome={goHome} onDocs={goDocs} darkMode={darkMode} toggleDark={toggleDark} />;
   }
-  return <RiwayatIdentifier onDocs={() => { window.location.hash = 'docs'; }} darkMode={darkMode} toggleDark={toggleDark} />;
+  return <RiwayatIdentifier onHome={goHome} onDocs={goDocs} darkMode={darkMode} toggleDark={toggleDark} />;
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
