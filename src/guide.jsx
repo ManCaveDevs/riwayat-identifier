@@ -79,6 +79,54 @@ const FEATURE_LABELS = {
   }
 };
 
+// Additional usul not used by the identifier but important for a complete guide
+const EXTRA_FEATURE_LABELS = {
+  sakt: {
+    label: "Sakt", arabic: "\u0627\u0644\u0633\u0643\u062A",
+    values: { yes: "Yes (pause before hamzah)", no: "No", four_places: "4 specific places" }
+  },
+  naql: {
+    label: "Naql", arabic: "\u0627\u0644\u0646\u0642\u0644",
+    values: { yes: "Yes (transfers hamzah vowel)", no: "No" }
+  },
+  silatMim: {
+    label: "Silat Mim al-Jam'", arabic: "\u0635\u0644\u0629 \u0645\u064A\u0645 \u0627\u0644\u062C\u0645\u0639",
+    values: { yes: "Yes", optional: "Optional (with khulf)", no: "No" }
+  },
+  taghlithLam: {
+    label: "Taghlith al-Lam", arabic: "\u062A\u063A\u0644\u064A\u0638 \u0627\u0644\u0644\u0627\u0645",
+    values: { yes: "Yes (after sad/ta'/tha')", no: "No" }
+  },
+  waqfHamzah: {
+    label: "Waqf on Hamzah", arabic: "\u0648\u0642\u0641 \u0627\u0644\u0647\u0645\u0632\u0629",
+    values: { full: "Takhfif on all hamzahs", final_only: "Final hamzahs only", no: "No" }
+  }
+};
+
+// Map riwayah ID to extra feature values
+const EXTRA_FEATURES = {
+  1:  { sakt: "four_places", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },      // Hafs
+  2:  { sakt: "no", naql: "yes", silatMim: "no", taghlithLam: "yes", waqfHamzah: "no" },             // Warsh
+  3:  { sakt: "no", naql: "no", silatMim: "optional", taghlithLam: "no", waqfHamzah: "no" },         // Qalun
+  4:  { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Duri Abu Amr
+  5:  { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Susi
+  6:  { sakt: "yes", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "full" },            // Khalaf an Hamzah
+  7:  { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "full" },             // Khallad
+  8:  { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Abu al-Harith
+  9:  { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Duri Kisai
+  10: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "final_only" },       // Hisham
+  11: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Ibn Dhakwan
+  12: { sakt: "no", naql: "no", silatMim: "yes", taghlithLam: "no", waqfHamzah: "no" },              // Bazzi
+  13: { sakt: "no", naql: "no", silatMim: "yes", taghlithLam: "no", waqfHamzah: "no" },              // Qunbul
+  14: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Shubah
+  15: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Ibn Wardan
+  16: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Ibn Jammaz
+  17: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Ruways
+  18: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Rawh
+  19: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Ishaq
+  20: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no" },               // Idris
+};
+
 function FeatureRow({ featureKey, value }) {
   const f = FEATURE_LABELS[featureKey];
   if (!f) return null;
@@ -117,6 +165,22 @@ function RiwayahCard({ r }) {
         {Object.keys(FEATURE_LABELS).map(key => (
           <FeatureRow key={key} featureKey={key} value={r.features[key]} />
         ))}
+        {EXTRA_FEATURES[r.id] && Object.keys(EXTRA_FEATURE_LABELS).map(key => {
+          const val = EXTRA_FEATURES[r.id][key];
+          if (!val || val === "no") return null;
+          const f = EXTRA_FEATURE_LABELS[key];
+          return (
+            <div key={key} style={{
+              display: "flex", justifyContent: "space-between", alignItems: "baseline",
+              padding: "6px 0", borderBottom: "1px solid var(--border)", gap: 8
+            }}>
+              <span style={{ fontSize: 13, color: "var(--sub)", flexShrink: 0 }}>{f.label}</span>
+              <span style={{ fontSize: 13, fontWeight: 600, color: "var(--text)", textAlign: "right" }}>
+                {f.values[val] || val}
+              </span>
+            </div>
+          );
+        })}
       </div>
 
       {/* Notes toggle */}
