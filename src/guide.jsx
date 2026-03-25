@@ -47,7 +47,7 @@ const FEATURE_LABELS = {
   },
   hamzah: {
     label: "Hamzah", arabic: "\u0627\u0644\u0647\u0645\u0632\u0629",
-    values: { clear: "Clear (tahqiq)", softened: "Softened (tashil/ibdal)" }
+    values: { clear: "Clear (tahqiq)", softened: "Eased (tashil/ibdal)" }
   },
   takbir: {
     label: "Takbir", arabic: "\u0627\u0644\u062A\u0643\u0628\u064A\u0631",
@@ -59,7 +59,7 @@ const FEATURE_LABELS = {
   },
   ra: {
     label: "Ra'", arabic: "\u0627\u0644\u0631\u0627\u0621",
-    values: { standard: "Standard (tafkhim)", thin: "Thin (tarqiq)" }
+    values: { standard: "Standard rules", thin: "Light (tarqiq) in extra positions" }
   },
   extraYa: {
     label: "Extra Ya'", arabic: "\u064A\u0627\u0621\u0627\u062A \u0627\u0644\u0632\u0648\u0627\u0626\u062F",
