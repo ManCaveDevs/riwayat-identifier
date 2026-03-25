@@ -311,7 +311,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
         {/* Usul intro */}
         <h2 style={{ fontSize: 20, fontWeight: 800, color: "var(--heading)", margin: "0 0 8px 0" }}>Usul per Riwayah</h2>
         <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 16px 0", lineHeight: 1.6 }}>
-          Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more. All data follows Tariq al-Tayyibah.
+          Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more.
         </p>
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
           {grouped.map((group, i) => (
