@@ -158,34 +158,60 @@ function FeatureRow({ featureKey, value }) {
   );
 }
 
-function RiwayahCard({ r }) {
+function RiwayahCard({ r, compareMode, isSelected, onToggleSelect }) {
   const [open, setOpen] = useState(false);
   return (
     <div style={{
-      background: "var(--card-bg)", border: "1.5px solid var(--border)",
+      background: "var(--card-bg)",
+      border: isSelected ? "2px solid var(--accent)" : "1.5px solid var(--border)",
       borderRadius: 12, overflow: "hidden"
     }}>
       {/* Accordion header — always visible */}
-      <button
-        onClick={() => setOpen(!open)}
-        style={{
-          width: "100%", background: "none", border: "none",
-          padding: "14px 18px", cursor: "pointer", textAlign: "left",
-          display: "flex", justifyContent: "space-between", alignItems: "center",
-          fontFamily: "'DM Sans', sans-serif"
-        }}
-      >
-        <div>
-          <div style={{ fontSize: 16, fontWeight: 700, color: "var(--heading)", marginBottom: 2 }}>
-            {r.name}
+      <div style={{
+        display: "flex", alignItems: "center",
+        padding: compareMode ? "0 18px 0 0" : 0
+      }}>
+        {compareMode && (
+          <button
+            onClick={(e) => { e.stopPropagation(); onToggleSelect(r.id); }}
+            style={{
+              background: "none", border: "none", cursor: "pointer",
+              padding: "14px 4px 14px 14px", display: "flex", alignItems: "center", flexShrink: 0
+            }}
+          >
+            <div style={{
+              width: 20, height: 20, borderRadius: 4,
+              border: isSelected ? "none" : "2px solid var(--border)",
+              background: isSelected ? "var(--accent)" : "transparent",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              transition: "all 0.15s ease"
+            }}>
+              {isSelected && <span style={{ color: "var(--accent-fg)", fontSize: 13, fontWeight: 700 }}>&#10003;</span>}
+            </div>
+          </button>
+        )}
+        <button
+          onClick={() => setOpen(!open)}
+          style={{
+            flex: 1, background: "none", border: "none",
+            padding: compareMode ? "14px 0 14px 6px" : "14px 18px",
+            cursor: "pointer", textAlign: "left",
+            display: "flex", justifyContent: "space-between", alignItems: "center",
+            fontFamily: "'DM Sans', sans-serif"
+          }}
+        >
+          <div>
+            <div style={{ fontSize: 16, fontWeight: 700, color: "var(--heading)", marginBottom: 2 }}>
+              {r.name}
+            </div>
+            <div style={{ fontSize: 12, color: "var(--sub)" }}>{r.region}</div>
           </div>
-          <div style={{ fontSize: 12, color: "var(--sub)" }}>{r.region}</div>
-        </div>
-        <span style={{
-          fontSize: 18, color: "var(--sub)", transition: "transform 0.2s",
-          transform: open ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0, marginLeft: 12
-        }}>&#9662;</span>
-      </button>
+          <span style={{
+            fontSize: 18, color: "var(--sub)", transition: "transform 0.2s",
+            transform: open ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0, marginLeft: 12
+          }}>&#9662;</span>
+        </button>
+      </div>
 
       {/* Accordion body */}
       {open && (
@@ -229,6 +255,17 @@ function RiwayahCard({ r }) {
 
 export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDark }) {
   const [activeTab, setActiveTab] = useState("usul");
+  const [compareMode, setCompareMode] = useState(false);
+  const [selected, setSelected] = useState([]);
+
+  const toggleSelect = (id) => {
+    setSelected(prev => {
+      if (prev.includes(id)) return prev.filter(x => x !== id);
+      if (prev.length >= 4) return prev;
+      return [...prev, id];
+    });
+  };
+
   const grouped = QARI_ORDER.map((qariName, idx) => ({
     ...QIRAAT[idx],
     riwayat: riwayatData.riwayat.filter(r => r.qari === qariName)
@@ -309,10 +346,88 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
 
         {activeTab === "usul" && <>
         {/* Usul intro */}
-        <h2 style={{ fontSize: 20, fontWeight: 800, color: "var(--heading)", margin: "0 0 8px 0" }}>Usul per Riwayah</h2>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+          <h2 style={{ fontSize: 20, fontWeight: 800, color: "var(--heading)", margin: 0 }}>Usul per Riwayah</h2>
+          <button
+            onClick={() => { setCompareMode(!compareMode); if (compareMode) setSelected([]); }}
+            style={{
+              padding: "6px 14px", borderRadius: 8, fontSize: 12, fontWeight: 600,
+              fontFamily: "'DM Sans', sans-serif", cursor: "pointer", transition: "all 0.2s",
+              background: compareMode ? "var(--accent)" : "transparent",
+              color: compareMode ? "var(--accent-fg)" : "var(--sub)",
+              border: compareMode ? "none" : "1.5px solid var(--border)"
+            }}
+          >{compareMode ? "Exit Compare" : "Compare"}</button>
+        </div>
         <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 16px 0", lineHeight: 1.6 }}>
-          Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more.
+          {compareMode
+            ? <>Select up to <strong>4 riwayat</strong> to compare their usul side by side. {selected.length > 0 && `(${selected.length} selected)`}</>
+            : <>Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more.</>
+          }
         </p>
+
+        {/* Comparison table */}
+        {compareMode && selected.length >= 2 && (() => {
+          const selData = selected.map(id => riwayatData.riwayat.find(r => r.id === id));
+          const allFeatures = [
+            ...Object.keys(FEATURE_LABELS).map(k => ({ key: k, ...FEATURE_LABELS[k], source: "main" })),
+            ...Object.keys(EXTRA_FEATURE_LABELS).map(k => ({ key: k, ...EXTRA_FEATURE_LABELS[k], source: "extra" }))
+          ];
+          const getVal = (r, key, source) => {
+            if (source === "main") return r.features[key];
+            return EXTRA_FEATURES[r.id] ? EXTRA_FEATURES[r.id][key] : null;
+          };
+          const getDisplay = (val, feat) => feat.values[val] || val || "—";
+
+          return (
+            <div style={{
+              background: "var(--card-bg)", border: "1.5px solid var(--border)",
+              borderRadius: 12, padding: "16px 0", marginBottom: 20, overflowX: "auto"
+            }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, fontFamily: "'DM Sans', sans-serif" }}>
+                <thead>
+                  <tr>
+                    <th style={{ textAlign: "left", padding: "6px 14px", color: "var(--sub)", fontWeight: 600, fontSize: 12, position: "sticky", left: 0, background: "var(--card-bg)" }}>Feature</th>
+                    {selData.map(r => (
+                      <th key={r.id} style={{ textAlign: "center", padding: "6px 10px", color: "var(--heading)", fontWeight: 700, fontSize: 12, minWidth: 100 }}>
+                        {r.name.split("'an")[0].split("(")[0].trim()}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {allFeatures.map(feat => {
+                    const vals = selData.map(r => getVal(r, feat.key, feat.source));
+                    const allSame = vals.every(v => v === vals[0]);
+                    const allNo = vals.every(v => !v || v === "no");
+                    if (feat.source === "extra" && allNo) return null;
+                    return (
+                      <tr key={feat.key} style={{
+                        background: allSame ? "transparent" : "var(--accent-bg)"
+                      }}>
+                        <td style={{ padding: "7px 14px", color: "var(--sub)", fontWeight: 500, borderTop: "1px solid var(--border)", position: "sticky", left: 0, background: allSame ? "var(--card-bg)" : "var(--accent-bg)" }}>
+                          {feat.label}
+                        </td>
+                        {selData.map(r => {
+                          const val = getVal(r, feat.key, feat.source);
+                          return (
+                            <td key={r.id} style={{
+                              padding: "7px 10px", textAlign: "center", borderTop: "1px solid var(--border)",
+                              color: allSame ? "var(--sub)" : "var(--heading)", fontWeight: allSame ? 400 : 600
+                            }}>
+                              {getDisplay(val, feat)}
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          );
+        })()}
+
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
           {grouped.map((group, i) => (
             <div key={i} style={{ animation: "fadeSlideUp 0.4s ease-out" }}>
@@ -338,7 +453,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
               {/* Riwayah cards */}
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {group.riwayat.map(r => (
-                  <RiwayahCard key={r.id} r={r} />
+                  <RiwayahCard key={r.id} r={r} compareMode={compareMode} isSelected={selected.includes(r.id)} onToggleSelect={toggleSelect} />
                 ))}
               </div>
             </div>
