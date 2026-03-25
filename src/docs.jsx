@@ -272,7 +272,7 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
                 <p style={{ fontSize: 12, color: "var(--sub)", margin: "6px 0 0 0" }}>Sahih al-Bukhari, 5041</p>
               </InfoCard>
               <p style={pStyle}>
-                When 'Umar ibn al-Khattab heard Hisham ibn Hakim reciting Surah al-Furqan differently than he had learned it, he was startled and nearly confronted him. But when they went to the Prophet &#xFDFA;, he confirmed both recitations were correct, saying: "This is how it was revealed." The companions understood from early on that the Qur'an carried multiple valid modes of recitation.
+                When 'Umar ibn al-Khattab heard Hisham ibn Hakim reciting Surah al-Furqan differently than he had learned it, he was startled and nearly confronted him. But when they went to the Prophet &#xFDFA;, he confirmed both recitations were correct, saying: "This is how it was revealed." The companions understood from early on that the Qur'an carried multiple valid modes of recitation. Over time, these modes were preserved and systemized into the qira'at we know today.
               </p>
               <p style={pStyle}>
                 Despite these variations, only about <strong>0.9%</strong> of the Qur'an's words have an alternative reading. The vast majority of the text is recited identically across all readings.
