@@ -36,7 +36,7 @@ const RIWAYAT = [
     region: "Sudan, parts of West Africa, Somalia",
     traits: ["Partial imalah (taqlil) on some Alifs", "Idgham kabir (merging identical adjacent letters)", "Some hamzah softening", "Medium madd munfasil (4-5 harakaat)"],
     color: "#42A5F5",
-    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
   },
   {
     name: "Al-Susi 'an Abu 'Amr",
@@ -944,7 +944,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
               margin: "0 0 12px 0",
               lineHeight: 1.7
             }}>
-              The Qur'an was revealed in one text, but it has been passed down through <strong>multiple chains of recitation</strong> called <em>riwayat</em>. Each riwayah sounds slightly different. A vowel might be longer, a letter pronounced differently, or a word read with a subtle tilt in the voice.
+              The Qur'an is one Scripture, but it was revealed and transmitted through <strong>multiple modes of recitation</strong> called <em>riwayat</em>. Each riwayah sounds slightly different. A vowel might be longer, a letter pronounced differently, or a word read with a subtle tilt in the voice.
             </p>
             <p style={{
               fontSize: 15,
