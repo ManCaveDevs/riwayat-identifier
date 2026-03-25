@@ -399,7 +399,7 @@ function ResultCard({ result, onReset }) {
         width: "100%",
         padding: "12px 20px",
         background: result.color,
-        color: "var(--accent-fg)",
+        color: "#fff",
         border: "none",
         borderRadius: 10,
         fontSize: 15,
@@ -843,7 +843,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
           --card-bg: #f4f4f5;
           --hover-bg: #ebebed;
           --accent: #3f3f46;
-          --accent-fg: #ffffff;
+          --accent-fg: #fff;
           --accent-bg: rgba(63, 63, 70, 0.06);
           --bg-top: #fafafa;
           --bg-bottom: #f0f0f2;
@@ -855,7 +855,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
           --border: #2e2e33;
           --card-bg: #1c1c21;
           --hover-bg: #252529;
-          --accent: #d4d4d8;
+          --accent: #e4e4e7;
           --accent-fg: #111114;
           --accent-bg: rgba(212, 212, 216, 0.08);
           --bg-top: #111114;
@@ -970,7 +970,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
             style={{
               padding: "14px 36px",
               background: "linear-gradient(135deg, #3f3f46, #27272a)",
-              color: "var(--accent-fg)",
+              color: "#fff",
               border: "none",
               borderRadius: 12,
               fontSize: 16,

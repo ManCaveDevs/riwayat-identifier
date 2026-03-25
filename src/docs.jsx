@@ -142,7 +142,7 @@ export default function DocsPage({ onBack, darkMode, toggleDark }) {
           --card-bg: #f4f4f5;
           --hover-bg: #ebebed;
           --accent: #3f3f46;
-          --accent-fg: #ffffff;
+          --accent-fg: #fff;
           --accent-bg: rgba(63, 63, 70, 0.06);
           --bg-top: #fafafa;
           --bg-bottom: #f0f0f2;
@@ -154,7 +154,7 @@ export default function DocsPage({ onBack, darkMode, toggleDark }) {
           --border: #2e2e33;
           --card-bg: #1c1c21;
           --hover-bg: #252529;
-          --accent: #d4d4d8;
+          --accent: #e4e4e7;
           --accent-fg: #111114;
           --accent-bg: rgba(212, 212, 216, 0.08);
           --bg-top: #111114;
@@ -236,7 +236,7 @@ export default function DocsPage({ onBack, darkMode, toggleDark }) {
                 flex: 1,
                 padding: "10px 12px",
                 background: activeTab === tab.id ? "var(--accent)" : "transparent",
-                color: activeTab === tab.id ? "#fff" : "var(--sub)",
+                color: activeTab === tab.id ? "var(--accent-fg)" : "var(--sub)",
                 border: "none",
                 borderRadius: 8,
                 fontSize: 14,
