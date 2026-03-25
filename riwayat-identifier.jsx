@@ -867,7 +867,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
           to { opacity: 1; transform: translateY(0); }
         }
         @media (max-width: 480px) {
-          .riwayat-root { padding: 20px 14px !important; }
+          .riwayat-root { padding: 60px 14px 20px !important; }
           .hero-arabic { font-size: 32px !important; }
           .hero-title { font-size: 20px !important; }
           .hero-card { padding: 16px 16px !important; }
@@ -960,6 +960,20 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
           >
             Start Identifying
           </button>
+
+          <p
+            onClick={onDocs}
+            style={{
+              fontSize: 13,
+              color: "var(--sub)",
+              marginTop: 12,
+              cursor: "pointer",
+              textDecoration: "underline",
+              textUnderlineOffset: 3,
+            }}
+          >
+            Learn about the Qira'at
+          </p>
 
         </div>
       ) : (
