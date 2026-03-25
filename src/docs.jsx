@@ -390,9 +390,8 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
               </p>
 
               <InfoCard style={{ marginBottom: 20 }}>
-                <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 8 }}>Usul vs. Farsh</div>
                 <p style={{ fontSize: 13, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
-                  Differences between readings fall into two categories. <strong style={{ color: "var(--text)" }}>Usul</strong> are general rules that apply systematically across the entire Qur'an, like imalah, madd lengths, and hamzah treatment. <strong style={{ color: "var(--text)" }}>Farsh</strong> are differences in the vowelization or letters of particular words in individual passages. This tool focuses on usul, since they are what you can hear consistently throughout a recitation.
+                  This tool focuses on <strong style={{ color: "var(--text)" }}>usul</strong> (systematic rules), not <strong style={{ color: "var(--text)" }}>farsh</strong> (word-level differences). See the <span onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}>Guide</span> for both.
                 </p>
               </InfoCard>
 
