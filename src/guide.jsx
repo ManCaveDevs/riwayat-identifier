@@ -214,15 +214,11 @@ function RiwayahCard({ r }) {
 }
 
 export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDark }) {
-  // Group riwayat by qari
+  const [activeTab, setActiveTab] = useState("usul");
   const grouped = QARI_ORDER.map((qariName, idx) => ({
     ...QIRAAT[idx],
     riwayat: riwayatData.riwayat.filter(r => r.qari === qariName)
   }));
-
-  // Also pull traits from the main RIWAYAT array in riwayat-identifier.jsx
-  // Since we can't import that easily, we'll use the traits from riwayat.json notes instead
-  // But riwayat.json doesn't have traits — let's work with what we have
 
   return (
     <div className={`riwayat-root${darkMode ? " dark" : ""}`} style={{
@@ -280,32 +276,28 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
           <p style={{ fontSize: 13, color: "var(--sub)", margin: 0 }}>Riwayah Guide</p>
         </div>
 
-        {/* Intro */}
+        {/* Tabs */}
         <div style={{
-          background: "var(--card-bg)", border: "1.5px solid var(--border)",
-          borderRadius: 12, padding: "16px 18px", marginBottom: 24
+          display: "flex", gap: 4, marginBottom: 24,
+          background: "var(--card-bg)", borderRadius: 10, padding: 4,
+          border: "1.5px solid var(--border)"
         }}>
-          <p style={{ fontSize: 14, color: "var(--text)", margin: "0 0 12px 0", lineHeight: 1.7 }}>
-            A reference for all <strong>20 riwayat</strong> from the 10 canonical qira'at, covering the usul of each reading:
-          </p>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-            <div style={{ flex: 1, minWidth: 200 }}>
-              <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 4 }}>Usul (foundational rules)</div>
-              <p style={{ fontSize: 12, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
-                Systematic rules applied <strong>throughout the entire Quran</strong>: imalah, madd lengths, hamzah treatment, etc. This is what defines how each riwayah sounds.
-              </p>
-            </div>
-            <div style={{ flex: 1, minWidth: 200 }}>
-              <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 4 }}>Farsh (word-level differences)</div>
-              <p style={{ fontSize: 12, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
-                Differences in the vowelization or letters of <strong>particular words in specific verses</strong>. Not systematic — varies verse by verse.
-              </p>
-            </div>
-          </div>
+          {[{ id: "usul", label: "Usul" }, { id: "farsh", label: "Farsh" }].map(tab => (
+            <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{
+              flex: 1, padding: "10px 12px",
+              background: activeTab === tab.id ? "var(--accent)" : "transparent",
+              color: activeTab === tab.id ? "var(--accent-fg)" : "var(--sub)",
+              border: "none", borderRadius: 8, fontSize: 14, fontWeight: 600,
+              cursor: "pointer", fontFamily: "'DM Sans', sans-serif", transition: "all 0.2s ease"
+            }}>{tab.label}</button>
+          ))}
         </div>
 
-        {/* Qari sections */}
-        <h2 style={{ fontSize: 18, fontWeight: 800, color: "var(--heading)", margin: "0 0 16px 0" }}>Usul per Riwayah</h2>
+        {activeTab === "usul" && <>
+        {/* Usul intro */}
+        <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 16px 0", lineHeight: 1.6 }}>
+          Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more.
+        </p>
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
           {grouped.map((group, i) => (
             <div key={i} style={{ animation: "fadeSlideUp 0.4s ease-out" }}>
@@ -338,8 +330,11 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
           ))}
         </div>
 
+        </>}
+
+        {activeTab === "farsh" && <>
         {/* Farsh Examples */}
-        <div style={{ marginTop: 36, animation: "fadeSlideUp 0.4s ease-out" }}>
+        <div style={{ animation: "fadeSlideUp 0.4s ease-out" }}>
           <h2 style={{ fontSize: 20, fontWeight: 800, color: "var(--heading)", margin: "0 0 8px 0" }}>Key Farsh Differences</h2>
           <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 16px 0", lineHeight: 1.6 }}>
             Select examples of word-level differences between readings. Unlike usul, these apply to specific verses, not the entire Quran. Each example involves multiple readers.
@@ -443,6 +438,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
             Source: Sh. Yousef Wahb, "Can the Qur'an Be Recited in Different Ways?" (Yaqeen Institute, 2022)
           </p>
         </div>
+        </>}
 
         {/* Back to tool */}
         <div style={{ textAlign: "center", marginTop: 32 }}>
