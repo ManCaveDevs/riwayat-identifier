@@ -756,7 +756,7 @@ function QuestionCard({ question, onSelect, onSkip, answeredCount, totalCandidat
 
 // ── Main component ────────────────────────────────────────────────────
 
-export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark }) {
+export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, toggleDark }) {
   const [started, setStarted] = useState(false);
   const [candidates, setCandidates] = useState(RIWAYAT);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -877,7 +877,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
         }
       `}</style>
 
-      <NavBar activePage="home" onHome={onHome} onDocs={onDocs} darkMode={darkMode} toggleDark={toggleDark} />
+      <NavBar activePage="home" onHome={onHome} onDocs={onDocs} onGuide={onGuide} darkMode={darkMode} toggleDark={toggleDark} />
 
       {/* Hero / Header */}
       {!started ? (
@@ -919,7 +919,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
               margin: "0 0 12px 0",
               lineHeight: 1.7
             }}>
-              The Qur'an is one Scripture, but it was revealed and transmitted through <strong>multiple modes of recitation</strong> called <em>riwayat</em>. Each riwayah sounds slightly different. A vowel might be longer, a letter pronounced differently, or a word read with a subtle tilt in the voice.
+              The Qur'an is one Scripture, but it was revealed in multiple modes called <em>ahruf</em>, a divine concession to ease recitation for the ummah. Over time, these were preserved and systemized into <strong>recognized readings</strong> called <em>qira'at</em>, each transmitted through unbroken chains back to the Prophet &#xFDFA;.
             </p>
             <p style={{
               fontSize: 15,
@@ -927,7 +927,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
               margin: "0 0 12px 0",
               lineHeight: 1.7
             }}>
-              Sometimes the differences are in pronunciation, like a vowel held longer or a letter softened, and sometimes even the words themselves differ slightly. All of these variations go back to authentic transmission chains from the Prophet &#xFDFA;.
+              Sometimes the differences are in pronunciation, like a vowel held longer or a letter softened, and sometimes even the words themselves differ slightly. All of these variations go back to authentic chains of transmission from the Prophet &#xFDFA;.
             </p>
             <p style={{
               fontSize: 14,
@@ -935,7 +935,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
               margin: 0,
               lineHeight: 1.6
             }}>
-              There are <strong>10 recognized readers</strong> (qurra'), each with <strong>2 narrators</strong> (ruwat), giving us <strong>20 riwayat</strong> in total. This tool helps you figure out which one you're listening to.
+              There are <strong>10 recognized readers</strong> (qurra'), each with <strong>2 narrators</strong> (ruwat), giving us <strong>20 riwayat</strong> (transmissions) in total. This tool helps you figure out which one you're listening to.
             </p>
           </div>
 

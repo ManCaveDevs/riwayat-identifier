@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import RiwayatIdentifier from '../riwayat-identifier.jsx';
 import DocsPage from './docs.jsx';
+import GuidePage from './guide.jsx';
 
 function App() {
   const parseHash = (hash) => {
     if (hash.startsWith('#docs')) return 'docs';
+    if (hash.startsWith('#guide')) return 'guide';
     return 'home';
   };
   const parseDocsTab = (hash) => {
@@ -39,11 +41,15 @@ function App() {
 
   const goHome = () => { window.location.hash = ''; };
   const goDocs = () => { window.location.hash = 'docs'; };
+  const goGuide = () => { window.location.hash = 'guide'; };
 
   if (page === 'docs') {
-    return <DocsPage onHome={goHome} onDocs={goDocs} darkMode={darkMode} toggleDark={toggleDark} initialTab={docsTab} />;
+    return <DocsPage onHome={goHome} onDocs={goDocs} onGuide={goGuide} darkMode={darkMode} toggleDark={toggleDark} initialTab={docsTab} />;
   }
-  return <RiwayatIdentifier onHome={goHome} onDocs={goDocs} darkMode={darkMode} toggleDark={toggleDark} />;
+  if (page === 'guide') {
+    return <GuidePage onHome={goHome} onDocs={goDocs} onGuide={goGuide} darkMode={darkMode} toggleDark={toggleDark} />;
+  }
+  return <RiwayatIdentifier onHome={goHome} onDocs={goDocs} onGuide={goGuide} darkMode={darkMode} toggleDark={toggleDark} />;
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -136,7 +136,7 @@ function InfoCard({ children, style }) {
   );
 }
 
-export default function DocsPage({ onHome, onDocs, darkMode, toggleDark, initialTab }) {
+export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark, initialTab }) {
   const [activeTab, setActiveTab] = useState(initialTab || "about");
 
   useEffect(() => {
@@ -196,7 +196,7 @@ export default function DocsPage({ onHome, onDocs, darkMode, toggleDark, initial
         }
       `}</style>
 
-      <NavBar activePage="docs" onHome={onHome} onDocs={onDocs} darkMode={darkMode} toggleDark={toggleDark} />
+      <NavBar activePage="docs" onHome={onHome} onDocs={onDocs} onGuide={onGuide} darkMode={darkMode} toggleDark={toggleDark} />
 
       <div style={{ maxWidth: 620, margin: "0 auto" }}>
         {/* Header */}
