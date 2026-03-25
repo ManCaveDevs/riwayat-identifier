@@ -6,7 +6,7 @@ const RIWAYAT = [
     name: "Hafs 'an 'Asim",
     qari: "'Asim ibn Abi al-Najud",
     rawi: "Hafs ibn Sulayman",
-    region: "Most of the Muslim world — Saudi Arabia, Egypt, South/Southeast Asia, Turkey",
+    region: "Most of the Muslim world: Saudi Arabia, Egypt, South/Southeast Asia, Turkey",
     traits: ["Maaliki with long Alif", "Short madd munfasil (2 harakaat)", "No imalah", "Clear hamzahs", "The most widely used riwayah globally"],
     color: "#66BB6A",
     imalah: "none", maaliki: "maaliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
@@ -15,8 +15,8 @@ const RIWAYAT = [
     name: "Warsh 'an Nafi'",
     qari: "Nafi' al-Madani",
     rawi: "'Uthman ibn Sa'id (Warsh)",
-    region: "North Africa — Morocco, Algeria, parts of Libya, West Africa",
-    traits: ["Taqlil (partial imalah) on Alifs", "Frequent tashil and ibdal of Hamzahs", "Thin Ra' in specific positions", "Long madd munfasil (6 harakaat)", "Basmalah, sakt, or wasl between surahs", "Naql — transferring Hamzah's vowel to preceding letter"],
+    region: "North Africa: Morocco, Algeria, parts of Libya, West Africa",
+    traits: ["Taqlil (partial imalah) on Alifs", "Frequent tashil and ibdal of Hamzahs", "Thin Ra' in specific positions", "Long madd munfasil (6 harakaat)", "Basmalah, sakt, or wasl between surahs", "Naql (transferring Hamzah's vowel to preceding letter)"],
     color: "#FF7043",
     imalah: "partial", maaliki: "maaliki", madd: "long", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "thin", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
@@ -34,7 +34,7 @@ const RIWAYAT = [
     qari: "Abu 'Amr ibn al-'Ala'",
     rawi: "Hafs ibn 'Umar al-Duri",
     region: "Sudan, parts of West Africa, Somalia",
-    traits: ["Partial imalah (taqlil) on some Alifs", "Idgham kabir — merging identical adjacent letters", "Some hamzah softening", "Medium madd munfasil (4-5 harakaat)"],
+    traits: ["Partial imalah (taqlil) on some Alifs", "Idgham kabir (merging identical adjacent letters)", "Some hamzah softening", "Medium madd munfasil (4-5 harakaat)"],
     color: "#42A5F5",
     imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
   },
@@ -79,7 +79,7 @@ const RIWAYAT = [
     qari: "'Ali ibn Hamzah al-Kisa'i",
     rawi: "Hafs ibn 'Umar al-Duri",
     region: "Historically Kufa (Iraq)",
-    traits: ["Heavy imalah — even broader than Abu al-Harith", "Basmalah between surahs", "Same Duri who also narrates from Abu 'Amr", "Extensive imalah system"],
+    traits: ["Heavy imalah, even broader than Abu al-Harith", "Basmalah between surahs", "Same Duri who also narrates from Abu 'Amr", "Extensive imalah system"],
     color: "#AB47BC",
     imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "broad", idghamKabir: "no", haKinayah: "standard"
   },
@@ -97,7 +97,7 @@ const RIWAYAT = [
     qari: "'Abdullah ibn 'Amir al-Dimashqi",
     rawi: "'Abdullah ibn Ahmad (Ibn Dhakwan)",
     region: "Historically Damascus (Syria)",
-    traits: ["Maliki (short)", "Medium madd munfasil", "Clear Hamzahs — no tashil", "Distinctive word forms shared with Hisham", "Closer to Hafs in many rulings"],
+    traits: ["Maliki (short)", "Medium madd munfasil", "Clear Hamzahs with no tashil", "Distinctive word forms shared with Hisham", "Closer to Hafs in many rulings"],
     color: "#5C9BD4",
     imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
@@ -123,7 +123,7 @@ const RIWAYAT = [
     name: "Shu'bah 'an 'Asim",
     qari: "'Asim ibn Abi al-Najud",
     rawi: "Shu'bah ibn 'Ayyash",
-    region: "Historically Kufa (Iraq) — less common today",
+    region: "Historically Kufa (Iraq), less common today",
     traits: ["Maaliki with long Alif", "Medium madd munfasil (4 harakaat)", "No imalah", "Same Qari' as Hafs but different transmission", "Different word choices in several ayat"],
     color: "#FFA726",
     imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
@@ -725,7 +725,7 @@ function QuestionCard({ question, onSelect, onSkip, answeredCount, totalCandidat
           e.currentTarget.style.color = "var(--sub)";
         }}
       >
-        I'm not sure &mdash; skip this question
+        I'm not sure, skip this question
       </button>
 
       {/* Back */}
@@ -944,7 +944,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
               margin: "0 0 12px 0",
               lineHeight: 1.7
             }}>
-              The Qur'an was revealed in one text, but it has been passed down through <strong>multiple chains of recitation</strong> called <em>riwayat</em>. Each riwayah sounds slightly different &mdash; a vowel might be longer, a letter pronounced differently, or a word read with a subtle tilt in the voice.
+              The Qur'an was revealed in one text, but it has been passed down through <strong>multiple chains of recitation</strong> called <em>riwayat</em>. Each riwayah sounds slightly different. A vowel might be longer, a letter pronounced differently, or a word read with a subtle tilt in the voice.
             </p>
             <p style={{
               fontSize: 15,
@@ -952,7 +952,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
               margin: "0 0 12px 0",
               lineHeight: 1.7
             }}>
-              Sometimes the differences are in pronunciation &mdash; a vowel held longer, a letter softened &mdash; and sometimes even the words themselves differ slightly. All of these variations go back to authentic transmission chains from the Prophet &#xFDFA;.
+              Sometimes the differences are in pronunciation, like a vowel held longer or a letter softened, and sometimes even the words themselves differ slightly. All of these variations go back to authentic transmission chains from the Prophet &#xFDFA;.
             </p>
             <p style={{
               fontSize: 14,
@@ -1010,7 +1010,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
         </div>
       ) : (
         <>
-          {/* Compact header during quiz — clickable to go home */}
+          {/* Compact header during quiz, clickable to go home */}
           <div
             onClick={handleReset}
             style={{

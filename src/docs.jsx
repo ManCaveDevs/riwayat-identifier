@@ -69,7 +69,7 @@ const QIRAAT = [
     city: "Baghdad",
     period: "d. 229 AH",
     ruwat: ["Ishaq", "Idris"],
-    description: "The 10th Qari'. His own reading is distinct from his narration of Hamzah — notably, it has no imalah."
+    description: "The 10th Qari'. His own reading is distinct from his narration of Hamzah, and notably has no imalah."
   }
 ];
 
@@ -258,15 +258,15 @@ export default function DocsPage({ onBack, darkMode, toggleDark }) {
                 The Riwayah Identifier helps you figure out which riwayah (transmission) of the Qur'an you're listening to by asking you a series of simple listening questions.
               </p>
               <p style={{ fontSize: 15, color: "var(--text)", lineHeight: 1.7, marginBottom: 16 }}>
-                It covers all <strong>20 riwayat</strong> from the <strong>10 canonical qira'at</strong>, working through an elimination process &mdash; each answer narrows down the possibilities until only one (or a few) remain.
+                It covers all <strong>20 riwayat</strong> from the <strong>10 canonical qira'at</strong>, working through an elimination process. Each answer narrows down the possibilities until only one (or a few) remain.
               </p>
 
               <h3 style={{ fontSize: 17, fontWeight: 700, color: "var(--heading)", margin: "24px 0 10px 0" }}>What is a Riwayah?</h3>
               <p style={{ fontSize: 15, color: "var(--text)", lineHeight: 1.7, marginBottom: 16 }}>
-                The Qur'an was revealed and recited by the Prophet &#xFDFA; and transmitted through multiple chains of reciters. A <strong>qira'ah</strong> (reading) refers to the method of recitation attributed to a particular Imam (reader). Each reader had students who transmitted his reading &mdash; these transmissions are called <strong>riwayat</strong>.
+                The Qur'an was revealed and recited by the Prophet &#xFDFA; and transmitted through multiple chains of reciters. A <strong>qira'ah</strong> (reading) refers to the method of recitation attributed to a particular Imam (reader). Each reader had students who transmitted his reading, and these transmissions are called <strong>riwayat</strong>.
               </p>
               <p style={{ fontSize: 15, color: "var(--text)", lineHeight: 1.7, marginBottom: 16 }}>
-                Sometimes the differences are in pronunciation &mdash; a vowel held longer, a letter softened &mdash; and sometimes even the words themselves differ slightly. All of these variations are authentic and go back to the Prophet &#xFDFA; through verified chains of transmission.
+                Sometimes the differences are in pronunciation, like a vowel held longer or a letter softened, and sometimes even the words themselves differ slightly. All of these variations are authentic and go back to the Prophet &#xFDFA; through verified chains of transmission.
               </p>
 
               <h3 style={{ fontSize: 17, fontWeight: 700, color: "var(--heading)", margin: "24px 0 10px 0" }}>How does it work?</h3>
