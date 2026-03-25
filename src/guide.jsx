@@ -286,7 +286,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
           borderRadius: 12, padding: "16px 18px", marginBottom: 24
         }}>
           <p style={{ fontSize: 14, color: "var(--text)", margin: "0 0 12px 0", lineHeight: 1.7 }}>
-            A reference for all <strong>20 riwayat</strong> from the 10 canonical qira'at, covering both types of differences between readings:
+            A reference for all <strong>20 riwayat</strong> from the 10 canonical qira'at, covering the usul of each reading:
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
             <div style={{ flex: 1, minWidth: 200 }}>
