@@ -285,9 +285,25 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
           background: "var(--card-bg)", border: "1.5px solid var(--border)",
           borderRadius: 12, padding: "16px 18px", marginBottom: 24
         }}>
-          <p style={{ fontSize: 14, color: "var(--text)", margin: 0, lineHeight: 1.7 }}>
-            A complete reference of the <strong>usul</strong> (foundational rules) for all <strong>20 riwayat</strong> from the 10 canonical qira'at. Each riwayah card shows all 12 distinguishing features used by the identifier tool. Data verified against nquran.com and An-Nashr fi al-Qira'at al-'Ashr.
+          <p style={{ fontSize: 14, color: "var(--text)", margin: "0 0 12px 0", lineHeight: 1.7 }}>
+            A complete reference for all <strong>20 riwayat</strong> from the 10 canonical qira'at. Data verified against nquran.com and An-Nashr fi al-Qira'at al-'Ashr.
           </p>
+          <div style={{ padding: "12px 0 0 0", borderTop: "1px solid var(--border)" }}>
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+              <div style={{ flex: 1, minWidth: 200 }}>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 4 }}>Usul (foundational rules)</div>
+                <p style={{ fontSize: 12, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
+                  General rules applied <strong>consistently throughout the entire Quran</strong>: imalah, madd lengths, hamzah treatment, basmalah, etc. These are what you hear systematically in a recitation and what our identifier uses.
+                </p>
+              </div>
+              <div style={{ flex: 1, minWidth: 200 }}>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 4 }}>Farsh (word-level differences)</div>
+                <p style={{ fontSize: 12, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
+                  Differences in the vowelization or letters of <strong>particular words in specific verses</strong>. These are not systematic and vary verse by verse. Examples are shown below the usul reference.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Qari sections */}
@@ -321,6 +337,112 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Farsh Examples */}
+        <div style={{ marginTop: 36, animation: "fadeSlideUp 0.4s ease-out" }}>
+          <h2 style={{ fontSize: 20, fontWeight: 800, color: "var(--heading)", margin: "0 0 8px 0" }}>Key Farsh Differences</h2>
+          <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 16px 0", lineHeight: 1.6 }}>
+            Select examples of word-level differences between readings. Unlike usul, these apply to specific verses, not the entire Quran. Each example involves multiple readers.
+          </p>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            {[
+              {
+                ref: "Al-Baqarah 2:219",
+                type: "Consonant alternation",
+                majority: "\u0643\u064E\u0628\u0650\u064A\u0631\u064C",
+                majorityLatin: "kabir (great)",
+                majorityReaders: "8 of the 10 readers",
+                variant: "\u0643\u064E\u062B\u0650\u064A\u0631\u064C",
+                variantLatin: "kathir (much)",
+                variantReaders: "Hamzah & Al-Kisa'i",
+                note: "About the sin of wine: 'great sin' vs 'much sin.' Both meanings are complementary."
+              },
+              {
+                ref: "Al-Kahf 18:55",
+                type: "Different vowels",
+                majority: "\u0642\u064F\u0628\u064F\u0644\u064B\u0627",
+                majorityLatin: "qubula (in many types)",
+                majorityReaders: "'Asim, Hamzah, Al-Kisa'i, Abu Ja'far",
+                variant: "\u0642\u0650\u0628\u064E\u0644\u064B\u0627",
+                variantLatin: "qibala (face to face)",
+                variantReaders: "Nafi', Ibn Kathir, Abu 'Amr, Ibn 'Amir, Ya'qub",
+                note: "Punishment coming 'in many forms' vs 'directly face to face.'"
+              },
+              {
+                ref: "Al-Takwir 81:24",
+                type: "Consonant alternation",
+                majority: "\u0628\u0650\u0636\u064E\u0646\u0650\u064A\u0646\u064D",
+                majorityLatin: "bi-danin (stingy/withholding)",
+                majorityReaders: "Majority of readers",
+                variant: "\u0628\u0650\u0638\u064E\u0646\u0650\u064A\u0646\u064D",
+                variantLatin: "bi-zanin (accused)",
+                variantReaders: "Ibn Kathir, Abu 'Amr, Al-Kisa'i, Ruways",
+                note: "The Prophet is 'not stingy' with revelation vs 'not accused' regarding it."
+              },
+              {
+                ref: "Al-Baqarah 2:229",
+                type: "Active / passive verb",
+                majority: "\u064A\u064E\u062E\u064E\u0627\u0641\u064E\u0627",
+                majorityLatin: "yakhafa (they both fear)",
+                majorityReaders: "Majority of readers",
+                variant: "\u064A\u064F\u062E\u064E\u0627\u0641\u064E\u0627",
+                variantLatin: "yukhafa (it is feared)",
+                variantReaders: "Hamzah, Abu Ja'far, Ya'qub",
+                note: "About khul' (divorce): the couple fears vs a third party (judge) fears they can't maintain limits."
+              },
+              {
+                ref: "Al-Rum 30:39",
+                type: "Verb conjugation",
+                majority: "\u0621\u064E\u0627\u062A\u064E\u064A\u0652\u062A\u064F\u0645",
+                majorityLatin: "ataytum (you give)",
+                majorityReaders: "Majority of readers",
+                variant: "\u0623\u064E\u062A\u064E\u064A\u0652\u062A\u064F\u0645\u0652",
+                variantLatin: "ataytum (you engage with)",
+                variantReaders: "Ibn Kathir",
+                note: "About riba: 'whatever you give in riba' vs 'whatever type of riba you engage with.' Broader prohibition."
+              },
+              {
+                ref: "Al-Rum 30:39",
+                type: "Pronoun change",
+                majority: "\u0644\u0650\u064A\u064E\u0631\u0652\u0628\u064F\u0648\u064E\u0627",
+                majorityLatin: "li-yarbuwa (so it increases)",
+                majorityReaders: "Majority of readers",
+                variant: "\u0644\u0650\u062A\u064F\u0631\u0652\u0628\u064F\u0648\u0627",
+                variantLatin: "li-turbu (so you increase it)",
+                variantReaders: "Nafi', Abu Ja'far, Ya'qub",
+                note: "The money itself increases vs you (the person) increase it. Links prohibition to intention."
+              }
+            ].map((ex, i) => (
+              <div key={i} style={{
+                background: "var(--card-bg)", border: "1.5px solid var(--border)",
+                borderRadius: 12, padding: "14px 18px"
+              }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 8 }}>
+                  <span style={{ fontSize: 14, fontWeight: 700, color: "var(--heading)" }}>{ex.ref}</span>
+                  <span style={{ fontSize: 11, color: "var(--accent)", background: "var(--accent-bg)", padding: "2px 8px", borderRadius: 6, fontWeight: 600 }}>{ex.type}</span>
+                </div>
+                <div style={{ display: "flex", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
+                  <div style={{ flex: 1, minWidth: 140 }}>
+                    <div style={{ fontSize: 20, fontFamily: "'Amiri', serif", color: "var(--heading)", direction: "rtl", marginBottom: 2 }}>{ex.majority}</div>
+                    <div style={{ fontSize: 12, fontWeight: 600, color: "var(--text)" }}>{ex.majorityLatin}</div>
+                    <div style={{ fontSize: 11, color: "var(--sub)" }}>{ex.majorityReaders}</div>
+                  </div>
+                  <div style={{ flex: 1, minWidth: 140 }}>
+                    <div style={{ fontSize: 20, fontFamily: "'Amiri', serif", color: "var(--heading)", direction: "rtl", marginBottom: 2 }}>{ex.variant}</div>
+                    <div style={{ fontSize: 12, fontWeight: 600, color: "var(--text)" }}>{ex.variantLatin}</div>
+                    <div style={{ fontSize: 11, color: "var(--sub)" }}>{ex.variantReaders}</div>
+                  </div>
+                </div>
+                <p style={{ fontSize: 12, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>{ex.note}</p>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ fontSize: 12, color: "var(--sub)", margin: "12px 0 0 0", lineHeight: 1.6, fontStyle: "italic" }}>
+            Source: Sh. Yousef Wahb, "Can the Qur'an Be Recited in Different Ways?" (Yaqeen Institute, 2022)
+          </p>
         </div>
 
         {/* Back to tool */}
