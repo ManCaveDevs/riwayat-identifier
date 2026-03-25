@@ -326,7 +326,7 @@ const QUESTIONS = [
 
 // ── Components ────────────────────────────────────────────────────────
 
-function ResultCard({ result, onReset }) {
+function ResultCard({ result, onReset, onBack }) {
   return (
     <div style={{
       animation: "fadeSlideUp 0.6s ease-out",
@@ -396,6 +396,16 @@ function ResultCard({ result, onReset }) {
         ))}
       </div>
 
+      {onBack && (
+        <button onClick={onBack} style={{
+          background: "none", border: "none", color: "var(--sub)", fontSize: 13,
+          cursor: "pointer", fontFamily: "'DM Sans', sans-serif", padding: "6px 0",
+          fontWeight: 600, display: "flex", alignItems: "center", gap: 4, marginBottom: 8
+        }}
+          onMouseEnter={e => e.target.style.color = "var(--text)"}
+          onMouseLeave={e => e.target.style.color = "var(--sub)"}
+        >&larr; Go back</button>
+      )}
       <button onClick={onReset} style={{
         width: "100%",
         padding: "12px 20px",
@@ -418,7 +428,7 @@ function ResultCard({ result, onReset }) {
   );
 }
 
-function CandidateList({ candidates, onReset }) {
+function CandidateList({ candidates, onReset, onBack }) {
   return (
     <div style={{
       animation: "fadeSlideUp 0.6s ease-out",
@@ -479,6 +489,16 @@ function CandidateList({ candidates, onReset }) {
         ))}
       </div>
 
+      {onBack && (
+        <button onClick={onBack} style={{
+          background: "none", border: "none", color: "var(--sub)", fontSize: 13,
+          cursor: "pointer", fontFamily: "'DM Sans', sans-serif", padding: "6px 0",
+          fontWeight: 600, display: "flex", alignItems: "center", gap: 4, marginBottom: 8
+        }}
+          onMouseEnter={e => e.target.style.color = "var(--text)"}
+          onMouseLeave={e => e.target.style.color = "var(--sub)"}
+        >&larr; Go back</button>
+      )}
       <button onClick={onReset} style={{
         width: "100%",
         padding: "12px 20px",
@@ -1007,17 +1027,28 @@ export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, t
           {/* Content */}
           {finished ? (
         candidates.length === 1 ? (
-          <ResultCard result={candidates[0]} onReset={handleReset} />
+          <ResultCard result={candidates[0]} onReset={handleReset} onBack={history.length > 0 ? handleBack : null} />
         ) : candidates.length === 0 ? (
           <div style={{ textAlign: "center", maxWidth: 560, margin: "0 auto", animation: "fadeSlideUp 0.5s ease-out" }}>
             <p style={{ fontSize: 16, color: "var(--sub)", marginBottom: 16 }}>No exact match found. Try again and listen carefully to each feature.</p>
+            {history.length > 0 && (
+              <button onClick={handleBack} style={{
+                background: "none", border: "none", color: "var(--sub)", fontSize: 13,
+                cursor: "pointer", fontFamily: "'DM Sans', sans-serif", padding: "6px 0",
+                fontWeight: 600, marginBottom: 8
+              }}
+                onMouseEnter={e => e.target.style.color = "var(--text)"}
+                onMouseLeave={e => e.target.style.color = "var(--sub)"}
+              >&larr; Go back</button>
+            )}
+            <br />
             <button onClick={handleReset} style={{
               padding: "12px 24px", background: "var(--accent)", color: "var(--accent-fg)", border: "none", borderRadius: 10,
               fontSize: 15, fontWeight: 700, cursor: "pointer", fontFamily: "'DM Sans', sans-serif"
             }}>Start Over</button>
           </div>
         ) : (
-          <CandidateList candidates={candidates} onReset={handleReset} />
+          <CandidateList candidates={candidates} onReset={handleReset} onBack={history.length > 0 ? handleBack : null} />
         )
       ) : currentQuestion ? (
         <QuestionCard
