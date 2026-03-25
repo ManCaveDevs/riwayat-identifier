@@ -12,8 +12,16 @@ function App() {
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
 
+  // Shared dark mode state so docs page inherits it
+  const isDark = () => {
+    if (localStorage.getItem("riwayat-dark") !== null) {
+      return localStorage.getItem("riwayat-dark") === "true";
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  };
+
   if (page === 'docs') {
-    return <DocsPage onBack={() => { window.location.hash = ''; }} />;
+    return <DocsPage onBack={() => { window.location.hash = ''; }} darkMode={isDark()} />;
   }
   return <RiwayatIdentifier onDocs={() => { window.location.hash = 'docs'; }} />;
 }

@@ -71,7 +71,7 @@ const RIWAYAT = [
     rawi: "Al-Layth ibn Khalid (Abu al-Harith)",
     region: "Historically Kufa (Iraq)",
     traits: ["Heavy imalah on ha' al-ta'nith and Alifs", "Basmalah between surahs", "Idgham of specific letter pairs", "Known for elegant grammatical tradition"],
-    color: "#5C6BC0",
+    color: "#546E7A",
     imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
   },
   {
@@ -606,7 +606,7 @@ function QuestionCard({ question, onSelect, onSkip, answeredCount, totalCandidat
           <div style={{
             width: `${narrowedPct}%`,
             height: "100%",
-            background: "linear-gradient(90deg, #4A90D9, #7C5CFC)",
+            background: "linear-gradient(90deg, #52525b, #3f3f46)",
             borderRadius: 2,
             transition: "width 0.4s ease"
           }} />
@@ -756,11 +756,24 @@ function QuestionCard({ question, onSelect, onSkip, answeredCount, totalCandidat
 // ── Main component ────────────────────────────────────────────────────
 
 export default function RiwayatIdentifier({ onDocs }) {
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== "undefined" && localStorage.getItem("riwayat-dark") !== null) {
+      return localStorage.getItem("riwayat-dark") === "true";
+    }
+    return typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
   const [started, setStarted] = useState(false);
   const [candidates, setCandidates] = useState(RIWAYAT);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [history, setHistory] = useState([]); // [{candidates, questionIndex}]
   const [finished, setFinished] = useState(false);
+
+  const toggleDark = () => {
+    setDarkMode(prev => {
+      localStorage.setItem("riwayat-dark", String(!prev));
+      return !prev;
+    });
+  };
 
   // Find next relevant question starting from a given index
   const findNextQuestion = (startIndex, currentCandidates) => {
@@ -827,7 +840,7 @@ export default function RiwayatIdentifier({ onDocs }) {
   const currentQuestion = QUESTIONS[questionIndex];
 
   return (
-    <div className="riwayat-root" style={{
+    <div className={`riwayat-root${darkMode ? " dark" : ""}`} style={{
       fontFamily: "'DM Sans', sans-serif",
       minHeight: "100vh",
       padding: "32px 20px",
@@ -836,16 +849,28 @@ export default function RiwayatIdentifier({ onDocs }) {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=Amiri:wght@400;700&display=swap');
         .riwayat-root {
-          --heading: #1a1a2e;
-          --text: #2d2d44;
-          --sub: #6b7094;
-          --border: #e2e4ef;
-          --card-bg: #f5f6fb;
-          --hover-bg: #eef0f8;
-          --accent: #5C6BC0;
-          --accent-bg: rgba(92, 107, 192, 0.08);
-          --bg-top: #fafbff;
-          --bg-bottom: #f0f1f8;
+          --heading: #1a1a1f;
+          --text: #2d2d35;
+          --sub: #71717a;
+          --border: #e4e4e7;
+          --card-bg: #f4f4f5;
+          --hover-bg: #ebebed;
+          --accent: #3f3f46;
+          --accent-bg: rgba(63, 63, 70, 0.06);
+          --bg-top: #fafafa;
+          --bg-bottom: #f0f0f2;
+        }
+        .riwayat-root.dark {
+          --heading: #e4e4e7;
+          --text: #d4d4d8;
+          --sub: #a1a1aa;
+          --border: #2e2e33;
+          --card-bg: #1c1c21;
+          --hover-bg: #252529;
+          --accent: #d4d4d8;
+          --accent-bg: rgba(212, 212, 216, 0.08);
+          --bg-top: #111114;
+          --bg-bottom: #18181b;
         }
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(16px); }
@@ -860,21 +885,35 @@ export default function RiwayatIdentifier({ onDocs }) {
           .hero-btn { padding: 12px 28px !important; font-size: 15px !important; }
           .compact-arabic { font-size: 20px !important; }
         }
-        @media (prefers-color-scheme: dark) {
-          .riwayat-root {
-            --heading: #e8eaf6;
-            --text: #c5cae9;
-            --sub: #9499b7;
-            --border: #2a2d45;
-            --card-bg: #1e2038;
-            --hover-bg: #252845;
-            --accent: #7C8ADB;
-            --accent-bg: rgba(124, 138, 219, 0.09);
-            --bg-top: #13142a;
-            --bg-bottom: #1a1b33;
-          }
-        }
       `}</style>
+
+      {/* Dark mode toggle */}
+      <button
+        onClick={toggleDark}
+        aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+        style={{
+          position: "fixed",
+          top: 16,
+          right: 16,
+          width: 36,
+          height: 36,
+          borderRadius: "50%",
+          border: "1.5px solid var(--border)",
+          background: "var(--card-bg)",
+          color: "var(--sub)",
+          fontSize: 16,
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          zIndex: 100,
+          transition: "all 0.2s ease"
+        }}
+        onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--text)"; }}
+        onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--sub)"; }}
+      >
+        {darkMode ? "\u2600" : "\u263E"}
+      </button>
 
       {/* Hero / Header */}
       {!started ? (
@@ -941,7 +980,7 @@ export default function RiwayatIdentifier({ onDocs }) {
             onClick={() => setStarted(true)}
             style={{
               padding: "14px 36px",
-              background: "linear-gradient(135deg, #5C6BC0, #7C5CFC)",
+              background: "linear-gradient(135deg, #3f3f46, #27272a)",
               color: "#fff",
               border: "none",
               borderRadius: 12,
@@ -950,7 +989,7 @@ export default function RiwayatIdentifier({ onDocs }) {
               cursor: "pointer",
               fontFamily: "'DM Sans', sans-serif",
               transition: "opacity 0.2s, transform 0.2s",
-              boxShadow: "0 4px 14px rgba(92, 107, 192, 0.35)"
+              boxShadow: "0 4px 14px rgba(0, 0, 0, 0.15)"
             }}
             onMouseEnter={e => { e.target.style.opacity = "0.9"; e.target.style.transform = "translateY(-1px)"; }}
             onMouseLeave={e => { e.target.style.opacity = "1"; e.target.style.transform = "translateY(0)"; }}

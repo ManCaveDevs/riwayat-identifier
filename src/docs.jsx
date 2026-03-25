@@ -116,7 +116,7 @@ const FEATURES = [
   }
 ];
 
-export default function DocsPage({ onBack }) {
+export default function DocsPage({ onBack, darkMode }) {
   const [activeTab, setActiveTab] = useState("about");
 
   const tabs = [
@@ -126,7 +126,7 @@ export default function DocsPage({ onBack }) {
   ];
 
   return (
-    <div className="riwayat-root" style={{
+    <div className={`riwayat-root${darkMode ? " dark" : ""}`} style={{
       fontFamily: "'DM Sans', sans-serif",
       minHeight: "100vh",
       padding: "32px 20px",
@@ -135,34 +135,32 @@ export default function DocsPage({ onBack }) {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=Amiri:wght@400;700&display=swap');
         .riwayat-root {
-          --heading: #1a1a2e;
-          --text: #2d2d44;
-          --sub: #6b7094;
-          --border: #e2e4ef;
-          --card-bg: #f5f6fb;
-          --hover-bg: #eef0f8;
-          --accent: #5C6BC0;
-          --accent-bg: rgba(92, 107, 192, 0.08);
-          --bg-top: #fafbff;
-          --bg-bottom: #f0f1f8;
+          --heading: #1a1a1f;
+          --text: #2d2d35;
+          --sub: #71717a;
+          --border: #e4e4e7;
+          --card-bg: #f4f4f5;
+          --hover-bg: #ebebed;
+          --accent: #3f3f46;
+          --accent-bg: rgba(63, 63, 70, 0.06);
+          --bg-top: #fafafa;
+          --bg-bottom: #f0f0f2;
+        }
+        .riwayat-root.dark {
+          --heading: #e4e4e7;
+          --text: #d4d4d8;
+          --sub: #a1a1aa;
+          --border: #2e2e33;
+          --card-bg: #1c1c21;
+          --hover-bg: #252529;
+          --accent: #d4d4d8;
+          --accent-bg: rgba(212, 212, 216, 0.08);
+          --bg-top: #111114;
+          --bg-bottom: #18181b;
         }
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(16px); }
           to { opacity: 1; transform: translateY(0); }
-        }
-        @media (prefers-color-scheme: dark) {
-          .riwayat-root {
-            --heading: #e8eaf6;
-            --text: #c5cae9;
-            --sub: #9499b7;
-            --border: #2a2d45;
-            --card-bg: #1e2038;
-            --hover-bg: #252845;
-            --accent: #7C8ADB;
-            --accent-bg: rgba(124, 138, 219, 0.09);
-            --bg-top: #13142a;
-            --bg-bottom: #1a1b33;
-          }
         }
       `}</style>
 
