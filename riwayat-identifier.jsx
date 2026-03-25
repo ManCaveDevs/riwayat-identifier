@@ -53,7 +53,7 @@ const RIWAYAT = [
     qari: "Hamzah al-Zayyat",
     rawi: "Khalaf ibn Hisham",
     region: "Historically Kufa (Iraq)",
-    traits: ["Heavy imalah on many words", "Ishmam on al-Sirat", "No basmalah option between surahs", "Sakt (pause) on certain hamzahs when stopping"],
+    traits: ["Heavy imalah on many words", "Ishmam on al-Sirat", "No basmalah option between surahs", "Sakt (pause) on certain hamzahs when stopping", "Waqf on hamzah (takhfif)"],
     color: "#E8B931",
     imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
   },
@@ -62,7 +62,7 @@ const RIWAYAT = [
     qari: "Hamzah al-Zayyat",
     rawi: "Khallad ibn Khalid",
     region: "Historically Kufa (Iraq)",
-    traits: ["Heavy imalah on many words", "Ishmam on al-Sirat in Fatihah", "Comprehensive idgham kabir", "No basmalah option between surahs", "Long madd munfasil (6 harakaat)"],
+    traits: ["Heavy imalah on many words", "Ishmam on al-Sirat in Fatihah", "Comprehensive idgham kabir", "No basmalah option between surahs", "Long madd munfasil (6 harakaat)", "Waqf on hamzah (takhfif)"],
     color: "#4CAF50",
     imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "yes", haKinayah: "standard"
   },
@@ -107,7 +107,7 @@ const RIWAYAT = [
     qari: "'Abdullah ibn Kathir al-Makki",
     rawi: "Ahmad ibn Muhammad (Al-Bazzi)",
     region: "Historically Mecca",
-    traits: ["Maliki (short)", "Takbir between surahs in Juz' 'Amma", "Standard Sad in al-Sirat", "Distinctive hamzah handling in some words"],
+    traits: ["Maliki (short)", "Takbir between surahs in Juz' 'Amma", "Standard Sad in al-Sirat", "Silat Mim al-Jam'", "Distinctive hamzah handling in some words"],
     color: "#42A5F5",
     imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "yes", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
@@ -116,7 +116,7 @@ const RIWAYAT = [
     qari: "'Abdullah ibn Kathir al-Makki",
     rawi: "Muhammad ibn 'Abd al-Rahman (Qunbul)",
     region: "Historically Mecca",
-    traits: ["Maliki (short)", "al-Sirat with Sin", "Connects Hamzahs (reads certain double-hamzahs differently)"],
+    traits: ["Maliki (short)", "al-Sirat with Sin", "Silat Mim al-Jam'", "Connects Hamzahs (reads certain double-hamzahs differently)"],
     color: "#FFD54F",
     imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sin", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
@@ -134,7 +134,7 @@ const RIWAYAT = [
     qari: "Yazid ibn al-Qa'qa' (Abu Ja'far)",
     rawi: "'Isa ibn Wardan",
     region: "Historically Medina",
-    traits: ["Maliki (short)", "Short madd munfasil", "Tashil of many Hamzahs", "One of the 3 additional Qurra' (making 10)", "More idgham in specific letter combinations"],
+    traits: ["Maliki (short)", "Short madd munfasil", "Tashil of many Hamzahs", "Ha' al-kinayah with sila", "One of the 3 additional Qurra' (making 10)"],
     color: "#CE93D8",
     imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "with_sila"
   },
@@ -152,7 +152,7 @@ const RIWAYAT = [
     qari: "Ya'qub ibn Ishaq",
     rawi: "Ruways",
     region: "Historically Basra (Iraq)",
-    traits: ["Maaliki with long Alif", "Additional Ya' on certain words", "Medium madd", "Idgham kabir in specific positions", "Hamzah tashil and naql", "Ha' al-kinayah with sila"],
+    traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Idgham kabir in specific positions", "Hamzah tashil and naql", "Ha' al-kinayah with sila"],
     color: "#7E57C2",
     imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "yes", haKinayah: "with_sila"
   },
@@ -161,7 +161,7 @@ const RIWAYAT = [
     qari: "Ya'qub ibn Ishaq",
     rawi: "Rawh",
     region: "Historically Basra (Iraq)",
-    traits: ["Maaliki with long Alif", "Additional Ya' on certain words", "Medium madd", "Standard ha' al-kinayah", "Fewer ishmam cases than Ruways"],
+    traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Standard ha' al-kinayah", "Fewer ishmam cases than Ruways"],
     color: "#9575CD",
     imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },

@@ -29,6 +29,7 @@
 - Abu Ja'far: Ibn Wardan has ha' kinayah with sila; Ibn Jammaz does not
 - Ya'qub: Ruways has idgham kabir + softened hamzah + ha' kinayah sila; Rawh does not
 - Khalaf al-'Ashir: Ishaq has idgham kabir; Idris does not
+- 'Asim: Hafs has short madd munfasil; Shu'bah has medium
 - Hamzah: Khalaf has sakt before hamzah + no idgham kabir; Khallad has no sakt + idgham kabir
 
 ## All data follows Tariq al-Tayyibah
