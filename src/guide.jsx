@@ -286,7 +286,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
           borderRadius: 12, padding: "16px 18px", marginBottom: 24
         }}>
           <p style={{ fontSize: 14, color: "var(--text)", margin: "0 0 12px 0", lineHeight: 1.7 }}>
-            A complete reference for all <strong>20 riwayat</strong> from the 10 canonical qira'at. Data verified against nquran.com and An-Nashr fi al-Qira'at al-'Ashr.
+            The <strong>usul</strong> (foundational rules) for all <strong>20 riwayat</strong> from the 10 canonical qira'at. These are the systematic pronunciation rules that apply throughout the entire Quran and define how each riwayah sounds. Farsh (word-level) examples are listed separately below.
           </p>
           <div style={{ padding: "12px 0 0 0", borderTop: "1px solid var(--border)" }}>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -307,6 +307,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
         </div>
 
         {/* Qari sections */}
+        <h2 style={{ fontSize: 18, fontWeight: 800, color: "var(--heading)", margin: "0 0 16px 0" }}>Usul per Riwayah</h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
           {grouped.map((group, i) => (
             <div key={i} style={{ animation: "fadeSlideUp 0.4s ease-out" }}>
