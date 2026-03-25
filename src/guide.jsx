@@ -31,7 +31,7 @@ const QARI_ORDER = [
 const FEATURE_LABELS = {
   imalah: {
     label: "Imalah", arabic: "\u0625\u0645\u0627\u0644\u0629",
-    values: { none: "None", partial: "Partial (taqlil)", heavy: "Heavy (imalah kubra)" }
+    values: { none: "None", partial: "Partial (taqlil)", heavy: "Full (imalah kubra)" }
   },
   maaliki: {
     label: "Maaliki / Maliki", arabic: "\u0645\u064E\u0627\u0644\u0650\u0643\u0650 / \u0645\u064E\u0644\u0650\u0643\u0650",
@@ -59,7 +59,7 @@ const FEATURE_LABELS = {
   },
   ra: {
     label: "Ra'", arabic: "\u0627\u0644\u0631\u0627\u0621",
-    values: { standard: "Standard rules", thin: "Light (tarqiq) in extra positions" }
+    values: { standard: "Standard rules", thin: "Light (tarqiq)" }
   },
   extraYa: {
     label: "Extra Ya'", arabic: "\u064A\u0627\u0621\u0627\u062A \u0627\u0644\u0632\u0648\u0627\u0626\u062F",
