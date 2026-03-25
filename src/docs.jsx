@@ -389,12 +389,6 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
                 These are the audible differences the tool listens for. Understanding them helps you identify riwayat on your own.
               </p>
 
-              <InfoCard style={{ marginBottom: 20 }}>
-                <p style={{ fontSize: 13, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
-                  This tool focuses on <strong style={{ color: "var(--text)" }}>usul</strong> (systematic rules), not <strong style={{ color: "var(--text)" }}>farsh</strong> (word-level differences). See the <span onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}>Guide</span> for both.
-                </p>
-              </InfoCard>
-
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {FEATURES.map((f, i) => (
                   <div key={i} style={{
