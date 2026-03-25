@@ -286,22 +286,20 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
           borderRadius: 12, padding: "16px 18px", marginBottom: 24
         }}>
           <p style={{ fontSize: 14, color: "var(--text)", margin: "0 0 12px 0", lineHeight: 1.7 }}>
-            The <strong>usul</strong> (foundational rules) for all <strong>20 riwayat</strong> from the 10 canonical qira'at. These are the systematic pronunciation rules that apply throughout the entire Quran and define how each riwayah sounds. Farsh (word-level) examples are listed separately below.
+            A reference for all <strong>20 riwayat</strong> from the 10 canonical qira'at, covering both types of differences between readings:
           </p>
-          <div style={{ padding: "12px 0 0 0", borderTop: "1px solid var(--border)" }}>
-            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <div style={{ flex: 1, minWidth: 200 }}>
-                <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 4 }}>Usul (foundational rules)</div>
-                <p style={{ fontSize: 12, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
-                  General rules applied <strong>consistently throughout the entire Quran</strong>: imalah, madd lengths, hamzah treatment, basmalah, etc. These are what you hear systematically in a recitation and what our identifier uses.
-                </p>
-              </div>
-              <div style={{ flex: 1, minWidth: 200 }}>
-                <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 4 }}>Farsh (word-level differences)</div>
-                <p style={{ fontSize: 12, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
-                  Differences in the vowelization or letters of <strong>particular words in specific verses</strong>. These are not systematic and vary verse by verse. Examples are shown below the usul reference.
-                </p>
-              </div>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+            <div style={{ flex: 1, minWidth: 200 }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 4 }}>Usul (foundational rules)</div>
+              <p style={{ fontSize: 12, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
+                Systematic rules applied <strong>throughout the entire Quran</strong>: imalah, madd lengths, hamzah treatment, etc. This is what defines how each riwayah sounds.
+              </p>
+            </div>
+            <div style={{ flex: 1, minWidth: 200 }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 4 }}>Farsh (word-level differences)</div>
+              <p style={{ fontSize: 12, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
+                Differences in the vowelization or letters of <strong>particular words in specific verses</strong>. Not systematic — varies verse by verse.
+              </p>
             </div>
           </div>
         </div>
