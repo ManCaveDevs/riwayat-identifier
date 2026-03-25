@@ -386,7 +386,7 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
             <div>
               <h2 style={h2Style}>Key Distinguishing Features</h2>
               <p style={{ ...subStyle, marginBottom: 12 }}>
-                These are the audible differences the tool listens for. Understanding them helps you identify riwayat on your own.
+                These are the audible <strong>usul</strong> (systematic rules) the tool listens for, not farsh (word-level differences). See the <span onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}>Guide</span> for both.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
