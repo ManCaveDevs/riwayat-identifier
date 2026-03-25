@@ -362,7 +362,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
             onMouseLeave={e => e.target.style.opacity = "1"}
           >{compareMode ? "Exit Compare" : "Compare"}</button>
         </div>
-        <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 24px 0", lineHeight: 1.6 }}>
+        <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 36px 0", lineHeight: 1.6 }}>
           {compareMode
             ? <>Select up to <strong>4 riwayat</strong> to compare their usul side by side. {selected.length > 0 && `(${selected.length} selected)`}</>
             : <>Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more.</>
