@@ -399,7 +399,7 @@ function ResultCard({ result, onReset }) {
         width: "100%",
         padding: "12px 20px",
         background: result.color,
-        color: "#fff",
+        color: "var(--accent-fg)",
         border: "none",
         borderRadius: 10,
         fontSize: 15,
@@ -482,7 +482,7 @@ function CandidateList({ candidates, onReset }) {
         width: "100%",
         padding: "12px 20px",
         background: "var(--accent)",
-        color: "#fff",
+        color: "var(--accent-fg)",
         border: "none",
         borderRadius: 10,
         fontSize: 15,
@@ -531,7 +531,7 @@ function RemainingBadge({ candidates }) {
           height: 22,
           borderRadius: "50%",
           background: "var(--accent)",
-          color: "#fff",
+          color: "var(--accent-fg)",
           fontSize: 12,
           fontWeight: 700
         }}>{candidates.length}</span>
@@ -843,6 +843,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
           --card-bg: #f4f4f5;
           --hover-bg: #ebebed;
           --accent: #3f3f46;
+          --accent-fg: #ffffff;
           --accent-bg: rgba(63, 63, 70, 0.06);
           --bg-top: #fafafa;
           --bg-bottom: #f0f0f2;
@@ -855,6 +856,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
           --card-bg: #1c1c21;
           --hover-bg: #252529;
           --accent: #d4d4d8;
+          --accent-fg: #111114;
           --accent-bg: rgba(212, 212, 216, 0.08);
           --bg-top: #111114;
           --bg-bottom: #18181b;
@@ -968,7 +970,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
             style={{
               padding: "14px 36px",
               background: "linear-gradient(135deg, #3f3f46, #27272a)",
-              color: "#fff",
+              color: "var(--accent-fg)",
               border: "none",
               borderRadius: 12,
               fontSize: 16,
@@ -1042,7 +1044,7 @@ export default function RiwayatIdentifier({ onDocs, darkMode, toggleDark }) {
           <div style={{ textAlign: "center", maxWidth: 560, margin: "0 auto", animation: "fadeSlideUp 0.5s ease-out" }}>
             <p style={{ fontSize: 16, color: "var(--sub)", marginBottom: 16 }}>No exact match found. Try again and listen carefully to each feature.</p>
             <button onClick={handleReset} style={{
-              padding: "12px 24px", background: "var(--accent)", color: "#fff", border: "none", borderRadius: 10,
+              padding: "12px 24px", background: "var(--accent)", color: "var(--accent-fg)", border: "none", borderRadius: 10,
               fontSize: 15, fontWeight: 700, cursor: "pointer", fontFamily: "'DM Sans', sans-serif"
             }}>Start Over</button>
           </div>
