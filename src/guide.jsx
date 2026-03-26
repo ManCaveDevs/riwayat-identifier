@@ -33,6 +33,10 @@ const FEATURE_LABELS = {
     label: "Imalah", arabic: "\u0625\u0645\u0627\u0644\u0629",
     values: { none: "None", partial: "Partial (taqlil)", heavy: "Full (imalah kubra)" }
   },
+  maaliki: {
+    label: "Maaliki / Maliki", arabic: "\u0645\u064E\u0627\u0644\u0650\u0643\u0650 / \u0645\u064E\u0644\u0650\u0643\u0650",
+    values: { maaliki: "M\u0101liki (long Alif)", maliki: "Maliki (short)" }
+  },
   madd: {
     label: "Madd Munfasil", arabic: "\u0645\u062F \u0645\u0646\u0641\u0635\u0644",
     values: { short: "Short (2 harakaat)", medium: "Medium (4 harakaat)", long: "Long (6 harakaat)" }
@@ -72,6 +76,14 @@ const FEATURE_LABELS = {
   haKinayah: {
     label: "Ha' al-Kinayah", arabic: "\u0647\u0627\u0621 \u0627\u0644\u0643\u0646\u0627\u064A\u0629",
     values: { standard: "Standard", with_sila: "With sila" }
+  },
+  silatMim: {
+    label: "Silat Mim al-Jam'", arabic: "\u0635\u0644\u0629 \u0645\u064A\u0645 \u0627\u0644\u062C\u0645\u0639",
+    values: { yes: "Yes", optional: "Optional (with khulf)", no: "No" }
+  },
+  waqfHamzah: {
+    label: "Waqf on Hamzah", arabic: "\u0648\u0642\u0641 \u0627\u0644\u0647\u0645\u0632\u0629",
+    values: { full: "Takhfif on all hamzahs", final_only: "Final hamzahs only", no: "No" }
   }
 };
 
@@ -85,17 +97,9 @@ const EXTRA_FEATURE_LABELS = {
     label: "Naql", arabic: "\u0627\u0644\u0646\u0642\u0644",
     values: { yes: "Yes (transfers hamzah vowel)", no: "No" }
   },
-  silatMim: {
-    label: "Silat Mim al-Jam'", arabic: "\u0635\u0644\u0629 \u0645\u064A\u0645 \u0627\u0644\u062C\u0645\u0639",
-    values: { yes: "Yes", optional: "Optional (with khulf)", no: "No" }
-  },
   taghlithLam: {
     label: "Taghlith al-Lam", arabic: "\u062A\u063A\u0644\u064A\u0638 \u0627\u0644\u0644\u0627\u0645",
     values: { yes: "Yes (after sad/ta'/tha')", no: "No" }
-  },
-  waqfHamzah: {
-    label: "Waqf on Hamzah", arabic: "\u0648\u0642\u0641 \u0627\u0644\u0647\u0645\u0632\u0629",
-    values: { full: "Takhfif on all hamzahs", final_only: "Final hamzahs only", no: "No" }
   },
   maddMuttasil: {
     label: "Madd Muttasil", arabic: "\u0645\u062F \u0645\u062A\u0635\u0644",
@@ -113,26 +117,26 @@ const EXTRA_FEATURE_LABELS = {
 
 // Map riwayah ID to extra feature values
 const EXTRA_FEATURES = {
-  1:  { sakt: "four_places", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },   // Hafs
-  2:  { sakt: "no", naql: "yes", silatMim: "no", taghlithLam: "yes", waqfHamzah: "no", maddMuttasil: "long", maddBadl: "three_options", imalahHaTanith: "no" },    // Warsh
-  3:  { sakt: "no", naql: "no", silatMim: "optional", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },      // Qalun
-  4:  { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Duri Abu Amr
-  5:  { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Susi
-  6:  { sakt: "yes", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "full", maddMuttasil: "long", maddBadl: "short", imalahHaTanith: "no" },           // Khalaf an Hamzah
-  7:  { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "full", maddMuttasil: "long", maddBadl: "short", imalahHaTanith: "no" },            // Khallad
-  8:  { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "yes" },           // Abu al-Harith
-  9:  { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "yes" },           // Duri Kisai
-  10: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "final_only", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },    // Hisham
-  11: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Ibn Dhakwan
-  12: { sakt: "no", naql: "no", silatMim: "yes", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },           // Bazzi
-  13: { sakt: "no", naql: "no", silatMim: "yes", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },           // Qunbul
-  14: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Shubah
-  15: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Ibn Wardan
-  16: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Ibn Jammaz
-  17: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Ruways
-  18: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Rawh
-  19: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Ishaq
-  20: { sakt: "no", naql: "no", silatMim: "no", taghlithLam: "no", waqfHamzah: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Idris
+  1:  { sakt: "four_places", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },   // Hafs
+  2:  { sakt: "no", naql: "yes", taghlithLam: "yes", maddMuttasil: "long", maddBadl: "three_options", imalahHaTanith: "no" },    // Warsh
+  3:  { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },      // Qalun
+  4:  { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Duri Abu Amr
+  5:  { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Susi
+  6:  { sakt: "yes", naql: "no", taghlithLam: "no", maddMuttasil: "long", maddBadl: "short", imalahHaTanith: "no" },           // Khalaf an Hamzah
+  7:  { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "long", maddBadl: "short", imalahHaTanith: "no" },            // Khallad
+  8:  { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "yes" },           // Abu al-Harith
+  9:  { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "yes" },           // Duri Kisai
+  10: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },    // Hisham
+  11: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Ibn Dhakwan
+  12: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },           // Bazzi
+  13: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },           // Qunbul
+  14: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Shubah
+  15: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Ibn Wardan
+  16: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Ibn Jammaz
+  17: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Ruways
+  18: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Rawh
+  19: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Ishaq
+  20: { sakt: "no", naql: "no", taghlithLam: "no", maddMuttasil: "medium", maddBadl: "short", imalahHaTanith: "no" },            // Idris
 };
 
 function FeatureRow({ featureKey, value }) {
