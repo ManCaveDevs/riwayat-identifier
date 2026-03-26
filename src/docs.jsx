@@ -120,6 +120,21 @@ const FEATURES = [
     name: "Idgham Kabir",
     arabic: "\u0627\u0644\u0625\u062F\u063A\u0627\u0645 \u0627\u0644\u0643\u0628\u064A\u0631",
     description: "Merging identical or similar letters across word boundaries so they flow together as one sound. Al-Susi, Ruways, and Hisham are among those known for this. It gives the recitation a distinctly smooth, connected quality."
+  },
+  {
+    name: "Imalah Scope",
+    arabic: "\u0646\u0637\u0627\u0642 \u0627\u0644\u0625\u0645\u0627\u0644\u0629",
+    description: "Among readers who have imalah, the scope varies. Some apply it only in standard positions (common words with ya-origin alifs), while Duri al-Kisa'i extends it to additional words and positions, giving his recitation a broader imalah presence."
+  },
+  {
+    name: "Extra Ya'",
+    arabic: "\u064A\u0627\u0621\u0627\u062A \u0627\u0644\u0632\u0648\u0627\u0626\u062F",
+    description: "Ya'qub al-Hadrami's reading adds a Ya' at the end of certain words where other readings omit it. Both his narrators, Ruways and Rawh, share this feature, which is one of the clearest markers of his qira'ah."
+  },
+  {
+    name: "Ha' al-Kinayah",
+    arabic: "\u0647\u0627\u0621 \u0627\u0644\u0643\u0646\u0627\u064A\u0629",
+    description: "The pronoun Ha' (his/him) is normally read short. Some narrators, like Ibn Wardan and Ruways, connect it with an extra vowel (sila), making it audibly longer. This is a narrator-level distinction, not a qari-level one."
   }
 ];
 
@@ -386,7 +401,7 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
             <div>
               <h2 style={h2Style}>Key Distinguishing Features</h2>
               <p style={{ ...subStyle, marginBottom: 12 }}>
-                These are the audible <strong>usul</strong> (systematic rules) the tool listens for, not farsh (word-level differences). See the <span onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}>Guide</span> for both.
+                These are the 12 <strong>usul</strong> (systematic rules) the tool uses to identify a riwayah. Most are audible; some distinguish narrators of the same qari. See the <span onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}>Guide</span> for these plus additional features and farsh examples.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
