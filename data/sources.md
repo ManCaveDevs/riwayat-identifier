@@ -86,3 +86,5 @@
 | 2026-03-25 | Hisham | basmalah | always | not_always | nquran 16699: not listed as difference from Ibn Dhakwan, shared qari rule |
 | 2026-03-25 | Hisham | imalah | none | partial | nquran 16699: selective imalah on specific words per Tayyibah |
 | 2026-03-25 | Ibn Dhakwan | imalah | none | partial | nquran 16677: extensive imalah kubra on limited positions via al-Suri tariq |
+| 2026-03-26 | Al-Bazzi | madd | medium | short | An-Nashr (باب المد والقصر): Ibn Kathir has qasr without disagreement; confirmed by Wikipedia (Bazzi article): "يقرأ بقصر المنفصل" |
+| 2026-03-26 | Qunbul | madd | medium | short | An-Nashr (باب المد والقصر): Ibn Kathir has qasr without disagreement; same qari-level rule as Bazzi |

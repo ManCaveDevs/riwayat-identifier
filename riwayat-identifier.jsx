@@ -109,7 +109,7 @@ const RIWAYAT = [
     region: "Historically Mecca",
     traits: ["Maliki (short)", "Takbir between surahs in Juz' 'Amma", "Standard Sad in al-Sirat", "Silat Mim al-Jam'", "Distinctive hamzah handling in some words"],
     color: "#42A5F5",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "yes", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "yes", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Qunbul 'an Ibn Kathir",
@@ -118,7 +118,7 @@ const RIWAYAT = [
     region: "Historically Mecca",
     traits: ["Maliki (short)", "al-Sirat with Sin", "Silat Mim al-Jam'", "Connects Hamzahs (reads certain double-hamzahs differently)"],
     color: "#FFD54F",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sin", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sin", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
   },
   {
     name: "Shu'bah 'an 'Asim",

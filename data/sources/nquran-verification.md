@@ -164,8 +164,8 @@ This is farsh, not usul. Verified via scholarly consensus and web sources:
 | 9 | Duri Kisai | heavy | maaliki | medium | always | clear | no | sad | standard | no | broad | no | standard |
 | 10 | Hisham | partial | maliki | medium | not_always | softened | no | sad | standard | no | none | yes | standard |
 | 11 | Ibn Dhakwan | partial | maliki | medium | not_always | clear | no | sad | standard | no | none | no | standard |
-| 12 | Bazzi | none | maliki | medium | always | clear | yes | sad | standard | no | none | no | standard |
-| 13 | Qunbul | none | maliki | medium | always | clear | no | sin | standard | no | none | no | standard |
+| 12 | Bazzi | none | maliki | short | always | clear | yes | sad | standard | no | none | no | standard |
+| 13 | Qunbul | none | maliki | short | always | clear | no | sin | standard | no | none | no | standard |
 | 14 | Shu'bah | none | maaliki | medium | always | clear | no | sad | standard | no | none | no | standard |
 | 15 | Ibn Wardan | none | maliki | short | always | softened | no | sad | standard | no | none | no | with_sila |
 | 16 | Ibn Jammaz | none | maliki | short | always | softened | no | sad | standard | no | none | no | standard |

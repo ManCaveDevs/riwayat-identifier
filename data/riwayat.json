@@ -298,7 +298,7 @@
       "features": {
         "imalah": "none",
         "maaliki": "maliki",
-        "madd": "medium",
+        "madd": "short",
         "basmalah": "always",
         "hamzah": "clear",
         "takbir": "yes",
@@ -309,7 +309,7 @@
         "idghamKabir": "no",
         "haKinayah": "standard"
       },
-      "notes": "Takbir between surahs from Al-Duha to Al-Nas. Distinctive hamzah handling in some words (idkhal between two hamzahs)."
+      "notes": "Takbir between surahs from Al-Duha to Al-Nas. Madd munfasil = qasr (2 harakaat) per An-Nashr and scholarly consensus. Distinctive hamzah handling in some words (idkhal between two hamzahs)."
     },
     {
       "id": 13,
@@ -322,7 +322,7 @@
       "features": {
         "imalah": "none",
         "maaliki": "maliki",
-        "madd": "medium",
+        "madd": "short",
         "basmalah": "always",
         "hamzah": "clear",
         "takbir": "no",
@@ -333,7 +333,7 @@
         "idghamKabir": "no",
         "haKinayah": "standard"
       },
-      "notes": "al-Sirat with Sin. No takbir (only Bazzi has takbir per nquran). Connects hamzahs in certain double-hamzah constructions."
+      "notes": "al-Sirat with Sin. No takbir (only Bazzi has takbir per nquran). Madd munfasil = qasr (2 harakaat), same as Bazzi. Connects hamzahs in certain double-hamzah constructions."
     },
     {
       "id": 14,
