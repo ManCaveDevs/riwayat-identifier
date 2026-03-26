@@ -3,11 +3,11 @@ import NavBar from "./NavBar.jsx";
 import riwayatData from "../data/riwayat.json";
 
 const QIRAAT = [
-  { qari: "Nafi' al-Madani", city: "Medina", period: "d. 169 AH", description: "Called 'Imam of the People' by Imam Malik. Of Persian descent, he systemized his reading by comparing 70 tabi'in teachers." },
+  { qari: "Nafi' al-Madani", city: "Medina", period: "d. 169 AH", description: "Called 'Imam of the People' by Imam Malik. Of Persian descent, he systematized his reading by comparing 70 tabi'in teachers." },
   { qari: "Ibn Kathir al-Makki", city: "Mecca", period: "d. 120 AH", description: "A hadith scholar and judge of Mecca who directly met companions including Ibn al-Zubayr and Anas ibn Malik." },
   { qari: "Abu 'Amr ibn al-'Ala'", city: "Basra", period: "d. 154 AH", description: "A native Arab from Banu Hanifa who traveled the most among the qurra' and had the largest number of teachers." },
   { qari: "Ibn 'Amir al-Dimashqi", city: "Damascus", period: "d. 118 AH", description: "A native Arab with the shortest isnad among all 10 qurra'. He learned directly from Abu al-Darda'." },
-  { qari: "'Asim ibn Abi al-Najud", city: "Kufa", period: "d. 127 AH", description: "Was blind but had one of the finest voices of recitation. His reading was influenced by both Ibn Mas'ud and 'Ali." },
+  { qari: "'Asim ibn Abi al-Najud", city: "Kufa", period: "d. 127 AH", description: "Known for one of the finest voices of recitation. His reading was influenced by both Ibn Mas'ud and 'Ali." },
   { qari: "Hamzah al-Zayyat", city: "Kufa", period: "d. 156 AH", description: "An oil merchant who never accepted compensation for Quranic teaching. Known for heavy imalah and long madd." },
   { qari: "Al-Kisa'i", city: "Kufa", period: "d. 189 AH", description: "Of Persian descent, a leading grammarian who reviewed the Quran with Hamzah four times." },
   { qari: "Abu Ja'far al-Madani", city: "Medina", period: "d. 130 AH", description: "Nafi's teacher. Learned from Ibn 'Abbas and Abu Hurayrah. Known for extensive hamzah softening (tashil)." },
@@ -99,7 +99,7 @@ const EXTRA_FEATURE_LABELS = {
   },
   taghlithLam: {
     label: "Taghlith al-Lam", arabic: "\u062A\u063A\u0644\u064A\u0638 \u0627\u0644\u0644\u0627\u0645",
-    values: { yes: "Yes (after sad/ta'/tha')", no: "No" }
+    values: { yes: "Yes (lam before sad/taa/zhaa)", no: "No" }
   },
   maddMuttasil: {
     label: "Madd Muttasil", arabic: "\u0645\u062F \u0645\u062A\u0635\u0644",
@@ -279,7 +279,6 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
       background: "linear-gradient(180deg, var(--bg-top), var(--bg-bottom))",
     }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=Amiri:wght@400;700&display=swap');
         .riwayat-root {
           --heading: #1a1a1f;
           --text: #2d2d35;
@@ -320,7 +319,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
       <div style={{ maxWidth: 620, margin: "0 auto" }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 28, animation: "fadeSlideUp 0.4s ease-out" }}>
-          <div onClick={onHome} style={{
+          <div onClick={onHome} onKeyDown={e => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), onHome())} role="button" tabIndex={0} style={{
             fontSize: 28, fontFamily: "'Amiri', serif", fontWeight: 700,
             color: "var(--heading)", marginBottom: 2, direction: "rtl", cursor: "pointer"
           }}>{"\u0628\u0650\u0623\u064E\u064A\u0651\u0650 \u0631\u0650\u0648\u064E\u0627\u064A\u064E\u0629\u064D\u061F"}</div>
@@ -505,7 +504,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
                 type: "Different vowels",
                 majority: "\u0642\u064F\u0628\u064F\u0644\u064B\u0627",
                 majorityLatin: "qubula (in many types)",
-                majorityReaders: "'Asim, Hamzah, Al-Kisa'i, Abu Ja'far",
+                majorityReaders: "'Asim, Hamzah, Al-Kisa'i, Abu Ja'far, Khalaf al-'Ashir",
                 variant: "\u0642\u0650\u0628\u064E\u0644\u064B\u0627",
                 variantLatin: "qibala (face to face)",
                 variantReaders: "Nafi', Ibn Kathir, Abu 'Amr, Ibn 'Amir, Ya'qub",

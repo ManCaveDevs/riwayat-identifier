@@ -297,7 +297,8 @@ const QUESTIONS = [
     feature: "imalahScope",
     options: [
       { label: "Broad \u2014 imalah on many extra words", value: "broad" },
-      { label: "Standard \u2014 common positions only", value: "standard" }
+      { label: "Standard \u2014 common positions only", value: "standard" },
+      { label: "None", value: "none" }
     ]
   },
   {
@@ -879,7 +880,6 @@ export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, t
       background: "linear-gradient(180deg, var(--bg-top), var(--bg-bottom))",
     }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=Amiri:wght@400;700&display=swap');
         .riwayat-root {
           --heading: #1a1a1f;
           --text: #2d2d35;
@@ -963,7 +963,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, t
               margin: "0 0 12px 0",
               lineHeight: 1.7
             }}>
-              The Qur'an is one Scripture, but it was revealed in multiple modes called <em>ahruf</em>, a divine concession to ease recitation for the ummah. Over time, these were preserved and systemized into <strong>recognized readings</strong> called <em>qira'at</em>, each transmitted through unbroken chains back to the Prophet &#xFDFA;.
+              The Qur'an is one Scripture, but it was revealed in multiple modes called <em>ahruf</em>, a divine concession to ease recitation for the ummah. Over time, these were preserved and systematized into <strong>recognized readings</strong> called <em>qira'at</em>, each transmitted through unbroken chains back to the Prophet &#xFDFA;.
             </p>
             <p style={{
               fontSize: 15,
@@ -1005,7 +1005,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, t
             Start Identifying
           </button>
 
-          <p
+          <button
             onClick={() => { window.history.pushState(null, null, '/riwayat-identifier/docs/qiraat'); window.dispatchEvent(new PopStateEvent('popstate')); }}
             style={{
               fontSize: 13,
@@ -1014,10 +1014,16 @@ export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, t
               cursor: "pointer",
               textDecoration: "underline",
               textUnderlineOffset: 3,
+              background: "none",
+              border: "none",
+              padding: 0,
+              font: "inherit",
+              display: "block",
+              margin: "12px auto 0",
             }}
           >
             Learn about the Qira'at
-          </p>
+          </button>
 
         </div>
       ) : (
@@ -1025,6 +1031,9 @@ export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, t
           {/* Compact header during quiz, clickable to go home */}
           <div
             onClick={handleReset}
+            onKeyDown={e => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), handleReset())}
+            role="button"
+            tabIndex={0}
             style={{
               textAlign: "center",
               maxWidth: 560,
