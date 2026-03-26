@@ -104,7 +104,7 @@ const FEATURES = [
   {
     name: "Takbir",
     arabic: "\u0627\u0644\u062A\u0643\u0628\u064A\u0631",
-    description: "Saying 'Allahu Akbar' between surahs from Al-Duha (93) to Al-Nas (114). This is a distinctive feature of Ibn Kathir's reading."
+    description: "Saying 'Allahu Akbar' between surahs from Al-Duha (93) to Al-Nas (114). This is a distinctive feature of Al-Bazzi's narration from Ibn Kathir."
   },
   {
     name: "Al-Sirat Pronunciation",
