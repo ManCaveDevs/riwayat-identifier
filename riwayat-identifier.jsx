@@ -10,7 +10,7 @@ const RIWAYAT = [
     region: "Most of the Muslim world: Saudi Arabia, Egypt, South/Southeast Asia, Turkey",
     traits: ["Maaliki with long Alif", "Short madd munfasil (2 harakaat)", "No imalah", "Clear hamzahs", "The most widely used riwayah globally"],
     color: "#66BB6A",
-    imalah: "none", maaliki: "maaliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maaliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Warsh 'an Nafi'",
@@ -19,7 +19,7 @@ const RIWAYAT = [
     region: "North Africa: Morocco, Algeria, parts of Libya, West Africa",
     traits: ["Taqlil (partial imalah) on Alifs", "Frequent tashil and ibdal of Hamzahs", "Thin Ra' in specific positions", "Long madd munfasil (6 harakaat)", "Basmalah, sakt, or wasl between surahs", "Naql (transferring Hamzah's vowel to preceding letter)"],
     color: "#FF7043",
-    imalah: "partial", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "thin", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "thin", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Qalun 'an Nafi'",
@@ -28,7 +28,7 @@ const RIWAYAT = [
     region: "Libya, Tunisia, parts of Qatar",
     traits: ["Maliki (short)", "Short madd munfasil (2 harakaat)", "No imalah", "Tashil on double hamzahs", "Same Qari' as Warsh but very different sound", "Silat Mim al-Jam' (connecting plural mim with a short vowel)"],
     color: "#66BB6A",
-    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "optional", waqfHamzah: "no"
   },
   {
     name: "Al-Duri 'an Abu 'Amr",
@@ -37,7 +37,7 @@ const RIWAYAT = [
     region: "Sudan, parts of West Africa, Somalia",
     traits: ["Partial imalah (taqlil) on some Alifs", "Some hamzah softening", "Medium madd munfasil (4-5 harakaat)"],
     color: "#42A5F5",
-    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Al-Susi 'an Abu 'Amr",
@@ -46,7 +46,7 @@ const RIWAYAT = [
     region: "Historically Basra (Iraq)",
     traits: ["Partial imalah (taqlil) on specific words", "Extensive idgham kabir (identical + similar letters)", "Ibdal of quiescent hamzahs", "Medium madd munfasil"],
     color: "#26A69A",
-    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Khalaf 'an Hamzah",
@@ -55,7 +55,7 @@ const RIWAYAT = [
     region: "Historically Kufa (Iraq)",
     traits: ["Heavy imalah on many words", "Ishmam on al-Sirat", "No basmalah option between surahs", "Sakt (pause) on certain hamzahs when stopping", "Waqf on hamzah (takhfif)"],
     color: "#E8B931",
-    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "full"
   },
   {
     name: "Khallad 'an Hamzah",
@@ -64,7 +64,7 @@ const RIWAYAT = [
     region: "Historically Kufa (Iraq)",
     traits: ["Heavy imalah on many words", "Ishmam on al-Sirat in Fatihah", "Comprehensive idgham kabir", "No basmalah option between surahs", "Long madd munfasil (6 harakaat)", "Waqf on hamzah (takhfif)"],
     color: "#4CAF50",
-    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "yes", haKinayah: "standard", silatMim: "no", waqfHamzah: "full"
   },
   {
     name: "Abu al-Harith 'an Al-Kisa'i",
@@ -73,7 +73,7 @@ const RIWAYAT = [
     region: "Historically Kufa (Iraq)",
     traits: ["Heavy imalah on ha' al-ta'nith and Alifs", "Basmalah between surahs", "Idgham of specific letter pairs", "Known for elegant grammatical tradition"],
     color: "#546E7A",
-    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Al-Duri 'an Al-Kisa'i",
@@ -82,7 +82,7 @@ const RIWAYAT = [
     region: "Historically Kufa (Iraq)",
     traits: ["Heavy imalah, even broader than Abu al-Harith", "Basmalah between surahs", "Same Duri who also narrates from Abu 'Amr", "Extensive imalah system"],
     color: "#AB47BC",
-    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "broad", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "broad", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Hisham 'an Ibn 'Amir",
@@ -91,7 +91,7 @@ const RIWAYAT = [
     region: "Historically Damascus (Syria)",
     traits: ["Maliki (short)", "Medium madd munfasil", "Tashil on some double-Hamzahs", "Idgham of dhal and dal into following letters", "Ha' al-Kinayah treated distinctly"],
     color: "#FFA726",
-    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard", silatMim: "no", waqfHamzah: "final_only"
   },
   {
     name: "Ibn Dhakwan 'an Ibn 'Amir",
@@ -100,7 +100,7 @@ const RIWAYAT = [
     region: "Historically Damascus (Syria)",
     traits: ["Maliki (short)", "Medium madd munfasil", "Clear Hamzahs with no tashil", "Distinctive word forms shared with Hisham", "Closer to Hafs in many rulings"],
     color: "#5C9BD4",
-    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Al-Bazzi 'an Ibn Kathir",
@@ -109,7 +109,7 @@ const RIWAYAT = [
     region: "Historically Mecca",
     traits: ["Maliki (short)", "Takbir between surahs in Juz' 'Amma", "Standard Sad in al-Sirat", "Silat Mim al-Jam'", "Distinctive hamzah handling in some words"],
     color: "#42A5F5",
-    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "yes", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "yes", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "yes", waqfHamzah: "no"
   },
   {
     name: "Qunbul 'an Ibn Kathir",
@@ -118,7 +118,7 @@ const RIWAYAT = [
     region: "Historically Mecca",
     traits: ["Maliki (short)", "al-Sirat with Sin", "Silat Mim al-Jam'", "Connects Hamzahs (reads certain double-hamzahs differently)"],
     color: "#FFD54F",
-    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sin", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sin", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "yes", waqfHamzah: "no"
   },
   {
     name: "Shu'bah 'an 'Asim",
@@ -127,7 +127,7 @@ const RIWAYAT = [
     region: "Historically Kufa (Iraq), less common today",
     traits: ["Maaliki with long Alif", "Medium madd munfasil (4 harakaat)", "No imalah", "Same Qari' as Hafs but different transmission", "Different word choices in several ayat"],
     color: "#FFA726",
-    imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Ibn Wardan 'an Abu Ja'far",
@@ -136,7 +136,7 @@ const RIWAYAT = [
     region: "Historically Medina",
     traits: ["Maliki (short)", "Short madd munfasil", "Tashil of many Hamzahs", "Ha' al-kinayah with sila", "One of the 3 additional Qurra' (making 10)"],
     color: "#CE93D8",
-    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "with_sila"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "with_sila", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Ibn Jammaz 'an Abu Ja'far",
@@ -145,7 +145,7 @@ const RIWAYAT = [
     region: "Historically Medina",
     traits: ["Maliki (short)", "Short madd munfasil", "Tashil of Hamzahs", "One of the 3 additional Qurra'", "Standard ha' al-kinayah treatment"],
     color: "#BA68C8",
-    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Ya'qub al-Hadrami (Ruways)",
@@ -154,7 +154,7 @@ const RIWAYAT = [
     region: "Historically Basra (Iraq)",
     traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Idgham kabir in specific positions", "Hamzah tashil and naql", "Ha' al-kinayah with sila"],
     color: "#7E57C2",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "yes", haKinayah: "with_sila"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "yes", haKinayah: "with_sila", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Ya'qub al-Hadrami (Rawh)",
@@ -163,7 +163,7 @@ const RIWAYAT = [
     region: "Historically Basra (Iraq)",
     traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Standard ha' al-kinayah", "Fewer ishmam cases than Ruways"],
     color: "#9575CD",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Khalaf al-'Ashir (Ishaq)",
@@ -172,7 +172,7 @@ const RIWAYAT = [
     region: "Historically Baghdad (Iraq)",
     traits: ["Maaliki with long Alif", "Medium madd munfasil", "The 10th Qari'", "Heavy imalah like Hamzah", "No basmalah between surahs", "Idgham kabir in specific positions"],
     color: "#EF5350",
-    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "yes", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Khalaf al-'Ashir (Idris)",
@@ -181,7 +181,7 @@ const RIWAYAT = [
     region: "Historically Baghdad (Iraq)",
     traits: ["Maaliki with long Alif", "Medium madd munfasil", "The 10th Qari'", "Heavy imalah like Hamzah", "No basmalah between surahs", "No idgham kabir"],
     color: "#E57373",
-    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   }
 ];
 
@@ -320,6 +320,30 @@ const QUESTIONS = [
     options: [
       { label: "With sila \u2014 connecting vowel added", value: "with_sila" },
       { label: "Standard \u2014 short, no connecting vowel", value: "standard" }
+    ]
+  },
+  {
+    id: "silatMim",
+    question: "Is the Mim of plural pronouns (\u0647\u064F\u0645\u0652 / \u0643\u064F\u0645\u0652) connected with a vowel before the next word?",
+    description: "Silat Mim al-Jam' means the plural Mim is extended with a short Waw or Ya' when followed by a voweled letter, e.g. \u0639\u064E\u0644\u064E\u064A\u0652\u0647\u0650\u0645\u064F\u0648 instead of \u0639\u064E\u0644\u064E\u064A\u0652\u0647\u0650\u0645\u0652.",
+    example: "\u0639\u064E\u0644\u064E\u064A\u0652\u0647\u0650\u0645\u064F\u0648 \u0623\u064E\u0646\u0652\u0639\u064E\u0645\u0652\u062A\u064E (with sila) vs \u0639\u064E\u0644\u064E\u064A\u0652\u0647\u0650\u0645\u0652 \u0623\u064E\u0646\u0652\u0639\u064E\u0645\u0652\u062A\u064E (no sila)",
+    feature: "silatMim",
+    options: [
+      { label: "Yes \u2014 always connected", value: "yes" },
+      { label: "Sometimes \u2014 optional connection", value: "optional" },
+      { label: "No \u2014 standard (no sila)", value: "no" }
+    ]
+  },
+  {
+    id: "waqfHamzah",
+    question: "When stopping on a word ending with Hamzah, is the Hamzah changed?",
+    description: "Some readings alter the final Hamzah when pausing \u2014 replacing it with a vowel letter, softening it (tashil), or dropping it entirely. Others keep the Hamzah as-is.",
+    example: "e.g. \u0627\u0644\u0633\u0651\u064E\u0645\u064E\u0627\u0621 \u2192 \u0627\u0644\u0633\u0651\u064E\u0645\u064E\u0627 (Hamzah dropped at pause)",
+    feature: "waqfHamzah",
+    options: [
+      { label: "Yes \u2014 extensive changes to Hamzah at pause", value: "full" },
+      { label: "Some \u2014 only certain final Hamzahs", value: "final_only" },
+      { label: "No \u2014 Hamzah kept as-is", value: "no" }
     ]
   }
 ];

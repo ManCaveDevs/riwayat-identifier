@@ -21,9 +21,9 @@
 4. `src/guide.jsx` EXTRA_FEATURES — supplementary features not in the identifier
 
 ### Known rawi-level distinctions (these SHOULD differ between narrators):
-- Nafi': Warsh has imalah/long madd/thin ra'/basmalah options; Qalun does not
+- Nafi': Warsh has imalah/long madd/thin ra'/basmalah options; Qalun has silat mim (optional) instead
 - Abu 'Amr: Susi has idgham kabir; Duri does not
-- Ibn 'Amir: Hisham has idgham kabir + softened hamzah; Ibn Dhakwan does not
+- Ibn 'Amir: Hisham has idgham kabir + softened hamzah + waqf hamzah (final_only); Ibn Dhakwan does not
 - Ibn Kathir: Bazzi has takbir + sad sirat; Qunbul has no takbir + sin sirat
 - Kisa'i: Duri has broad imalah scope; Abu al-Harith has standard
 - Abu Ja'far: Ibn Wardan has ha' kinayah with sila; Ibn Jammaz does not

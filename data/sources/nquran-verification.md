@@ -151,25 +151,25 @@ This is farsh, not usul. Verified via scholarly consensus and web sources:
 
 ## Feature Value Summary — All 20 Riwayat
 
-| ID | Name | imalah | maaliki | madd | basmalah | hamzah | takbir | sirat | ra | extraYa | imalahScope | idghamKabir | haKinayah |
-|----|------|--------|---------|------|----------|--------|--------|-------|-----|---------|-------------|-------------|-----------|
-| 1 | Hafs | none | maaliki | short | always | clear | no | sad | standard | no | none | no | standard |
-| 2 | Warsh | partial | maliki | long | not_always | softened | no | sad | thin | no | none | no | standard |
-| 3 | Qalun | none | maliki | short | always | softened | no | sad | standard | no | none | no | standard |
-| 4 | Duri Abu Amr | partial | maliki | medium | not_always | softened | no | sad | standard | no | none | no | standard |
-| 5 | Susi | partial | maliki | medium | not_always | softened | no | sad | standard | no | none | yes | standard |
-| 6 | Khalaf Hamzah | heavy | maliki | long | not_always | clear | no | ishmam | standard | no | standard | no | standard |
-| 7 | Khallad | heavy | maliki | long | not_always | clear | no | ishmam | standard | no | standard | yes | standard |
-| 8 | Abu al-Harith | heavy | maaliki | medium | always | clear | no | sad | standard | no | standard | no | standard |
-| 9 | Duri Kisai | heavy | maaliki | medium | always | clear | no | sad | standard | no | broad | no | standard |
-| 10 | Hisham | partial | maliki | medium | not_always | softened | no | sad | standard | no | none | yes | standard |
-| 11 | Ibn Dhakwan | partial | maliki | medium | not_always | clear | no | sad | standard | no | none | no | standard |
-| 12 | Bazzi | none | maliki | short | always | clear | yes | sad | standard | no | none | no | standard |
-| 13 | Qunbul | none | maliki | short | always | clear | no | sin | standard | no | none | no | standard |
-| 14 | Shu'bah | none | maaliki | medium | always | clear | no | sad | standard | no | none | no | standard |
-| 15 | Ibn Wardan | none | maliki | short | always | softened | no | sad | standard | no | none | no | with_sila |
-| 16 | Ibn Jammaz | none | maliki | short | always | softened | no | sad | standard | no | none | no | standard |
-| 17 | Ruways | none | maliki | medium | always | softened | no | sad | standard | yes | none | yes | with_sila |
-| 18 | Rawh | none | maliki | medium | always | clear | no | sad | standard | yes | none | no | standard |
-| 19 | Ishaq | heavy | maaliki | medium | not_always | clear | no | sad | standard | no | standard | yes | standard |
-| 20 | Idris | heavy | maaliki | medium | not_always | clear | no | sad | standard | no | standard | no | standard |
+| ID | Name | imalah | maaliki | madd | basmalah | hamzah | takbir | sirat | ra | extraYa | imalahScope | idghamKabir | haKinayah | silatMim | waqfHamzah |
+|----|------|--------|---------|------|----------|--------|--------|-------|-----|---------|-------------|-------------|-----------|----------|------------|
+| 1 | Hafs | none | maaliki | short | always | clear | no | sad | standard | no | none | no | standard | no | no |
+| 2 | Warsh | partial | maliki | long | not_always | softened | no | sad | thin | no | none | no | standard | no | no |
+| 3 | Qalun | none | maliki | short | always | softened | no | sad | standard | no | none | no | standard | optional | no |
+| 4 | Duri Abu Amr | partial | maliki | medium | not_always | softened | no | sad | standard | no | none | no | standard | no | no |
+| 5 | Susi | partial | maliki | medium | not_always | softened | no | sad | standard | no | none | yes | standard | no | no |
+| 6 | Khalaf Hamzah | heavy | maliki | long | not_always | clear | no | ishmam | standard | no | standard | no | standard | no | full |
+| 7 | Khallad | heavy | maliki | long | not_always | clear | no | ishmam | standard | no | standard | yes | standard | no | full |
+| 8 | Abu al-Harith | heavy | maaliki | medium | always | clear | no | sad | standard | no | standard | no | standard | no | no |
+| 9 | Duri Kisai | heavy | maaliki | medium | always | clear | no | sad | standard | no | broad | no | standard | no | no |
+| 10 | Hisham | partial | maliki | medium | not_always | softened | no | sad | standard | no | none | yes | standard | no | final_only |
+| 11 | Ibn Dhakwan | partial | maliki | medium | not_always | clear | no | sad | standard | no | none | no | standard | no | no |
+| 12 | Bazzi | none | maliki | short | always | clear | yes | sad | standard | no | none | no | standard | yes | no |
+| 13 | Qunbul | none | maliki | short | always | clear | no | sin | standard | no | none | no | standard | yes | no |
+| 14 | Shu'bah | none | maaliki | medium | always | clear | no | sad | standard | no | none | no | standard | no | no |
+| 15 | Ibn Wardan | none | maliki | short | always | softened | no | sad | standard | no | none | no | with_sila | no | no |
+| 16 | Ibn Jammaz | none | maliki | short | always | softened | no | sad | standard | no | none | no | standard | no | no |
+| 17 | Ruways | none | maliki | medium | always | softened | no | sad | standard | yes | none | yes | with_sila | no | no |
+| 18 | Rawh | none | maliki | medium | always | clear | no | sad | standard | yes | none | no | standard | no | no |
+| 19 | Ishaq | heavy | maaliki | medium | not_always | clear | no | sad | standard | no | standard | yes | standard | no | no |
+| 20 | Idris | heavy | maaliki | medium | not_always | clear | no | sad | standard | no | standard | no | standard | no | no |

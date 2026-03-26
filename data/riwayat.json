@@ -6,7 +6,7 @@
       "An-Nashr fi al-Qira'at al-'Ashr by Ibn al-Jazari (via islamweb.net)",
       "جدول أصول القراءات والقراء العشر (archive.org/details/20211118_20211118_2313)"
     ],
-    "lastUpdated": "2026-03-24",
+    "lastUpdated": "2026-03-26",
     "featureKeys": {
       "imalah": "none = no tilting | partial = taqlil/bayna bayna | heavy = imalah kubra",
       "maaliki": "maaliki = long Alif (مَالِكِ) | maliki = short (مَلِكِ)",
@@ -19,7 +19,9 @@
       "extraYa": "yes = additional Ya' at end of certain words | no = standard",
       "imalahScope": "none = no imalah | standard = common positions | broad = extended to extra words",
       "idghamKabir": "yes = merging identical/similar letters across word boundaries | no = no idgham kabir",
-      "haKinayah": "standard = normal treatment | with_sila = connecting vowel added to pronoun Ha'"
+      "haKinayah": "standard = normal treatment | with_sila = connecting vowel added to pronoun Ha'",
+      "silatMim": "no = standard | optional = sometimes connects (Qalun) | yes = always connects plural mim (Ibn Kathir)",
+      "waqfHamzah": "no = standard | final_only = changes some final hamzahs (Hisham) | full = extensive hamzah changes at waqf (Hamzah)"
     }
   },
   "riwayat": [
@@ -43,7 +45,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "The most widely used riwayah globally. Madd munfasil = 2 harakaat (4 via some Tayyibah turuq)."
     },
@@ -67,7 +71,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Basmalah has 3 options: basmalah, sakt, wasl. Madd munfasil/muttasil = 6 harakaat (ishba'). Taqlil on ya-origin alifs. Extensive naql. Ra' tarqiq when preceded by ya sakinah or kasrah."
     },
@@ -91,7 +97,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "optional",
+        "waqfHamzah": "no"
       },
       "notes": "Madd munfasil = qasr (2) or tawassut (4). No imalah except هار with imalah kubra. Silat mim al-jam' optional. Has tashil on double hamzahs (same-word: tashil 2nd with idkhal; cross-word: drops 1st or tashil), but single hamzahs are mostly tahqiq."
     },
@@ -115,7 +123,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Basmalah has 3 options. Madd munfasil = 4 harakaat. No idgham kabir (reads with clarity per nquran 16698 — idgham kabir is Susi's distinction). Imalah on feminine alifs, after ra', in 11 surahs' final verses."
     },
@@ -139,7 +149,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "yes",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Extensive idgham kabir (identical + similar letters). Ibdal of quiescent hamzahs. More extensive imalah application than Duri in some positions. Per nquran comparison: Susi does idgham while Duri reads with idhar."
     },
@@ -163,7 +175,9 @@
         "extraYa": "no",
         "imalahScope": "standard",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "full"
       },
       "notes": "Ishmam on al-Sirat. Sakt (pause) on consonant before hamzah — key distinction from Khallad. Basmalah: wasl only (no basmalah between surahs). Confirmed via An-Nashr: heavy imalah on all ya-origin alifs."
     },
@@ -187,7 +201,9 @@
         "extraYa": "no",
         "imalahScope": "standard",
         "idghamKabir": "yes",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "full"
       },
       "notes": "Ishmam on al-Sirat in Umm al-Kitab (Fatihah) only, sad elsewhere. Both Khalaf and Khallad share ishmam in Fatihah. No sakt before hamzah (unlike Khalaf). Comprehensive idgham kabir. Madd = 6 harakaat (ishba')."
     },
@@ -211,7 +227,9 @@
         "extraYa": "no",
         "imalahScope": "standard",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Al-Kisa'i's imalah confirmed via An-Nashr (heavy on all ya-origin alifs + additional words not shared with Hamzah). Abu al-Harith has standard scope of imalah within Al-Kisa'i's system."
     },
@@ -235,7 +253,9 @@
         "extraYa": "no",
         "imalahScope": "broad",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Same Duri who narrates from Abu 'Amr. Broader imalah scope than Abu al-Harith — extends to additional words and positions."
     },
@@ -259,7 +279,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "yes",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "final_only"
       },
       "notes": "Tashil on some double-hamzahs. Idgham of dhal (idh) and dal (qad) into following letters. Selective imalah on specific words per Tayyibah (less extensive than Ibn Dhakwan). Basmalah has options (shared qari rule with Ibn Dhakwan). Per nquran comparison: Hisham has idgham where Ibn Dhakwan has idhar."
     },
@@ -283,7 +305,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Basmalah has 3 options per Tayyibah. Has imalah kubra on limited positions via al-Suri tariq (specific words with final alif-raa, certain past-tense verbs), but not systematic enough to be audibly distinctive. Madd munfasil = 4 harakaat."
     },
@@ -307,7 +331,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "yes",
+        "waqfHamzah": "no"
       },
       "notes": "Takbir between surahs from Al-Duha to Al-Nas. Madd munfasil = qasr (2 harakaat) per An-Nashr and scholarly consensus. Distinctive hamzah handling in some words (idkhal between two hamzahs)."
     },
@@ -331,7 +357,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "yes",
+        "waqfHamzah": "no"
       },
       "notes": "al-Sirat with Sin. No takbir (only Bazzi has takbir per nquran). Madd munfasil = qasr (2 harakaat), same as Bazzi. Connects hamzahs in certain double-hamzah constructions."
     },
@@ -355,7 +383,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Same Qari' as Hafs but very different transmission. Madd munfasil = 4 harakaat. Different word choices in several ayat vs Hafs."
     },
@@ -379,7 +409,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "with_sila"
+        "haKinayah": "with_sila",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "nquran confirms: basmalah always, no takbir, qasr on madd munfasil, extensive hamzah tashil. Ibn Wardan has sila on ha' al-kinayah in more positions than Ibn Jammaz."
     },
@@ -403,7 +435,9 @@
         "extraYa": "no",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Shares Abu Ja'far's general usul. Standard ha' al-kinayah treatment (no extra sila)."
     },
@@ -427,7 +461,9 @@
         "extraYa": "yes",
         "imalahScope": "none",
         "idghamKabir": "yes",
-        "haKinayah": "with_sila"
+        "haKinayah": "with_sila",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Idgham kabir in specific positions. Hamzah tashil on second of doubles + naql. Additional Ya' on certain words. Ha' al-kinayah with sila. Per nquran comparison: Ruways does idgham while Rawh reads with clarity."
     },
@@ -451,7 +487,9 @@
         "extraYa": "yes",
         "imalahScope": "none",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Shares Ya'qub's extra Ya' feature. Standard ha' al-kinayah (no extra sila). Fewer ishmam cases than Ruways."
     },
@@ -475,7 +513,9 @@
         "extraYa": "no",
         "imalahScope": "standard",
         "idghamKabir": "yes",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "nquran confirms: wasl only (no basmalah), no takbir, tawassut madd, heavy imalah, extensive idgham. The 10th Qari' — his own reading is distinct from his narration of Hamzah."
     },
@@ -499,7 +539,9 @@
         "extraYa": "no",
         "imalahScope": "standard",
         "idghamKabir": "no",
-        "haKinayah": "standard"
+        "haKinayah": "standard",
+        "silatMim": "no",
+        "waqfHamzah": "no"
       },
       "notes": "Same Qari' as Ishaq but no idgham kabir. Distinguished from Ishaq by this feature."
     }
