@@ -135,6 +135,16 @@ const FEATURES = [
     name: "Ha' al-Kinayah",
     arabic: "\u0647\u0627\u0621 \u0627\u0644\u0643\u0646\u0627\u064A\u0629",
     description: "The pronoun Ha' (his/him) is normally read short. Some narrators, like Ibn Wardan and Ruways, connect it with an extra vowel (sila), making it audibly longer. This is a narrator-level distinction, not a qari-level one."
+  },
+  {
+    name: "Silat Mim al-Jam'",
+    arabic: "\u0635\u0644\u0629 \u0645\u064A\u0645 \u0627\u0644\u062C\u0645\u0639",
+    description: "When the plural pronoun Mim (\u0647\u064F\u0645\u0652/\u0643\u064F\u0645\u0652) is followed by a voweled letter, some readings connect it with a short Waw or Ya'. Ibn Kathir always connects, Qalun optionally connects, and all others keep the Mim silent."
+  },
+  {
+    name: "Waqf on Hamzah",
+    arabic: "\u0648\u0642\u0641 \u0627\u0644\u0647\u0645\u0632\u0629",
+    description: "When pausing on a word ending with Hamzah, Hamzah's narrators (Khalaf and Khallad) extensively alter the Hamzah \u2014 replacing, softening, or dropping it. Hisham changes only some final Hamzahs. All other readings keep the Hamzah as-is at pause."
   }
 ];
 
@@ -401,7 +411,7 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
             <div>
               <h2 style={h2Style}>Key Distinguishing Features</h2>
               <p style={{ ...subStyle, marginBottom: 12 }}>
-                These are the 12 <strong>usul</strong> (systematic rules) the tool uses to identify a riwayah. Most are audible; some distinguish narrators of the same qari. See the <span onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}>Guide</span> for these plus additional features and farsh examples.
+                These are the 14 <strong>usul</strong> (systematic rules) the tool uses to identify a riwayah. Most are audible; some distinguish narrators of the same qari. See the <span onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}>Guide</span> for these plus additional features and farsh examples.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
