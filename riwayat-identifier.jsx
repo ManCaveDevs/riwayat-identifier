@@ -1005,25 +1005,46 @@ export default function RiwayatIdentifier({ onHome, onLearn, onExplore, darkMode
             Start Identifying
           </button>
 
-          <button
-            onClick={() => { window.history.pushState(null, null, '/riwayat-identifier/learn'); window.dispatchEvent(new PopStateEvent('popstate')); }}
-            style={{
-              fontSize: 13,
-              color: "var(--sub)",
-              marginTop: 12,
-              cursor: "pointer",
-              textDecoration: "underline",
-              textUnderlineOffset: 3,
-              background: "none",
-              border: "none",
-              padding: 0,
-              font: "inherit",
-              display: "block",
-              margin: "12px auto 0",
-            }}
-          >
-            Learn about the Qira'at
-          </button>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "center", marginTop: 16 }}>
+            <button
+              onClick={() => { window.scrollTo(0, 0); window.history.pushState(null, null, '/riwayat-identifier/learn'); window.dispatchEvent(new PopStateEvent('popstate')); }}
+              style={{
+                fontSize: 13,
+                fontWeight: 600,
+                color: "var(--sub)",
+                cursor: "pointer",
+                background: "var(--card-bg)",
+                border: "1.5px solid var(--border)",
+                borderRadius: 8,
+                padding: "8px 16px",
+                fontFamily: "'DM Sans', sans-serif",
+                transition: "all 0.2s ease"
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--text)"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--sub)"; }}
+            >
+              Learn about the Qira'at
+            </button>
+            <button
+              onClick={() => { window.scrollTo(0, 0); window.history.pushState(null, null, '/riwayat-identifier/explore'); window.dispatchEvent(new PopStateEvent('popstate')); }}
+              style={{
+                fontSize: 13,
+                fontWeight: 600,
+                color: "var(--sub)",
+                cursor: "pointer",
+                background: "var(--card-bg)",
+                border: "1.5px solid var(--border)",
+                borderRadius: 8,
+                padding: "8px 16px",
+                fontFamily: "'DM Sans', sans-serif",
+                transition: "all 0.2s ease"
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--text)"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--sub)"; }}
+            >
+              Compare Usul
+            </button>
+          </div>
 
         </div>
       ) : (
