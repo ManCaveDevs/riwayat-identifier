@@ -217,7 +217,7 @@ function InfoCard({ children, style }) {
   );
 }
 
-export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark, initialTab }) {
+export default function LearnPage({ onHome, onLearn, onExplore, darkMode, toggleDark, initialTab }) {
   const [activeTab, setActiveTab] = useState(initialTab || "about");
   const [openFeature, setOpenFeature] = useState(null);
 
@@ -277,15 +277,15 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
         }
       `}</style>
 
-      <NavBar activePage="docs" onHome={onHome} onDocs={onDocs} onGuide={onGuide} darkMode={darkMode} toggleDark={toggleDark} />
+      <NavBar activePage="learn" onHome={onHome} onLearn={onLearn} onExplore={onExplore} darkMode={darkMode} toggleDark={toggleDark} />
 
       <div style={{ maxWidth: 620, margin: "0 auto" }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 28, animation: "fadeSlideUp 0.4s ease-out" }}>
-          <div onClick={onHome} onKeyDown={e => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), onHome())} role="button" tabIndex={0} style={{
+          <span onClick={onHome} onKeyDown={e => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), onHome())} role="button" tabIndex={0} style={{
             fontSize: 28, fontFamily: "'Amiri', serif", fontWeight: 700,
-            color: "var(--heading)", marginBottom: 2, direction: "rtl", cursor: "pointer"
-          }}>{"\u0628\u0650\u0623\u064E\u064A\u0651\u0650 \u0631\u0650\u0648\u064E\u0627\u064A\u064E\u0629\u064D\u061F"}</div>
+            color: "var(--heading)", marginBottom: 2, direction: "rtl", cursor: "pointer", display: "inline-block"
+          }}>{"\u0628\u0650\u0623\u064E\u064A\u0651\u0650 \u0631\u0650\u0648\u064E\u0627\u064A\u064E\u0629\u064D\u061F"}</span>
           <p style={{ fontSize: 13, color: "var(--sub)", margin: 0 }}>Learn</p>
         </div>
 
@@ -467,7 +467,7 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
             <div>
               <h2 style={h2Style}>Terms</h2>
               <p style={{ ...subStyle, marginBottom: 12 }}>
-                The 14 <strong>usul</strong> (systematic rules) the identifier uses, plus 6 supplementary features found in the <button onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3, background: "none", border: "none", padding: 0, font: "inherit", fontWeight: "inherit" }}>Guide</button>.
+                The 14 <strong>usul</strong> (systematic rules) the identifier uses, plus 6 supplementary features found in <button onClick={onExplore} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3, background: "none", border: "none", padding: 0, font: "inherit", fontWeight: "inherit" }}>Explore</button>.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>

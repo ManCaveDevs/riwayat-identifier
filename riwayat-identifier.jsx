@@ -801,7 +801,7 @@ function QuestionCard({ question, onSelect, onSkip, answeredCount, totalCandidat
 
 // ── Main component ────────────────────────────────────────────────────
 
-export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, toggleDark }) {
+export default function RiwayatIdentifier({ onHome, onLearn, onExplore, darkMode, toggleDark }) {
   const [started, setStarted] = useState(false);
   const [candidates, setCandidates] = useState(RIWAYAT);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -921,7 +921,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, t
         }
       `}</style>
 
-      <NavBar activePage="home" onHome={onHome} onDocs={onDocs} onGuide={onGuide} darkMode={darkMode} toggleDark={toggleDark} />
+      <NavBar activePage="home" onHome={onHome} onLearn={onLearn} onExplore={onExplore} darkMode={darkMode} toggleDark={toggleDark} />
 
       {/* Hero / Header */}
       {!started ? (
@@ -1006,7 +1006,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, t
           </button>
 
           <button
-            onClick={() => { window.history.pushState(null, null, '/riwayat-identifier/docs'); window.dispatchEvent(new PopStateEvent('popstate')); }}
+            onClick={() => { window.history.pushState(null, null, '/riwayat-identifier/learn'); window.dispatchEvent(new PopStateEvent('popstate')); }}
             style={{
               fontSize: 13,
               color: "var(--sub)",

@@ -18,7 +18,7 @@
 1. `data/sources/nquran-verification.md` — fetched nquran.com page data (local, deterministic)
 2. `data/riwayat.json` — canonical app data (must match sources)
 3. `riwayat-identifier.jsx` — must exactly mirror riwayat.json features
-4. `src/guide.jsx` EXTRA_FEATURES — supplementary features not in the identifier
+4. `src/explore.jsx` EXTRA_FEATURES — supplementary features not in the identifier
 
 ### Critical uniqueness dependencies:
 - **silatMim** is the ONLY feature distinguishing Qalun from Ibn Jammaz (without it they are identical across all other 13 features)

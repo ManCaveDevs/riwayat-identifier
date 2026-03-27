@@ -1,4 +1,4 @@
-export default function NavBar({ activePage, onHome, onDocs, onGuide, darkMode, toggleDark }) {
+export default function NavBar({ activePage, onHome, onLearn, onExplore, darkMode, toggleDark }) {
   const linkStyle = (isActive) => ({
     background: "none",
     border: "none",
@@ -39,18 +39,18 @@ export default function NavBar({ activePage, onHome, onDocs, onGuide, darkMode, 
             onMouseEnter={e => { if (activePage !== "home") e.target.style.color = "var(--text)"; }}
             onMouseLeave={e => { if (activePage !== "home") e.target.style.color = "var(--sub)"; }}
           >Home</button>
-          {onGuide && <button
-            onClick={onGuide}
-            style={linkStyle(activePage === "guide")}
-            onMouseEnter={e => { if (activePage !== "guide") e.target.style.color = "var(--text)"; }}
-            onMouseLeave={e => { if (activePage !== "guide") e.target.style.color = "var(--sub)"; }}
-          >Explore</button>}
           <button
-            onClick={() => onDocs()}
-            style={linkStyle(activePage === "docs")}
-            onMouseEnter={e => { if (activePage !== "docs") e.target.style.color = "var(--text)"; }}
-            onMouseLeave={e => { if (activePage !== "docs") e.target.style.color = "var(--sub)"; }}
+            onClick={() => onLearn()}
+            style={linkStyle(activePage === "learn")}
+            onMouseEnter={e => { if (activePage !== "learn") e.target.style.color = "var(--text)"; }}
+            onMouseLeave={e => { if (activePage !== "learn") e.target.style.color = "var(--sub)"; }}
           >Learn</button>
+          <button
+            onClick={onExplore}
+            style={linkStyle(activePage === "explore")}
+            onMouseEnter={e => { if (activePage !== "explore") e.target.style.color = "var(--text)"; }}
+            onMouseLeave={e => { if (activePage !== "explore") e.target.style.color = "var(--sub)"; }}
+          >Explore</button>
         </div>
         {toggleDark && (
           <button

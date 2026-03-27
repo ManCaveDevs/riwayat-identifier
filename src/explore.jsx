@@ -253,7 +253,7 @@ function RiwayahCard({ r, compareMode, isSelected, onToggleSelect }) {
   );
 }
 
-export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDark }) {
+export default function ExplorePage({ onHome, onLearn, onExplore, darkMode, toggleDark }) {
   const [activeTab, setActiveTab] = useState("usul");
   const [compareMode, setCompareMode] = useState(false);
   const [selected, setSelected] = useState([]);
@@ -314,15 +314,15 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
         }
       `}</style>
 
-      <NavBar activePage="guide" onHome={onHome} onDocs={onDocs} onGuide={onGuide} darkMode={darkMode} toggleDark={toggleDark} />
+      <NavBar activePage="explore" onHome={onHome} onLearn={onLearn} onExplore={onExplore} darkMode={darkMode} toggleDark={toggleDark} />
 
       <div style={{ maxWidth: 620, margin: "0 auto" }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 28, animation: "fadeSlideUp 0.4s ease-out" }}>
-          <div onClick={onHome} onKeyDown={e => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), onHome())} role="button" tabIndex={0} style={{
+          <span onClick={onHome} onKeyDown={e => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), onHome())} role="button" tabIndex={0} style={{
             fontSize: 28, fontFamily: "'Amiri', serif", fontWeight: 700,
-            color: "var(--heading)", marginBottom: 2, direction: "rtl", cursor: "pointer"
-          }}>{"\u0628\u0650\u0623\u064E\u064A\u0651\u0650 \u0631\u0650\u0648\u064E\u0627\u064A\u064E\u0629\u064D\u061F"}</div>
+            color: "var(--heading)", marginBottom: 2, direction: "rtl", cursor: "pointer", display: "inline-block"
+          }}>{"\u0628\u0650\u0623\u064E\u064A\u0651\u0650 \u0631\u0650\u0648\u064E\u0627\u064A\u064E\u0629\u064D\u061F"}</span>
           <p style={{ fontSize: 13, color: "var(--sub)", margin: 0 }}>Explore</p>
         </div>
 
@@ -364,7 +364,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
         <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 24px 0", lineHeight: 1.6 }}>
           {compareMode
             ? <>Select up to <strong>4 riwayat</strong> to compare their usul side by side. {selected.length > 0 && `(${selected.length} selected)`}</>
-            : <>Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more. To learn what each term means, check out the <a href="/riwayat-identifier/docs/features" onClick={e => { e.preventDefault(); onDocs("features"); }} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}>docs</a>.</>
+            : <>Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more. To learn what each term means, check out the <a href="/riwayat-identifier/learn/features" onClick={e => { e.preventDefault(); onLearn("features"); }} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}>terms</a>.</>
           }
         </p>
 

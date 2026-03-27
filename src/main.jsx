@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import RiwayatIdentifier from '../riwayat-identifier.jsx';
-import DocsPage from './docs.jsx';
-import GuidePage from './guide.jsx';
+import LearnPage from './learn.jsx';
+import ExplorePage from './explore.jsx';
 
 const BASE = '/riwayat-identifier';
 
@@ -17,17 +17,17 @@ function navigate(path) {
 
 function App() {
   const parsePath = (p) => {
-    if (p.startsWith('docs')) return 'docs';
-    if (p.startsWith('guide')) return 'guide';
+    if (p.startsWith('learn')) return 'learn';
+    if (p.startsWith('explore')) return 'explore';
     return 'home';
   };
-  const parseDocsTab = (p) => {
-    const match = p.match(/^docs\/(.+)/);
+  const parseLearnTab = (p) => {
+    const match = p.match(/^learn\/(.+)/);
     return match ? match[1] : null;
   };
 
   const [page, setPage] = useState(parsePath(getPath()));
-  const [docsTab, setDocsTab] = useState(parseDocsTab(getPath()));
+  const [learnTab, setLearnTab] = useState(parseLearnTab(getPath()));
   const [darkMode, setDarkMode] = useState(() => {
     if (localStorage.getItem("riwayat-dark") !== null) {
       return localStorage.getItem("riwayat-dark") === "true";
@@ -39,7 +39,7 @@ function App() {
     const onPop = () => {
       const p = getPath();
       setPage(parsePath(p));
-      setDocsTab(parseDocsTab(p));
+      setLearnTab(parseLearnTab(p));
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
@@ -53,16 +53,16 @@ function App() {
   };
 
   const goHome = () => navigate('');
-  const goDocs = (tab) => navigate(tab ? 'docs/' + tab : 'docs');
-  const goGuide = () => navigate('guide');
+  const goLearn = (tab) => navigate(tab ? 'learn/' + tab : 'learn');
+  const goExplore = () => navigate('explore');
 
-  if (page === 'docs') {
-    return <DocsPage onHome={goHome} onDocs={goDocs} onGuide={goGuide} darkMode={darkMode} toggleDark={toggleDark} initialTab={docsTab} />;
+  if (page === 'learn') {
+    return <LearnPage onHome={goHome} onLearn={goLearn} onExplore={goExplore} darkMode={darkMode} toggleDark={toggleDark} initialTab={learnTab} />;
   }
-  if (page === 'guide') {
-    return <GuidePage onHome={goHome} onDocs={goDocs} onGuide={goGuide} darkMode={darkMode} toggleDark={toggleDark} />;
+  if (page === 'explore') {
+    return <ExplorePage onHome={goHome} onLearn={goLearn} onExplore={goExplore} darkMode={darkMode} toggleDark={toggleDark} />;
   }
-  return <RiwayatIdentifier onHome={goHome} onDocs={goDocs} onGuide={goGuide} darkMode={darkMode} toggleDark={toggleDark} />;
+  return <RiwayatIdentifier onHome={goHome} onLearn={goLearn} onExplore={goExplore} darkMode={darkMode} toggleDark={toggleDark} />;
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
