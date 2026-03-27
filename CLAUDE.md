@@ -6,7 +6,7 @@
 1. **Always update both files**: `data/riwayat.json` AND `riwayat-identifier.jsx` — they must stay in sync
 2. **Check the other narrator**: Both narrators of the same qari share qari-level usul. If you change a value for one narrator, ask: "Is this a qari-level rule or a rawi-level distinction?" If qari-level, change both.
 3. **Check comparison pages**: If a comparison page (nquran) does NOT list a feature as a difference between two narrators, they must have the same value.
-4. **Log every correction**: Add a row to `data/sources.md` corrections log with date, riwayah, field, old value, new value, and source.
+4. **Log every correction**: Add a row to `data/sources/corrections-log.md` with date, riwayah, field, old value, new value, and source.
 5. **Update traits array**: If a feature value changes, check if the traits array in `riwayat-identifier.jsx` needs updating to match.
 6. **Run narrator-pair check**: After any data change, run the consistency check:
    ```
@@ -19,6 +19,11 @@
 2. `data/riwayat.json` — canonical app data (must match sources)
 3. `riwayat-identifier.jsx` — must exactly mirror riwayat.json features
 4. `src/guide.jsx` EXTRA_FEATURES — supplementary features not in the identifier
+
+### Critical uniqueness dependencies:
+- **silatMim** is the ONLY feature distinguishing Qalun from Ibn Jammaz (without it they are identical across all other 13 features)
+- **waqfHamzah** is the ONLY feature distinguishing Al-Susi from Hisham (without it they are identical across all other 13 features)
+- Never remove these features from the identifier — they are load-bearing for quiz uniqueness
 
 ### Known rawi-level distinctions (these SHOULD differ between narrators):
 - Nafi': Warsh has imalah/long madd/thin ra'/basmalah options/no silat mim; Qalun has no imalah/short madd/standard ra/always basmalah/silat mim (optional)
