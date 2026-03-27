@@ -99,7 +99,7 @@ const FEATURES = [
   {
     name: "Basmalah Between Surahs",
     arabic: "\u0627\u0644\u0628\u0633\u0645\u0644\u0629 \u0628\u064A\u0646 \u0627\u0644\u0633\u0648\u0631",
-    description: "Most readings always recite Bismillah between consecutive surahs. Hamzah and Khalaf al-'Ashir's readings allow silence or connection without basmalah. Warsh and some others offer all three options."
+    description: "Most readings always recite Bismillah between consecutive surahs. Hamzah and Khalaf al-'Ashir use wasl only (no basmalah). Abu 'Amr, Ibn 'Amir, Ya'qub, and Warsh offer all three options (basmalah, sakt, wasl)."
   },
   {
     name: "Takbir",

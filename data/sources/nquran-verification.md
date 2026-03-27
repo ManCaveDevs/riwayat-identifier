@@ -138,7 +138,8 @@ Key differences:
 - **Hamzah (same word)**: Ruways = eases 2nd hamzah, Rawh = full realization
 - **Hamzah (between words)**: Ruways = systematic tashil/ibdal, Rawh = full tahqiq
 - **Imalah**: Ruways inclines in al-Sirat and ya-seen; Rawh standard
-- **Shared**: Both maliki, both always basmalah, both extra ya', both no takbir
+- **Shared**: Both maliki, both extra ya', both no takbir
+- **Basmalah (nquran vs An-Nashr tension)**: nquran.com says "always basmalah" for both. However, An-Nashr explicitly groups Ya'qub with Abu 'Amr and Ibn 'Amir as having three options (basmalah, sakt, wasl) through different turuq. Since we follow Tariq al-Tayyibah and already set Abu 'Amr/Ibn 'Amir to "not_always" for the same reason, we use `not_always` for both Ruways and Rawh to be consistent.
 
 ---
 
@@ -169,7 +170,7 @@ This is farsh, not usul. Verified via scholarly consensus and web sources:
 | 14 | Shu'bah | none | maaliki | medium | always | clear | no | sad | standard | no | none | no | standard | no | no |
 | 15 | Ibn Wardan | none | maliki | short | always | softened | no | sad | standard | no | none | no | with_sila | no | no |
 | 16 | Ibn Jammaz | none | maliki | short | always | softened | no | sad | standard | no | none | no | standard | no | no |
-| 17 | Ruways | none | maliki | medium | always | softened | no | sad | standard | yes | none | yes | with_sila | no | no |
-| 18 | Rawh | none | maliki | medium | always | clear | no | sad | standard | yes | none | no | standard | no | no |
+| 17 | Ruways | none | maliki | medium | not_always | softened | no | sad | standard | yes | none | yes | with_sila | no | no |
+| 18 | Rawh | none | maliki | medium | not_always | clear | no | sad | standard | yes | none | no | standard | no | no |
 | 19 | Ishaq | heavy | maaliki | medium | not_always | clear | no | sad | standard | no | standard | yes | standard | no | no |
 | 20 | Idris | heavy | maaliki | medium | not_always | clear | no | sad | standard | no | standard | no | standard | no | no |

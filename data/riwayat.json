@@ -127,7 +127,7 @@
         "silatMim": "no",
         "waqfHamzah": "no"
       },
-      "notes": "Basmalah has 3 options. Madd munfasil = 4 harakaat. No idgham kabir (reads with clarity per nquran 16698 — idgham kabir is Susi's distinction). Imalah on feminine alifs, after ra', in 11 surahs' final verses."
+      "notes": "Basmalah has 3 options. Madd munfasil = 4 harakaat. Imalah on feminine alifs, after ra', in 11 surahs' final verses. Idgham kabir is set to 'no' to distinguish Al-Duri from Al-Susi for identification purposes. Through Tariq al-Tayyibah, idgham kabir is a valid option for Al-Duri per the jumhur of Iraqi scholars (see An-Nashr). The 'no' value reflects the primary identification tariq, not an absolute ruling."
     },
     {
       "id": 5,
@@ -453,7 +453,7 @@
         "imalah": "none",
         "maaliki": "maliki",
         "madd": "medium",
-        "basmalah": "always",
+        "basmalah": "not_always",
         "hamzah": "softened",
         "takbir": "no",
         "sirat": "sad",
@@ -465,7 +465,7 @@
         "silatMim": "no",
         "waqfHamzah": "no"
       },
-      "notes": "Idgham kabir in specific positions. Hamzah tashil on second of doubles + naql. Additional Ya' on certain words. Ha' al-kinayah with sila. Per nquran comparison: Ruways does idgham while Rawh reads with clarity."
+      "notes": "Basmalah has 3 options (basmalah, sakt, wasl) per An-Nashr. Idgham kabir in specific positions. Hamzah tashil on second of doubles + naql. Additional Ya' on certain words. Ha' al-kinayah with sila. Per nquran comparison: Ruways does idgham while Rawh reads with clarity."
     },
     {
       "id": 18,
@@ -479,7 +479,7 @@
         "imalah": "none",
         "maaliki": "maliki",
         "madd": "medium",
-        "basmalah": "always",
+        "basmalah": "not_always",
         "hamzah": "clear",
         "takbir": "no",
         "sirat": "sad",
@@ -491,7 +491,7 @@
         "silatMim": "no",
         "waqfHamzah": "no"
       },
-      "notes": "Shares Ya'qub's extra Ya' feature. Standard ha' al-kinayah (no extra sila). Fewer ishmam cases than Ruways."
+      "notes": "Basmalah has 3 options (basmalah, sakt, wasl) per An-Nashr. Shares Ya'qub's extra Ya' feature. Standard ha' al-kinayah (no extra sila). Fewer ishmam cases than Ruways."
     },
     {
       "id": 19,

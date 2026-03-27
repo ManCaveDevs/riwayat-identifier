@@ -88,3 +88,5 @@
 | 2026-03-25 | Ibn Dhakwan | imalah | none | partial | nquran 16677: extensive imalah kubra on limited positions via al-Suri tariq |
 | 2026-03-26 | Al-Bazzi | madd | medium | short | An-Nashr (باب المد والقصر): Ibn Kathir has qasr without disagreement; confirmed by Wikipedia (Bazzi article): "يقرأ بقصر المنفصل" |
 | 2026-03-26 | Qunbul | madd | medium | short | An-Nashr (باب المد والقصر): Ibn Kathir has qasr without disagreement; same qari-level rule as Bazzi |
+| 2026-03-26 | Ruways | basmalah | always | not_always | An-Nashr (باب البسملة): Ya'qub explicitly grouped with Abu 'Amr and Ibn 'Amir as having 3 options (basmalah, sakt, wasl). nquran says "always" but An-Nashr (Tayyibah authority) overrides. |
+| 2026-03-26 | Rawh | basmalah | always | not_always | An-Nashr (باب البسملة): same qari-level rule as Ruways; Ya'qub has 3 basmalah options per An-Nashr |

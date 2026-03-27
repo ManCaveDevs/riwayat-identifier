@@ -152,18 +152,18 @@ const RIWAYAT = [
     qari: "Ya'qub ibn Ishaq",
     rawi: "Ruways",
     region: "Historically Basra (Iraq)",
-    traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Idgham kabir in specific positions", "Hamzah tashil and naql", "Ha' al-kinayah with sila"],
+    traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Basmalah, sakt, or wasl between surahs", "Idgham kabir in specific positions", "Hamzah tashil and naql", "Ha' al-kinayah with sila"],
     color: "#7E57C2",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "yes", haKinayah: "with_sila", silatMim: "no", waqfHamzah: "no"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "yes", haKinayah: "with_sila", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Ya'qub al-Hadrami (Rawh)",
     qari: "Ya'qub ibn Ishaq",
     rawi: "Rawh",
     region: "Historically Basra (Iraq)",
-    traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Standard ha' al-kinayah", "Fewer ishmam cases than Ruways"],
+    traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Basmalah, sakt, or wasl between surahs", "Standard ha' al-kinayah", "Fewer ishmam cases than Ruways"],
     color: "#9575CD",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Khalaf al-'Ashir (Ishaq)",
