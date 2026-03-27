@@ -15,14 +15,14 @@ const QIRAAT = [
     city: "Mecca",
     period: "d. 120 AH",
     ruwat: ["Al-Bazzi (d. 250 AH)", "Qunbul (d. 291 AH)"],
-    description: "A hadith scholar and judge of Mecca who directly met companions including Ibn al-Zubayr and Anas ibn Malik. Known for Takbir between surahs in Juz' 'Amma. Imam al-Shafi'i said: 'Whoever seeks perfection in reciting, let them recite by Ibn Kathir's reading.'"
+    description: "A hadith scholar and judge of Mecca who directly met companions including Ibn al-Zubayr and Anas ibn Malik. Al-Bazzi's narration features takbir between surahs from Al-Duha to Al-Nas. Imam al-Shafi'i said: 'Whoever seeks perfection in reciting, let them recite by Ibn Kathir's reading.'"
   },
   {
     qari: "Abu 'Amr ibn al-'Ala'",
     city: "Basra",
     period: "d. 154 AH",
     ruwat: ["Al-Duri (d. 246 AH)", "Al-Susi (d. 261 AH)"],
-    description: "A native Arab from Banu Hanifa who traveled the most among the qurra' and had the largest number of teachers. Characterized by partial imalah (taqlil) and idgham kabir. Al-Duri's narration is widely used in Sudan and parts of West Africa."
+    description: "A native Arab from Banu Hanifa who traveled the most among the qurra' and had the largest number of teachers. Characterized by partial imalah (taqlil); Al-Susi's narration features idgham kabir. Al-Duri's narration is widely used in Sudan and parts of West Africa."
   },
   {
     qari: "Ibn 'Amir al-Dimashqi",
@@ -79,72 +79,128 @@ const FEATURES = [
   {
     name: "Imalah",
     arabic: "\u0625\u0645\u0627\u0644\u0629",
-    description: "Tilting the Alif sound ('ah') toward an 'eh' sound. Rooted in the dialects of certain Arabian tribes. Heavy imalah is very noticeable, while taqlil (partial imalah) is a subtler tilt. Most readings have no imalah at all."
+    description: "Tilting the Alif sound ('ah') toward an 'eh' sound. Rooted in the dialects of certain Arabian tribes. Heavy imalah is very noticeable, while taqlil (partial imalah) is a subtler tilt. Most readings have no imalah at all.",
+    example: "In \u0647\u064F\u062F\u0649 (huda), the final alif is tilted: 'hudaa' becomes closer to 'hudeh' with heavy imalah (Al-Kisa'i), or a subtler tilt with taqlil (Warsh)."
   },
   {
     name: "Maaliki vs Maliki",
     arabic: "\u0645\u064E\u0627\u0644\u0650\u0643\u0650 / \u0645\u064E\u0644\u0650\u0643\u0650",
-    description: "In the 4th ayah of Al-Fatihah, some readings use Maaliki (with a long Alif, meaning 'Master/Owner') while others use Maliki (short, meaning 'King'). Both are valid, authentic, and describe Allah."
+    description: "In the 4th ayah of Al-Fatihah, some readings use Maaliki (with a long Alif, meaning 'Master/Owner') while others use Maliki (short, meaning 'King'). Both are valid, authentic, and describe Allah.",
+    example: "\u0645\u064E\u0640\u0670\u0644\u0650\u0643\u0650 \u064A\u064E\u0648\u0652\u0645\u0650 \u0627\u0644\u062F\u0651\u0650\u064A\u0646\u0650 — 'Asim, Al-Kisa'i, and Khalaf al-'Ashir stretch the Mim with a long Alif (Maaliki). The other 7 qurra read it short (Maliki)."
   },
   {
     name: "Madd Munfasil",
     arabic: "\u0645\u062F \u0645\u0646\u0641\u0635\u0644",
-    description: "The lengthening that occurs when a madd letter is followed by a hamzah in the next word. Different readings stretch this for 2 beats (short), 4 beats (medium), or 5-6 beats (long). The exact duration may vary by tariq."
+    description: "The lengthening that occurs when a madd letter is followed by a hamzah in the next word. Different readings stretch this for 2 beats (short), 4 beats (medium), or 5-6 beats (long). The exact duration may vary by tariq.",
+    example: "In \u0628\u0650\u0645\u064E\u0627 \u0623\u064F\u0646\u0632\u0650\u0644\u064E (bimaa unzila), the Alif at the end of \u0645\u064E\u0627 meets the Hamzah of \u0623\u064F\u0646\u0632\u0650\u0644\u064E. Hafs keeps it short at 2 beats; Warsh stretches it to 6."
   },
   {
     name: "Hamzah Treatment",
     arabic: "\u062A\u062E\u0641\u064A\u0641 \u0627\u0644\u0647\u0645\u0632\u0629",
-    description: "Some readings pronounce every hamzah clearly (tahqiq), while others soften them (tashil), replace them with vowel sounds (ibdal), or transfer their sound to the preceding letter (naql). This is one of the most audibly distinctive differences."
+    description: "Some readings pronounce every hamzah clearly (tahqiq), while others soften them (tashil), replace them with vowel sounds (ibdal), or transfer their sound to the preceding letter (naql). This is one of the most audibly distinctive differences.",
+    example: "In \u0623\u064E\u0623\u064E\u0646\u0630\u064E\u0631\u0652\u062A\u064E\u0647\u064F\u0645\u0652 (a-andhartahum, Al-Baqarah 2:6), Abu 'Amr and Abu Ja'far ease the second hamzah so the two glottal stops don't collide. Hamzah al-Zayyat, by contrast, pronounces both hamzahs clearly (tahqiq)."
   },
   {
     name: "Basmalah Between Surahs",
     arabic: "\u0627\u0644\u0628\u0633\u0645\u0644\u0629 \u0628\u064A\u0646 \u0627\u0644\u0633\u0648\u0631",
-    description: "Most readings always recite Bismillah between consecutive surahs. Hamzah and Khalaf al-'Ashir use wasl only (no basmalah). Abu 'Amr, Ibn 'Amir, Ya'qub, and Warsh offer all three options (basmalah, sakt, wasl)."
+    description: "Most readings always recite Bismillah between consecutive surahs. Hamzah and Khalaf al-'Ashir use wasl only (no basmalah). Abu 'Amr, Ibn 'Amir, Ya'qub, and Warsh offer all three options (basmalah, sakt, wasl).",
+    example: "Between Al-Anfal and At-Tawbah, no reader recites basmalah — this is the one exception all agree on. Between other surahs, listen for whether the reciter says \u0628\u0650\u0633\u0652\u0645\u0650 \u0627\u0644\u0644\u0651\u0647\u0650 or connects the surahs directly."
   },
   {
     name: "Takbir",
     arabic: "\u0627\u0644\u062A\u0643\u0628\u064A\u0631",
-    description: "Saying 'Allahu Akbar' between surahs from Al-Duha (93) to Al-Nas (114). This is a distinctive feature of Al-Bazzi's narration from Ibn Kathir."
+    description: "Saying 'Allahu Akbar' between surahs from Al-Duha (93) to Al-Nas (114). This is a distinctive feature of Al-Bazzi's narration from Ibn Kathir.",
+    example: "After the last ayah of Al-Duha, Al-Bazzi says \u0627\u0644\u0644\u0651\u0647\u064F \u0623\u064E\u0643\u0652\u0628\u064E\u0631 before beginning Al-Sharh, and repeats this pattern through to Al-Nas."
   },
   {
     name: "Al-Sirat Pronunciation",
     arabic: "\u0627\u0644\u0635\u0631\u0627\u0637",
-    description: "The word al-Sirat in Al-Fatihah can be read with a pure Sad, a Sin, or with ishmam (mixing the Sad with a buzzing Zay sound). This is a purely dialectal difference with no change in meaning."
+    description: "The word al-Sirat in Al-Fatihah can be read with a pure Sad, a Sin, or with ishmam (mixing the Sad with a buzzing Zay sound). This is a purely dialectal difference with no change in meaning.",
+    example: "\u0627\u0647\u0652\u062F\u0650\u0646\u064E\u0627 \u0627\u0644\u0635\u0651\u0650\u0631\u064E\u0627\u0637\u064E — Qunbul reads it with Sin (\u0627\u0644\u0633\u0651\u0650\u0631\u064E\u0627\u0637), Hamzah's narrators (Khalaf and Khallad) read it with ishmam (Sad buzzing like Zay), and most others use pure Sad."
   },
   {
     name: "Ra' Thinning (Tarqiq)",
     arabic: "\u062A\u0631\u0642\u064A\u0642 \u0627\u0644\u0631\u0627\u0621",
-    description: "Warsh thins the Ra' in certain positions where other readings would make it thick. This gives a noticeably lighter sound to words like Fir'awn."
+    description: "Warsh thins the Ra' in certain positions where other readings would make it thick. This gives a noticeably lighter sound to words like Fir'awn.",
+    example: "In \u0641\u0650\u0631\u0652\u0639\u064E\u0648\u0652\u0646\u064E (Fir'awn), Warsh thins the Ra' because it is preceded by a Kasrah, while others make it thick due to the following letters."
   },
   {
     name: "Idgham Kabir",
     arabic: "\u0627\u0644\u0625\u062F\u063A\u0627\u0645 \u0627\u0644\u0643\u0628\u064A\u0631",
-    description: "Merging identical or similar letters across word boundaries so they flow together as one sound. Al-Susi, Khallad, Hisham, Ruways, and Ishaq are known for this. It gives the recitation a distinctly smooth, connected quality."
+    description: "Merging identical or similar letters across word boundaries so they flow together as one sound. Al-Susi, Khallad, Hisham, Ruways, and Ishaq are known for this. It gives the recitation a distinctly smooth, connected quality.",
+    example: "In \u064A\u064E\u0639\u0652\u0644\u064E\u0645\u064F \u0645\u064E\u0627 (ya'lamu ma), Al-Susi merges the two Mims into one: 'ya'lam-maa' — the first Mim flows directly into the second."
   },
   {
     name: "Imalah Scope",
     arabic: "\u0646\u0637\u0627\u0642 \u0627\u0644\u0625\u0645\u0627\u0644\u0629",
-    description: "Among readers who have imalah, the scope varies. Some apply it only in standard positions (common words with ya-origin alifs), while Duri al-Kisa'i extends it to additional words and positions, giving his recitation a broader imalah presence."
+    description: "Among readers who have imalah, the scope varies. Some apply it only in standard positions (common words with ya-origin alifs), while Duri al-Kisa'i extends it to additional words and positions, giving his recitation a broader imalah presence.",
+    example: "Most readers with imalah apply it to words like \u0647\u064F\u062F\u0649 and \u0645\u064F\u0648\u0633\u0649. Duri al-Kisa'i goes further, applying imalah to words like \u0627\u0644\u0646\u0651\u064E\u0627\u0631 (al-naar) and \u0627\u0644\u062C\u064E\u0627\u0631 (al-jaar) where others do not."
   },
   {
     name: "Extra Ya'",
     arabic: "\u064A\u0627\u0621\u0627\u062A \u0627\u0644\u0632\u0648\u0627\u0626\u062F",
-    description: "Ya'qub al-Hadrami's reading adds a Ya' at the end of certain words where other readings omit it. Both his narrators, Ruways and Rawh, share this feature, which is one of the clearest markers of his qira'ah."
+    description: "Ya'qub al-Hadrami's reading adds a Ya' at the end of certain words where other readings omit it. Both his narrators, Ruways and Rawh, share this feature, which is one of the clearest markers of his qira'ah.",
+    example: "In Al-Fajr 89:15, most readers read \u0623\u064E\u0643\u0652\u0631\u064E\u0645\u064E\u0646\u0650 (akraman). Ya'qub reads \u0623\u064E\u0643\u0652\u0631\u064E\u0645\u064E\u0646\u0650\u064A (akramani) with an extra Ya' at the end."
   },
   {
     name: "Ha' al-Kinayah",
     arabic: "\u0647\u0627\u0621 \u0627\u0644\u0643\u0646\u0627\u064A\u0629",
-    description: "The pronoun Ha' (his/him) is normally read short. Some narrators, like Ibn Wardan and Ruways, connect it with an extra vowel (sila), making it audibly longer. This is a narrator-level distinction, not a qari-level one."
+    description: "The pronoun Ha' (his/him) is normally read short. Some narrators, like Ibn Wardan and Ruways, connect it with an extra vowel (sila), making it audibly longer. This is a narrator-level distinction, not a qari-level one.",
+    example: "In \u0644\u064E\u0647\u064F (lahu, 'for him'), most readers say a short 'lahu.' With sila, Ibn Wardan extends it: 'lahuu' — the Ha' vowel is prolonged with a connecting Waw sound."
   },
   {
     name: "Silat Mim al-Jam'",
     arabic: "\u0635\u0644\u0629 \u0645\u064A\u0645 \u0627\u0644\u062C\u0645\u0639",
-    description: "When the plural pronoun Mim (\u0647\u064F\u0645\u0652/\u0643\u064F\u0645\u0652) is followed by a voweled letter, some readings connect it with a short Waw or Ya'. Ibn Kathir always connects, Qalun optionally connects, and all others keep the Mim silent."
+    description: "When the plural pronoun Mim (\u0647\u064F\u0645\u0652/\u0643\u064F\u0645\u0652) is followed by a voweled letter, some readings connect it with a short Waw or Ya'. Ibn Kathir always connects, Qalun optionally connects, and all others keep the Mim silent.",
+    example: "In \u0639\u064E\u0644\u064E\u064A\u0652\u0647\u0650\u0645\u0652 \u0648\u064E\u0644\u064E\u0627 (alayhim wa-la), Ibn Kathir adds a short Waw after the Mim: 'alayhimuu wa-la,' creating an audible link between the words."
   },
   {
     name: "Waqf on Hamzah",
     arabic: "\u0648\u0642\u0641 \u0627\u0644\u0647\u0645\u0632\u0629",
-    description: "When pausing on a word ending with Hamzah, Hamzah's narrators (Khalaf and Khallad) extensively alter the Hamzah \u2014 replacing, softening, or dropping it. Hisham changes only some final Hamzahs. All other readings keep the Hamzah as-is at pause."
+    description: "When pausing on a word ending with Hamzah, Hamzah's narrators (Khalaf and Khallad) extensively alter the Hamzah \u2014 replacing, softening, or dropping it. Hisham changes only some final Hamzahs. All other readings keep the Hamzah as-is at pause.",
+    example: "Pausing on \u0627\u0644\u0633\u0651\u064E\u0645\u064E\u0627\u0621 (al-samaa'), Khalaf and Khallad replace the final Hamzah with an Alif: 'al-samaa.' Most others keep the glottal stop: 'al-samaa\u02BC.'"
+  },
+  {
+    name: "Sakt",
+    arabic: "\u0627\u0644\u0633\u0643\u062A",
+    description: "A brief, breathless pause inserted before a hamzah or between specific words. Hafs applies it at 4 specific places in the Quran. Khalaf 'an Hamzah pauses before hamzah generally. Most other readings do not use sakt.",
+    supplementary: true,
+    example: "Hafs pauses at 4 places: \u0639\u0650\u0648\u064E\u062C\u064E\u0627 (Al-Kahf 18:1), \u0645\u064E\u0631\u0652\u0642\u064E\u062F\u0650\u0646\u064E\u0627 (Ya Sin 36:52), \u0645\u064E\u0646\u0652 \u0631\u064E\u0627\u0642\u064D (Al-Qiyamah 75:27), and \u0628\u064E\u0644\u0652 \u0631\u064E\u0627\u0646\u064E (Al-Mutaffifin 83:14) — a brief stop without breathing."
+  },
+  {
+    name: "Naql",
+    arabic: "\u0627\u0644\u0646\u0642\u0644",
+    description: "Transferring the vowel of a hamzah at the start of a word to the silent letter at the end of the previous word, then dropping the hamzah. This is a hallmark of Warsh's recitation and gives it a distinctly flowing quality.",
+    supplementary: true,
+    example: "In \u0642\u064E\u062F\u0652 \u0623\u064E\u0641\u0652\u0644\u064E\u062D\u064E (qad aflaha), Warsh moves the fathah of the Hamzah onto the Dal: 'qada-flaha' — the Hamzah disappears and the words flow together."
+  },
+  {
+    name: "Taghlith al-Lam",
+    arabic: "\u062A\u063A\u0644\u064A\u0638 \u0627\u0644\u0644\u0627\u0645",
+    description: "Pronouncing the Lam with a thick, heavy sound (tafkhim) when it is preceded by the letters Sad, Taa, or Zhaa. This is unique to Warsh and gives certain words a fuller, more emphatic pronunciation.",
+    supplementary: true,
+    example: "In \u0627\u0644\u0635\u0651\u064E\u0644\u064E\u0627\u0629 (al-salah), Warsh thickens the Lam when it is preceded by the Sad, giving it a heavier sound than the thin Lam heard in all other readings."
+  },
+  {
+    name: "Madd Muttasil",
+    arabic: "\u0645\u062F \u0645\u062A\u0635\u0644",
+    description: "The lengthening that occurs when a madd letter and a hamzah are in the same word. All readers stretch this to at least 4 harakaat, but some extend it to 5 or 6. Unlike madd munfasil, the minimum here is never 2 beats.",
+    supplementary: true,
+    example: "In \u062C\u064E\u0627\u0621\u064E (jaa'a), the Alif and Hamzah are in the same word. Hafs stretches the Alif for 4-5 beats; Warsh stretches it for 6 beats."
+  },
+  {
+    name: "Madd Badl",
+    arabic: "\u0645\u062F \u0628\u062F\u0644",
+    description: "The lengthening that occurs when a hamzah is followed by a madd letter in the same word (e.g., \u0622\u0645\u064E\u0646\u064F\u0648\u0627). Most readers keep it short at 2 harakaat. Warsh uniquely offers three options: 2, 4, or 6 harakaat, making it one of his most recognizable features.",
+    supplementary: true,
+    example: "In \u0622\u0645\u064E\u0646\u064F\u0648\u0627 (aamanu), the Hamzah comes before the Alif. Most readers hold the Alif for just 2 beats. Warsh may stretch it to 4 or even 6 beats."
+  },
+  {
+    name: "Imalah Ha' al-Ta'nith",
+    arabic: "\u0625\u0645\u0627\u0644\u0629 \u0647\u0627\u0621 \u0627\u0644\u062A\u0623\u0646\u064A\u062B",
+    description: "Applying heavy imalah (imalah kubra) to the feminine ending Ha' al-Ta'nith when pausing on it. This is specific to Al-Kisa'i, who tilts the final vowel sound toward 'eh,' giving a distinctive quality to words ending in ta' marbuta at pause.",
+    supplementary: true,
+    example: "Pausing on \u0631\u064E\u062D\u0652\u0645\u064E\u0629 (rahmah), Al-Kisa'i tilts the final Ha' sound: 'rahmeh' instead of 'rahmah.' This applies broadly to words ending in ta' marbuta."
   }
 ];
 
@@ -163,9 +219,10 @@ function InfoCard({ children, style }) {
 
 export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark, initialTab }) {
   const [activeTab, setActiveTab] = useState(initialTab || "about");
+  const [openFeature, setOpenFeature] = useState(null);
 
   useEffect(() => {
-    if (initialTab) setActiveTab(initialTab);
+    setActiveTab(initialTab || "about");
   }, [initialTab]);
 
   const tabs = [
@@ -410,22 +467,72 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
             <div>
               <h2 style={h2Style}>Key Distinguishing Features</h2>
               <p style={{ ...subStyle, marginBottom: 12 }}>
-                These are the 14 <strong>usul</strong> (systematic rules) the tool uses to identify a riwayah. Most are audible; some distinguish narrators of the same qari. See the <button onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3, background: "none", border: "none", padding: 0, font: "inherit", fontWeight: "inherit" }}>Guide</button> for these plus additional features and farsh examples.
+                The 14 <strong>usul</strong> (systematic rules) the identifier uses, plus 6 supplementary features found in the <button onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3, background: "none", border: "none", padding: 0, font: "inherit", fontWeight: "inherit" }}>Guide</button>.
               </p>
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                {FEATURES.map((f, i) => (
-                  <div key={i} style={{
-                    background: "var(--card-bg)", border: "1.5px solid var(--border)",
-                    borderRadius: 12, padding: "16px 18px"
-                  }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 6 }}>
-                      <span style={{ fontSize: 16, fontWeight: 700, color: "var(--heading)" }}>{f.name}</span>
-                      <span style={{ fontSize: 16, fontFamily: "'Amiri', serif", color: "var(--accent)", direction: "rtl" }}>{f.arabic}</span>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {FEATURES.filter(f => !f.supplementary).map((f, i) => {
+                  const key = "core-" + i;
+                  const isOpen = openFeature === key;
+                  return (
+                    <div key={key} style={{
+                      background: "var(--card-bg)", border: "1.5px solid var(--border)",
+                      borderRadius: 12, overflow: "hidden"
+                    }}>
+                      <button onClick={() => setOpenFeature(isOpen ? null : key)} style={{
+                        width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center",
+                        padding: "14px 18px", background: "none", border: "none", cursor: "pointer", gap: 12
+                      }}>
+                        <span style={{ fontSize: 15, fontWeight: 700, color: "var(--heading)", textAlign: "left" }}>{f.name}</span>
+                        <span style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
+                          <span style={{ fontSize: 16, fontFamily: "'Amiri', serif", color: "var(--accent)", direction: "rtl" }}>{f.arabic}</span>
+                          <span style={{ fontSize: 12, color: "var(--sub)", transition: "transform 0.2s", transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}>▼</span>
+                        </span>
+                      </button>
+                      {isOpen && (
+                        <div style={{ padding: "0 18px 14px" }}>
+                          <p style={{ fontSize: 14, color: "var(--text)", margin: 0, lineHeight: 1.7 }}>{f.description}</p>
+                          {f.example && <p style={{ fontSize: 13, color: "var(--sub)", margin: "8px 0 0 0", lineHeight: 1.6, fontStyle: "italic" }}>Example: {f.example}</p>}
+                        </div>
+                      )}
                     </div>
-                    <p style={{ fontSize: 14, color: "var(--text)", margin: 0, lineHeight: 1.7 }}>{f.description}</p>
-                  </div>
-                ))}
+                  );
+                })}
+              </div>
+
+              <h3 style={{ fontSize: 16, fontWeight: 700, color: "var(--heading)", marginTop: 24, marginBottom: 4 }}>Supplementary Features</h3>
+              <p style={{ ...subStyle, marginBottom: 12 }}>
+                These features appear in the Guide but are not used by the identifier quiz. They provide additional detail for distinguishing certain riwayat.
+              </p>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {FEATURES.filter(f => f.supplementary).map((f, i) => {
+                  const key = "supp-" + i;
+                  const isOpen = openFeature === key;
+                  return (
+                    <div key={key} style={{
+                      background: "var(--card-bg)", border: "1.5px solid var(--border)",
+                      borderRadius: 12, overflow: "hidden"
+                    }}>
+                      <button onClick={() => setOpenFeature(isOpen ? null : key)} style={{
+                        width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center",
+                        padding: "14px 18px", background: "none", border: "none", cursor: "pointer", gap: 12
+                      }}>
+                        <span style={{ fontSize: 15, fontWeight: 700, color: "var(--heading)", textAlign: "left" }}>{f.name}</span>
+                        <span style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
+                          <span style={{ fontSize: 16, fontFamily: "'Amiri', serif", color: "var(--accent)", direction: "rtl" }}>{f.arabic}</span>
+                          <span style={{ fontSize: 12, color: "var(--sub)", transition: "transform 0.2s", transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}>▼</span>
+                        </span>
+                      </button>
+                      {isOpen && (
+                        <div style={{ padding: "0 18px 14px" }}>
+                          <p style={{ fontSize: 14, color: "var(--text)", margin: 0, lineHeight: 1.7 }}>{f.description}</p>
+                          {f.example && <p style={{ fontSize: 13, color: "var(--sub)", margin: "8px 0 0 0", lineHeight: 1.6, fontStyle: "italic" }}>Example: {f.example}</p>}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}

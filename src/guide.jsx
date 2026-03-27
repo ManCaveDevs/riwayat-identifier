@@ -364,7 +364,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
         <p style={{ fontSize: 13, color: "var(--sub)", margin: "0 0 24px 0", lineHeight: 1.6 }}>
           {compareMode
             ? <>Select up to <strong>4 riwayat</strong> to compare their usul side by side. {selected.length > 0 && `(${selected.length} selected)`}</>
-            : <>Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more.</>
+            : <>Systematic rules applied <strong>throughout the entire Quran</strong> that define how each riwayah sounds: imalah, madd lengths, hamzah treatment, basmalah, and more. To learn what each term means, check out the <a href="/riwayat-identifier/docs/features" onClick={e => { e.preventDefault(); onDocs("features"); }} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3 }}>docs</a>.</>
           }
         </p>
 
@@ -564,12 +564,12 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
                   <span style={{ fontSize: 11, color: "var(--accent)", background: "var(--accent-bg)", padding: "2px 8px", borderRadius: 6, fontWeight: 600 }}>{ex.type}</span>
                 </div>
                 <div style={{ display: "flex", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
-                  <div style={{ flex: 1, minWidth: 140 }}>
+                  <div style={{ flex: 1, minWidth: 140, textAlign: "center" }}>
                     <div style={{ fontSize: 20, fontFamily: "'Amiri', serif", color: "var(--heading)", direction: "rtl", marginBottom: 2 }}>{ex.majority}</div>
                     <div style={{ fontSize: 12, fontWeight: 600, color: "var(--text)" }}>{ex.majorityLatin}</div>
                     <div style={{ fontSize: 11, color: "var(--sub)" }}>{ex.majorityReaders}</div>
                   </div>
-                  <div style={{ flex: 1, minWidth: 140 }}>
+                  <div style={{ flex: 1, minWidth: 140, textAlign: "center" }}>
                     <div style={{ fontSize: 20, fontFamily: "'Amiri', serif", color: "var(--heading)", direction: "rtl", marginBottom: 2 }}>{ex.variant}</div>
                     <div style={{ fontSize: 12, fontWeight: 600, color: "var(--text)" }}>{ex.variantLatin}</div>
                     <div style={{ fontSize: 11, color: "var(--sub)" }}>{ex.variantReaders}</div>

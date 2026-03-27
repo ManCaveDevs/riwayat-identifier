@@ -53,7 +53,7 @@ function App() {
   };
 
   const goHome = () => navigate('');
-  const goDocs = () => navigate('docs');
+  const goDocs = (tab) => navigate(tab ? 'docs/' + tab : 'docs');
   const goGuide = () => navigate('guide');
 
   if (page === 'docs') {
