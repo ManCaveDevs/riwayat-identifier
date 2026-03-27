@@ -7,7 +7,7 @@ const QIRAAT = [
     city: "Medina",
     period: "d. 169 AH",
     ruwat: ["Qalun (d. 220 AH)", "Warsh (d. 197 AH)"],
-    description: "Called 'Imam of the People' by Imam Malik. Of Persian descent, he systemized his reading by comparing 70 tabi'in teachers, adopting what two or more agreed on. Warsh is dominant across North Africa, while Qalun is used in Libya and Tunisia.",
+    description: "Called 'Imam of the People' by Imam Malik. Of Persian descent, he systematized his reading by comparing 70 tabi'in teachers, adopting what two or more agreed on. Warsh is dominant across North Africa, while Qalun is used in Libya and Tunisia.",
     note: "Abu Ja'far was his teacher."
   },
   {
@@ -36,7 +36,7 @@ const QIRAAT = [
     city: "Kufa",
     period: "d. 127 AH",
     ruwat: ["Hafs (d. 180 AH)", "Shu'bah (d. 193 AH)"],
-    description: "Was blind but had one of the finest voices of recitation. His reading was influenced by the readings of both Ibn Mas'ud and 'Ali through their students. Hafs 'an 'Asim is the most widespread riwayah in the world today."
+    description: "Known for one of the finest voices of recitation. His reading was influenced by the readings of both Ibn Mas'ud and 'Ali through their students. Hafs 'an 'Asim is the most widespread riwayah in the world today."
   },
   {
     qari: "Hamzah al-Zayyat",
@@ -49,14 +49,14 @@ const QIRAAT = [
     qari: "Al-Kisa'i",
     city: "Kufa",
     period: "d. 189 AH",
-    ruwat: ["Abu al-Harith (d. 240 AH)", "Al-Duri"],
+    ruwat: ["Abu al-Harith (d. 240 AH)", "Al-Duri (d. 246 AH)"],
     description: "Of Persian descent, a leading grammarian who reviewed the Quran with Hamzah four times. Also features heavy imalah like Hamzah but with basmalah between surahs. Al-Duri here is the same person who narrates from Abu 'Amr."
   },
   {
     qari: "Abu Ja'far al-Madani",
     city: "Medina",
     period: "d. 130 AH",
-    ruwat: ["Ibn Wardan", "Ibn Jammaz"],
+    ruwat: ["Ibn Wardan (d. 160 AH)", "Ibn Jammaz (d. 170 AH)"],
     description: "Nafi's teacher. Learned from Ibn 'Abbas and Abu Hurayrah. As a child, he visited Umm Salamah (the Prophet's wife), who made du'a for him. Known for extensive hamzah softening (tashil)."
   },
   {
@@ -99,12 +99,12 @@ const FEATURES = [
   {
     name: "Basmalah Between Surahs",
     arabic: "\u0627\u0644\u0628\u0633\u0645\u0644\u0629 \u0628\u064A\u0646 \u0627\u0644\u0633\u0648\u0631",
-    description: "Most readings always recite Bismillah between consecutive surahs. Hamzah and Khalaf al-'Ashir's readings allow silence or connection without basmalah. Warsh and some others offer all three options."
+    description: "Most readings always recite Bismillah between consecutive surahs. Hamzah and Khalaf al-'Ashir use wasl only (no basmalah). Abu 'Amr, Ibn 'Amir, Ya'qub, and Warsh offer all three options (basmalah, sakt, wasl)."
   },
   {
     name: "Takbir",
     arabic: "\u0627\u0644\u062A\u0643\u0628\u064A\u0631",
-    description: "Saying 'Allahu Akbar' between surahs from Al-Duha (93) to Al-Nas (114). This is a distinctive feature of Ibn Kathir's reading."
+    description: "Saying 'Allahu Akbar' between surahs from Al-Duha (93) to Al-Nas (114). This is a distinctive feature of Al-Bazzi's narration from Ibn Kathir."
   },
   {
     name: "Al-Sirat Pronunciation",
@@ -119,7 +119,32 @@ const FEATURES = [
   {
     name: "Idgham Kabir",
     arabic: "\u0627\u0644\u0625\u062F\u063A\u0627\u0645 \u0627\u0644\u0643\u0628\u064A\u0631",
-    description: "Merging identical or similar letters across word boundaries so they flow together as one sound. Al-Susi, Ruways, and Hisham are among those known for this. It gives the recitation a distinctly smooth, connected quality."
+    description: "Merging identical or similar letters across word boundaries so they flow together as one sound. Al-Susi, Khallad, Hisham, Ruways, and Ishaq are known for this. It gives the recitation a distinctly smooth, connected quality."
+  },
+  {
+    name: "Imalah Scope",
+    arabic: "\u0646\u0637\u0627\u0642 \u0627\u0644\u0625\u0645\u0627\u0644\u0629",
+    description: "Among readers who have imalah, the scope varies. Some apply it only in standard positions (common words with ya-origin alifs), while Duri al-Kisa'i extends it to additional words and positions, giving his recitation a broader imalah presence."
+  },
+  {
+    name: "Extra Ya'",
+    arabic: "\u064A\u0627\u0621\u0627\u062A \u0627\u0644\u0632\u0648\u0627\u0626\u062F",
+    description: "Ya'qub al-Hadrami's reading adds a Ya' at the end of certain words where other readings omit it. Both his narrators, Ruways and Rawh, share this feature, which is one of the clearest markers of his qira'ah."
+  },
+  {
+    name: "Ha' al-Kinayah",
+    arabic: "\u0647\u0627\u0621 \u0627\u0644\u0643\u0646\u0627\u064A\u0629",
+    description: "The pronoun Ha' (his/him) is normally read short. Some narrators, like Ibn Wardan and Ruways, connect it with an extra vowel (sila), making it audibly longer. This is a narrator-level distinction, not a qari-level one."
+  },
+  {
+    name: "Silat Mim al-Jam'",
+    arabic: "\u0635\u0644\u0629 \u0645\u064A\u0645 \u0627\u0644\u062C\u0645\u0639",
+    description: "When the plural pronoun Mim (\u0647\u064F\u0645\u0652/\u0643\u064F\u0645\u0652) is followed by a voweled letter, some readings connect it with a short Waw or Ya'. Ibn Kathir always connects, Qalun optionally connects, and all others keep the Mim silent."
+  },
+  {
+    name: "Waqf on Hamzah",
+    arabic: "\u0648\u0642\u0641 \u0627\u0644\u0647\u0645\u0632\u0629",
+    description: "When pausing on a word ending with Hamzah, Hamzah's narrators (Khalaf and Khallad) extensively alter the Hamzah \u2014 replacing, softening, or dropping it. Hisham changes only some final Hamzahs. All other readings keep the Hamzah as-is at pause."
   }
 ];
 
@@ -136,7 +161,7 @@ function InfoCard({ children, style }) {
   );
 }
 
-export default function DocsPage({ onHome, onDocs, darkMode, toggleDark, initialTab }) {
+export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark, initialTab }) {
   const [activeTab, setActiveTab] = useState(initialTab || "about");
 
   useEffect(() => {
@@ -163,7 +188,6 @@ export default function DocsPage({ onHome, onDocs, darkMode, toggleDark, initial
       background: "linear-gradient(180deg, var(--bg-top), var(--bg-bottom))",
     }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=Amiri:wght@400;700&display=swap');
         .riwayat-root {
           --heading: #1a1a1f;
           --text: #2d2d35;
@@ -196,12 +220,12 @@ export default function DocsPage({ onHome, onDocs, darkMode, toggleDark, initial
         }
       `}</style>
 
-      <NavBar activePage="docs" onHome={onHome} onDocs={onDocs} darkMode={darkMode} toggleDark={toggleDark} />
+      <NavBar activePage="docs" onHome={onHome} onDocs={onDocs} onGuide={onGuide} darkMode={darkMode} toggleDark={toggleDark} />
 
       <div style={{ maxWidth: 620, margin: "0 auto" }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 28, animation: "fadeSlideUp 0.4s ease-out" }}>
-          <div onClick={onHome} style={{
+          <div onClick={onHome} onKeyDown={e => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), onHome())} role="button" tabIndex={0} style={{
             fontSize: 28, fontFamily: "'Amiri', serif", fontWeight: 700,
             color: "var(--heading)", marginBottom: 2, direction: "rtl", cursor: "pointer"
           }}>{"\u0628\u0650\u0623\u064E\u064A\u0651\u0650 \u0631\u0650\u0648\u064E\u0627\u064A\u064E\u0629\u064D\u061F"}</div>
@@ -272,7 +296,7 @@ export default function DocsPage({ onHome, onDocs, darkMode, toggleDark, initial
                 <p style={{ fontSize: 12, color: "var(--sub)", margin: "6px 0 0 0" }}>Sahih al-Bukhari, 5041</p>
               </InfoCard>
               <p style={pStyle}>
-                When 'Umar ibn al-Khattab heard Hisham ibn Hakim reciting Surah al-Furqan differently than he had learned it, he was startled and nearly confronted him. But when they went to the Prophet &#xFDFA;, he confirmed both recitations were correct, saying: "This is how it was revealed." The companions understood from early on that the Qur'an carried multiple valid modes of recitation.
+                When 'Umar ibn al-Khattab heard Hisham ibn Hakim reciting Surah al-Furqan differently than he had learned it, he was startled and nearly confronted him. But when they went to the Prophet &#xFDFA;, he confirmed both recitations were correct, saying: "This is how it was revealed." The companions understood from early on that the Qur'an carried multiple valid modes of recitation. Over time, these modes were preserved and systematized into the qira'at we know today.
               </p>
               <p style={pStyle}>
                 Despite these variations, only about <strong>0.9%</strong> of the Qur'an's words have an alternative reading. The vast majority of the text is recited identically across all readings.
@@ -386,15 +410,8 @@ export default function DocsPage({ onHome, onDocs, darkMode, toggleDark, initial
             <div>
               <h2 style={h2Style}>Key Distinguishing Features</h2>
               <p style={{ ...subStyle, marginBottom: 12 }}>
-                These are the audible differences the tool listens for. Understanding them helps you identify riwayat on your own.
+                These are the 14 <strong>usul</strong> (systematic rules) the tool uses to identify a riwayah. Most are audible; some distinguish narrators of the same qari. See the <button onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3, background: "none", border: "none", padding: 0, font: "inherit", fontWeight: "inherit" }}>Guide</button> for these plus additional features and farsh examples.
               </p>
-
-              <InfoCard style={{ marginBottom: 20 }}>
-                <div style={{ fontSize: 13, fontWeight: 700, color: "var(--heading)", marginBottom: 8 }}>Usul vs. Farsh</div>
-                <p style={{ fontSize: 13, color: "var(--sub)", margin: 0, lineHeight: 1.6 }}>
-                  Differences between readings fall into two categories. <strong style={{ color: "var(--text)" }}>Usul</strong> are general rules that apply systematically across the entire Qur'an, like imalah, madd lengths, and hamzah treatment. <strong style={{ color: "var(--text)" }}>Farsh</strong> are differences in the vowelization or letters of particular words in individual passages. This tool focuses on usul, since they are what you can hear consistently throughout a recitation.
-                </p>
-              </InfoCard>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {FEATURES.map((f, i) => (

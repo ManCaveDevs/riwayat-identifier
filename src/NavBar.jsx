@@ -1,4 +1,4 @@
-export default function NavBar({ activePage, onHome, onDocs, darkMode, toggleDark }) {
+export default function NavBar({ activePage, onHome, onDocs, onGuide, darkMode, toggleDark }) {
   const linkStyle = (isActive) => ({
     background: "none",
     border: "none",
@@ -39,6 +39,12 @@ export default function NavBar({ activePage, onHome, onDocs, darkMode, toggleDar
             onMouseEnter={e => { if (activePage !== "home") e.target.style.color = "var(--text)"; }}
             onMouseLeave={e => { if (activePage !== "home") e.target.style.color = "var(--sub)"; }}
           >Home</button>
+          {onGuide && <button
+            onClick={onGuide}
+            style={linkStyle(activePage === "guide")}
+            onMouseEnter={e => { if (activePage !== "guide") e.target.style.color = "var(--text)"; }}
+            onMouseLeave={e => { if (activePage !== "guide") e.target.style.color = "var(--sub)"; }}
+          >Guide</button>}
           <button
             onClick={onDocs}
             style={linkStyle(activePage === "docs")}

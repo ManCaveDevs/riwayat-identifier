@@ -71,3 +71,22 @@
 | 2026-03-24 | Hisham | idghamKabir | no | yes | nquran 16699 (dhal/dal idgham) |
 | 2026-03-24 | Ruways | hamzah | clear | softened | nquran 16700 (tashil + naql) |
 | 2026-03-24 | Ruways | idghamKabir | no | yes | nquran 16700 (idgham in specific positions) |
+| 2026-03-25 | Warsh | maaliki | maaliki | maliki | Nafi' reads Maliki (short) — this is farsh, not usul |
+| 2026-03-25 | Khalaf 'an Hamzah | maaliki | maaliki | maliki | Hamzah reads Maliki (short) |
+| 2026-03-25 | Khallad 'an Hamzah | maaliki | maaliki | maliki | Hamzah reads Maliki (short) |
+| 2026-03-25 | Ruways | maaliki | maaliki | maliki | Ya'qub reads Maliki (short) |
+| 2026-03-25 | Rawh | maaliki | maaliki | maliki | Ya'qub reads Maliki (short) |
+| 2026-03-25 | Al-Susi | basmalah | always | not_always | nquran 16698: basmalah not listed as Duri/Susi difference, both share Abu 'Amr's 3 options |
+| 2026-03-25 | Qunbul | takbir | yes | no | nquran 16692: only Bazzi transmits takbir, not Qunbul |
+| 2026-03-25 | Qalun | hamzah | clear | softened | nquran 16680: has tashil on double hamzahs (same-word and cross-word) |
+| 2026-03-25 | Ibn Dhakwan | basmalah | always | not_always | nquran 16677: 3 options (bismillah, pause, connection) |
+| 2026-03-25 | Khallad | sirat | sad | ishmam | nquran 16678: ishmam in Umm al-Kitab (Fatihah), consistent with Khalaf |
+| 2026-03-25 | Ibn Dhakwan | notes | Shatibiyyah reasoning | Tayyibah data | Removed Shatibiyyah reference, documented Tayyibah imalah positions |
+| 2026-03-25 | Al-Duri Abu Amr | idghamKabir | yes | no | nquran 16698: "Duri = reads with clarity", idgham kabir is Susi's distinction |
+| 2026-03-25 | Hisham | basmalah | always | not_always | nquran 16699: not listed as difference from Ibn Dhakwan, shared qari rule |
+| 2026-03-25 | Hisham | imalah | none | partial | nquran 16699: selective imalah on specific words per Tayyibah |
+| 2026-03-25 | Ibn Dhakwan | imalah | none | partial | nquran 16677: extensive imalah kubra on limited positions via al-Suri tariq |
+| 2026-03-26 | Al-Bazzi | madd | medium | short | An-Nashr (باب المد والقصر): Ibn Kathir has qasr without disagreement; confirmed by Wikipedia (Bazzi article): "يقرأ بقصر المنفصل" |
+| 2026-03-26 | Qunbul | madd | medium | short | An-Nashr (باب المد والقصر): Ibn Kathir has qasr without disagreement; same qari-level rule as Bazzi |
+| 2026-03-26 | Ruways | basmalah | always | not_always | An-Nashr (باب البسملة): Ya'qub explicitly grouped with Abu 'Amr and Ibn 'Amir as having 3 options (basmalah, sakt, wasl). nquran says "always" but An-Nashr (Tayyibah authority) overrides. |
+| 2026-03-26 | Rawh | basmalah | always | not_always | An-Nashr (باب البسملة): same qari-level rule as Ruways; Ya'qub has 3 basmalah options per An-Nashr |

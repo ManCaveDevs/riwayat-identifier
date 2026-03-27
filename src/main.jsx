@@ -2,18 +2,32 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import RiwayatIdentifier from '../riwayat-identifier.jsx';
 import DocsPage from './docs.jsx';
+import GuidePage from './guide.jsx';
+
+const BASE = '/riwayat-identifier';
+
+function getPath() {
+  return window.location.pathname.replace(BASE, '').replace(/^\/+/, '') || '';
+}
+
+function navigate(path) {
+  window.history.pushState(null, null, BASE + '/' + path);
+  window.dispatchEvent(new PopStateEvent('popstate'));
+}
 
 function App() {
-  const parseHash = (hash) => {
-    if (hash.startsWith('#docs')) return 'docs';
+  const parsePath = (p) => {
+    if (p.startsWith('docs')) return 'docs';
+    if (p.startsWith('guide')) return 'guide';
     return 'home';
   };
-  const parseDocsTab = (hash) => {
-    const match = hash.match(/^#docs\/(.+)/);
+  const parseDocsTab = (p) => {
+    const match = p.match(/^docs\/(.+)/);
     return match ? match[1] : null;
   };
-  const [page, setPage] = useState(parseHash(window.location.hash));
-  const [docsTab, setDocsTab] = useState(parseDocsTab(window.location.hash));
+
+  const [page, setPage] = useState(parsePath(getPath()));
+  const [docsTab, setDocsTab] = useState(parseDocsTab(getPath()));
   const [darkMode, setDarkMode] = useState(() => {
     if (localStorage.getItem("riwayat-dark") !== null) {
       return localStorage.getItem("riwayat-dark") === "true";
@@ -22,12 +36,13 @@ function App() {
   });
 
   useEffect(() => {
-    const onHash = () => {
-      setPage(parseHash(window.location.hash));
-      setDocsTab(parseDocsTab(window.location.hash));
+    const onPop = () => {
+      const p = getPath();
+      setPage(parsePath(p));
+      setDocsTab(parseDocsTab(p));
     };
-    window.addEventListener('hashchange', onHash);
-    return () => window.removeEventListener('hashchange', onHash);
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
   }, []);
 
   const toggleDark = () => {
@@ -37,13 +52,17 @@ function App() {
     });
   };
 
-  const goHome = () => { window.location.hash = ''; };
-  const goDocs = () => { window.location.hash = 'docs'; };
+  const goHome = () => navigate('');
+  const goDocs = () => navigate('docs');
+  const goGuide = () => navigate('guide');
 
   if (page === 'docs') {
-    return <DocsPage onHome={goHome} onDocs={goDocs} darkMode={darkMode} toggleDark={toggleDark} initialTab={docsTab} />;
+    return <DocsPage onHome={goHome} onDocs={goDocs} onGuide={goGuide} darkMode={darkMode} toggleDark={toggleDark} initialTab={docsTab} />;
   }
-  return <RiwayatIdentifier onHome={goHome} onDocs={goDocs} darkMode={darkMode} toggleDark={toggleDark} />;
+  if (page === 'guide') {
+    return <GuidePage onHome={goHome} onDocs={goDocs} onGuide={goGuide} darkMode={darkMode} toggleDark={toggleDark} />;
+  }
+  return <RiwayatIdentifier onHome={goHome} onDocs={goDocs} onGuide={goGuide} darkMode={darkMode} toggleDark={toggleDark} />;
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(

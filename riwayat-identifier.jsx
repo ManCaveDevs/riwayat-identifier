@@ -10,7 +10,7 @@ const RIWAYAT = [
     region: "Most of the Muslim world: Saudi Arabia, Egypt, South/Southeast Asia, Turkey",
     traits: ["Maaliki with long Alif", "Short madd munfasil (2 harakaat)", "No imalah", "Clear hamzahs", "The most widely used riwayah globally"],
     color: "#66BB6A",
-    imalah: "none", maaliki: "maaliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maaliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Warsh 'an Nafi'",
@@ -19,25 +19,25 @@ const RIWAYAT = [
     region: "North Africa: Morocco, Algeria, parts of Libya, West Africa",
     traits: ["Taqlil (partial imalah) on Alifs", "Frequent tashil and ibdal of Hamzahs", "Thin Ra' in specific positions", "Long madd munfasil (6 harakaat)", "Basmalah, sakt, or wasl between surahs", "Naql (transferring Hamzah's vowel to preceding letter)"],
     color: "#FF7043",
-    imalah: "partial", maaliki: "maaliki", madd: "long", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "thin", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "thin", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Qalun 'an Nafi'",
     qari: "Nafi' al-Madani",
     rawi: "'Isa ibn Mina (Qalun)",
     region: "Libya, Tunisia, parts of Qatar",
-    traits: ["Maliki (short)", "Short madd munfasil (2 harakaat)", "No imalah", "Same Qari' as Warsh but very different sound", "Silat Mim al-Jam' (connecting plural mim with a short vowel)"],
+    traits: ["Maliki (short)", "Short madd munfasil (2 harakaat)", "No imalah", "Tashil on double hamzahs", "Same Qari' as Warsh but very different sound", "Silat Mim al-Jam' (connecting plural mim with a short vowel)"],
     color: "#66BB6A",
-    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "optional", waqfHamzah: "no"
   },
   {
     name: "Al-Duri 'an Abu 'Amr",
     qari: "Abu 'Amr ibn al-'Ala'",
     rawi: "Hafs ibn 'Umar al-Duri",
     region: "Sudan, parts of West Africa, Somalia",
-    traits: ["Partial imalah (taqlil) on some Alifs", "Idgham kabir (merging identical adjacent letters)", "Some hamzah softening", "Medium madd munfasil (4-5 harakaat)"],
+    traits: ["Partial imalah (taqlil) on some Alifs", "Some hamzah softening", "Medium madd munfasil (4-5 harakaat)"],
     color: "#42A5F5",
-    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Al-Susi 'an Abu 'Amr",
@@ -46,25 +46,25 @@ const RIWAYAT = [
     region: "Historically Basra (Iraq)",
     traits: ["Partial imalah (taqlil) on specific words", "Extensive idgham kabir (identical + similar letters)", "Ibdal of quiescent hamzahs", "Medium madd munfasil"],
     color: "#26A69A",
-    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Khalaf 'an Hamzah",
     qari: "Hamzah al-Zayyat",
     rawi: "Khalaf ibn Hisham",
     region: "Historically Kufa (Iraq)",
-    traits: ["Heavy imalah on many words", "Ishmam on al-Sirat", "No basmalah option between surahs", "Sakt (pause) on certain hamzahs when stopping"],
+    traits: ["Heavy imalah on many words", "Ishmam on al-Sirat", "No basmalah option between surahs", "Sakt (pause) on certain hamzahs when stopping", "Waqf on hamzah (takhfif)"],
     color: "#E8B931",
-    imalah: "heavy", maaliki: "maaliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "full"
   },
   {
     name: "Khallad 'an Hamzah",
     qari: "Hamzah al-Zayyat",
     rawi: "Khallad ibn Khalid",
     region: "Historically Kufa (Iraq)",
-    traits: ["Heavy imalah on many words", "Pure Sad in al-Sirat", "No basmalah option between surahs", "Long madd munfasil (6 harakaat)"],
+    traits: ["Heavy imalah on many words", "Ishmam on al-Sirat in Fatihah", "Comprehensive idgham kabir", "No basmalah option between surahs", "Long madd munfasil (6 harakaat)", "Waqf on hamzah (takhfif)"],
     color: "#4CAF50",
-    imalah: "heavy", maaliki: "maaliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maliki", madd: "long", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "ishmam", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "yes", haKinayah: "standard", silatMim: "no", waqfHamzah: "full"
   },
   {
     name: "Abu al-Harith 'an Al-Kisa'i",
@@ -73,7 +73,7 @@ const RIWAYAT = [
     region: "Historically Kufa (Iraq)",
     traits: ["Heavy imalah on ha' al-ta'nith and Alifs", "Basmalah between surahs", "Idgham of specific letter pairs", "Known for elegant grammatical tradition"],
     color: "#546E7A",
-    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Al-Duri 'an Al-Kisa'i",
@@ -82,7 +82,7 @@ const RIWAYAT = [
     region: "Historically Kufa (Iraq)",
     traits: ["Heavy imalah, even broader than Abu al-Harith", "Basmalah between surahs", "Same Duri who also narrates from Abu 'Amr", "Extensive imalah system"],
     color: "#AB47BC",
-    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "broad", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "broad", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Hisham 'an Ibn 'Amir",
@@ -91,7 +91,7 @@ const RIWAYAT = [
     region: "Historically Damascus (Syria)",
     traits: ["Maliki (short)", "Medium madd munfasil", "Tashil on some double-Hamzahs", "Idgham of dhal and dal into following letters", "Ha' al-Kinayah treated distinctly"],
     color: "#FFA726",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard", silatMim: "no", waqfHamzah: "final_only"
   },
   {
     name: "Ibn Dhakwan 'an Ibn 'Amir",
@@ -100,25 +100,25 @@ const RIWAYAT = [
     region: "Historically Damascus (Syria)",
     traits: ["Maliki (short)", "Medium madd munfasil", "Clear Hamzahs with no tashil", "Distinctive word forms shared with Hisham", "Closer to Hafs in many rulings"],
     color: "#5C9BD4",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Al-Bazzi 'an Ibn Kathir",
     qari: "'Abdullah ibn Kathir al-Makki",
     rawi: "Ahmad ibn Muhammad (Al-Bazzi)",
     region: "Historically Mecca",
-    traits: ["Maliki (short)", "Takbir between surahs in Juz' 'Amma", "Standard Sad in al-Sirat", "Distinctive hamzah handling in some words"],
+    traits: ["Maliki (short)", "Takbir between surahs in Juz' 'Amma", "Standard Sad in al-Sirat", "Silat Mim al-Jam'", "Distinctive hamzah handling in some words"],
     color: "#42A5F5",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "yes", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "yes", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "yes", waqfHamzah: "no"
   },
   {
     name: "Qunbul 'an Ibn Kathir",
     qari: "'Abdullah ibn Kathir al-Makki",
     rawi: "Muhammad ibn 'Abd al-Rahman (Qunbul)",
     region: "Historically Mecca",
-    traits: ["Maliki (short)", "Takbir between surahs in Juz' 'Amma", "al-Sirat with Sin", "Connects Hamzahs (reads certain double-hamzahs differently)"],
+    traits: ["Maliki (short)", "al-Sirat with Sin", "Silat Mim al-Jam'", "Connects Hamzahs (reads certain double-hamzahs differently)"],
     color: "#FFD54F",
-    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "yes", sirat: "sin", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sin", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "yes", waqfHamzah: "no"
   },
   {
     name: "Shu'bah 'an 'Asim",
@@ -127,16 +127,16 @@ const RIWAYAT = [
     region: "Historically Kufa (Iraq), less common today",
     traits: ["Maaliki with long Alif", "Medium madd munfasil (4 harakaat)", "No imalah", "Same Qari' as Hafs but different transmission", "Different word choices in several ayat"],
     color: "#FFA726",
-    imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Ibn Wardan 'an Abu Ja'far",
     qari: "Yazid ibn al-Qa'qa' (Abu Ja'far)",
     rawi: "'Isa ibn Wardan",
     region: "Historically Medina",
-    traits: ["Maliki (short)", "Short madd munfasil", "Tashil of many Hamzahs", "One of the 3 additional Qurra' (making 10)", "More idgham in specific letter combinations"],
+    traits: ["Maliki (short)", "Short madd munfasil", "Tashil of many Hamzahs", "Ha' al-kinayah with sila", "One of the 3 additional Qurra' (making 10)"],
     color: "#CE93D8",
-    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "with_sila"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "with_sila", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Ibn Jammaz 'an Abu Ja'far",
@@ -145,25 +145,25 @@ const RIWAYAT = [
     region: "Historically Medina",
     traits: ["Maliki (short)", "Short madd munfasil", "Tashil of Hamzahs", "One of the 3 additional Qurra'", "Standard ha' al-kinayah treatment"],
     color: "#BA68C8",
-    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Ya'qub al-Hadrami (Ruways)",
     qari: "Ya'qub ibn Ishaq",
     rawi: "Ruways",
     region: "Historically Basra (Iraq)",
-    traits: ["Maaliki with long Alif", "Additional Ya' on certain words", "Medium madd", "Idgham kabir in specific positions", "Hamzah tashil and naql", "Ha' al-kinayah with sila"],
+    traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Basmalah, sakt, or wasl between surahs", "Idgham kabir in specific positions", "Hamzah tashil and naql", "Ha' al-kinayah with sila"],
     color: "#7E57C2",
-    imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "yes", haKinayah: "with_sila"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "yes", haKinayah: "with_sila", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Ya'qub al-Hadrami (Rawh)",
     qari: "Ya'qub ibn Ishaq",
     rawi: "Rawh",
     region: "Historically Basra (Iraq)",
-    traits: ["Maaliki with long Alif", "Additional Ya' on certain words", "Medium madd", "Standard ha' al-kinayah", "Fewer ishmam cases than Ruways"],
+    traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Basmalah, sakt, or wasl between surahs", "Standard ha' al-kinayah", "Fewer ishmam cases than Ruways"],
     color: "#9575CD",
-    imalah: "none", maaliki: "maaliki", madd: "medium", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "standard"
+    imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Khalaf al-'Ashir (Ishaq)",
@@ -172,7 +172,7 @@ const RIWAYAT = [
     region: "Historically Baghdad (Iraq)",
     traits: ["Maaliki with long Alif", "Medium madd munfasil", "The 10th Qari'", "Heavy imalah like Hamzah", "No basmalah between surahs", "Idgham kabir in specific positions"],
     color: "#EF5350",
-    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "yes", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "yes", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
   {
     name: "Khalaf al-'Ashir (Idris)",
@@ -181,7 +181,7 @@ const RIWAYAT = [
     region: "Historically Baghdad (Iraq)",
     traits: ["Maaliki with long Alif", "Medium madd munfasil", "The 10th Qari'", "Heavy imalah like Hamzah", "No basmalah between surahs", "No idgham kabir"],
     color: "#E57373",
-    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard"
+    imalah: "heavy", maaliki: "maaliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "standard", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   }
 ];
 
@@ -297,7 +297,8 @@ const QUESTIONS = [
     feature: "imalahScope",
     options: [
       { label: "Broad \u2014 imalah on many extra words", value: "broad" },
-      { label: "Standard \u2014 common positions only", value: "standard" }
+      { label: "Standard \u2014 common positions only", value: "standard" },
+      { label: "None", value: "none" }
     ]
   },
   {
@@ -321,12 +322,36 @@ const QUESTIONS = [
       { label: "With sila \u2014 connecting vowel added", value: "with_sila" },
       { label: "Standard \u2014 short, no connecting vowel", value: "standard" }
     ]
+  },
+  {
+    id: "silatMim",
+    question: "Is the Mim of plural pronouns (\u0647\u064F\u0645\u0652 / \u0643\u064F\u0645\u0652) connected with a vowel before the next word?",
+    description: "Silat Mim al-Jam' means the plural Mim is extended with a short Waw or Ya' when followed by a voweled letter, e.g. \u0639\u064E\u0644\u064E\u064A\u0652\u0647\u0650\u0645\u064F\u0648 instead of \u0639\u064E\u0644\u064E\u064A\u0652\u0647\u0650\u0645\u0652.",
+    example: "\u0639\u064E\u0644\u064E\u064A\u0652\u0647\u0650\u0645\u064F\u0648 \u0623\u064E\u0646\u0652\u0639\u064E\u0645\u0652\u062A\u064E (with sila) vs \u0639\u064E\u0644\u064E\u064A\u0652\u0647\u0650\u0645\u0652 \u0623\u064E\u0646\u0652\u0639\u064E\u0645\u0652\u062A\u064E (no sila)",
+    feature: "silatMim",
+    options: [
+      { label: "Yes \u2014 always connected", value: "yes" },
+      { label: "Sometimes \u2014 optional connection", value: "optional" },
+      { label: "No \u2014 standard (no sila)", value: "no" }
+    ]
+  },
+  {
+    id: "waqfHamzah",
+    question: "When stopping on a word ending with Hamzah, is the Hamzah changed?",
+    description: "Some readings alter the final Hamzah when pausing \u2014 replacing it with a vowel letter, softening it (tashil), or dropping it entirely. Others keep the Hamzah as-is.",
+    example: "e.g. \u0627\u0644\u0633\u0651\u064E\u0645\u064E\u0627\u0621 \u2192 \u0627\u0644\u0633\u0651\u064E\u0645\u064E\u0627 (Hamzah dropped at pause)",
+    feature: "waqfHamzah",
+    options: [
+      { label: "Yes \u2014 extensive changes to Hamzah at pause", value: "full" },
+      { label: "Some \u2014 only certain final Hamzahs", value: "final_only" },
+      { label: "No \u2014 Hamzah kept as-is", value: "no" }
+    ]
   }
 ];
 
 // ── Components ────────────────────────────────────────────────────────
 
-function ResultCard({ result, onReset }) {
+function ResultCard({ result, onReset, onBack }) {
   return (
     <div style={{
       animation: "fadeSlideUp 0.6s ease-out",
@@ -396,6 +421,16 @@ function ResultCard({ result, onReset }) {
         ))}
       </div>
 
+      {onBack && (
+        <button onClick={onBack} style={{
+          background: "none", border: "none", color: "var(--sub)", fontSize: 13,
+          cursor: "pointer", fontFamily: "'DM Sans', sans-serif", padding: "6px 0",
+          fontWeight: 600, display: "flex", alignItems: "center", gap: 4, marginBottom: 8
+        }}
+          onMouseEnter={e => e.target.style.color = "var(--text)"}
+          onMouseLeave={e => e.target.style.color = "var(--sub)"}
+        >&larr; Go back</button>
+      )}
       <button onClick={onReset} style={{
         width: "100%",
         padding: "12px 20px",
@@ -418,7 +453,7 @@ function ResultCard({ result, onReset }) {
   );
 }
 
-function CandidateList({ candidates, onReset }) {
+function CandidateList({ candidates, onReset, onBack }) {
   return (
     <div style={{
       animation: "fadeSlideUp 0.6s ease-out",
@@ -479,6 +514,16 @@ function CandidateList({ candidates, onReset }) {
         ))}
       </div>
 
+      {onBack && (
+        <button onClick={onBack} style={{
+          background: "none", border: "none", color: "var(--sub)", fontSize: 13,
+          cursor: "pointer", fontFamily: "'DM Sans', sans-serif", padding: "6px 0",
+          fontWeight: 600, display: "flex", alignItems: "center", gap: 4, marginBottom: 8
+        }}
+          onMouseEnter={e => e.target.style.color = "var(--text)"}
+          onMouseLeave={e => e.target.style.color = "var(--sub)"}
+        >&larr; Go back</button>
+      )}
       <button onClick={onReset} style={{
         width: "100%",
         padding: "12px 20px",
@@ -756,7 +801,7 @@ function QuestionCard({ question, onSelect, onSkip, answeredCount, totalCandidat
 
 // ── Main component ────────────────────────────────────────────────────
 
-export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark }) {
+export default function RiwayatIdentifier({ onHome, onDocs, onGuide, darkMode, toggleDark }) {
   const [started, setStarted] = useState(false);
   const [candidates, setCandidates] = useState(RIWAYAT);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -835,7 +880,6 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
       background: "linear-gradient(180deg, var(--bg-top), var(--bg-bottom))",
     }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=Amiri:wght@400;700&display=swap');
         .riwayat-root {
           --heading: #1a1a1f;
           --text: #2d2d35;
@@ -877,7 +921,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
         }
       `}</style>
 
-      <NavBar activePage="home" onHome={onHome} onDocs={onDocs} darkMode={darkMode} toggleDark={toggleDark} />
+      <NavBar activePage="home" onHome={onHome} onDocs={onDocs} onGuide={onGuide} darkMode={darkMode} toggleDark={toggleDark} />
 
       {/* Hero / Header */}
       {!started ? (
@@ -919,7 +963,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
               margin: "0 0 12px 0",
               lineHeight: 1.7
             }}>
-              The Qur'an is one Scripture, but it was revealed and transmitted through <strong>multiple modes of recitation</strong> called <em>riwayat</em>. Each riwayah sounds slightly different. A vowel might be longer, a letter pronounced differently, or a word read with a subtle tilt in the voice.
+              The Qur'an is one Scripture, but it was revealed in multiple modes called <em>ahruf</em>, a divine concession to ease recitation for the ummah. Over time, these were preserved and systematized into <strong>recognized readings</strong> called <em>qira'at</em>, each transmitted through unbroken chains back to the Prophet &#xFDFA;.
             </p>
             <p style={{
               fontSize: 15,
@@ -927,7 +971,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
               margin: "0 0 12px 0",
               lineHeight: 1.7
             }}>
-              Sometimes the differences are in pronunciation, like a vowel held longer or a letter softened, and sometimes even the words themselves differ slightly. All of these variations go back to authentic transmission chains from the Prophet &#xFDFA;.
+              Sometimes the differences are in pronunciation, like a vowel held longer or a letter softened, and sometimes even the words themselves differ slightly. All of these variations go back to authentic chains of transmission from the Prophet &#xFDFA;.
             </p>
             <p style={{
               fontSize: 14,
@@ -935,7 +979,7 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
               margin: 0,
               lineHeight: 1.6
             }}>
-              There are <strong>10 recognized readers</strong> (qurra'), each with <strong>2 narrators</strong> (ruwat), giving us <strong>20 riwayat</strong> in total. This tool helps you figure out which one you're listening to.
+              There are <strong>10 recognized readers</strong> (qurra'), each with <strong>2 narrators</strong> (ruwat), giving us <strong>20 riwayat</strong> (transmissions) in total. This tool helps you figure out which one you're listening to.
             </p>
           </div>
 
@@ -961,8 +1005,8 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
             Start Identifying
           </button>
 
-          <p
-            onClick={() => { window.location.hash = 'docs/qiraat'; }}
+          <button
+            onClick={() => { window.history.pushState(null, null, '/riwayat-identifier/docs/qiraat'); window.dispatchEvent(new PopStateEvent('popstate')); }}
             style={{
               fontSize: 13,
               color: "var(--sub)",
@@ -970,10 +1014,16 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
               cursor: "pointer",
               textDecoration: "underline",
               textUnderlineOffset: 3,
+              background: "none",
+              border: "none",
+              padding: 0,
+              font: "inherit",
+              display: "block",
+              margin: "12px auto 0",
             }}
           >
             Learn about the Qira'at
-          </p>
+          </button>
 
         </div>
       ) : (
@@ -981,6 +1031,9 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
           {/* Compact header during quiz, clickable to go home */}
           <div
             onClick={handleReset}
+            onKeyDown={e => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), handleReset())}
+            role="button"
+            tabIndex={0}
             style={{
               textAlign: "center",
               maxWidth: 560,
@@ -1007,17 +1060,28 @@ export default function RiwayatIdentifier({ onHome, onDocs, darkMode, toggleDark
           {/* Content */}
           {finished ? (
         candidates.length === 1 ? (
-          <ResultCard result={candidates[0]} onReset={handleReset} />
+          <ResultCard result={candidates[0]} onReset={handleReset} onBack={history.length > 0 ? handleBack : null} />
         ) : candidates.length === 0 ? (
           <div style={{ textAlign: "center", maxWidth: 560, margin: "0 auto", animation: "fadeSlideUp 0.5s ease-out" }}>
             <p style={{ fontSize: 16, color: "var(--sub)", marginBottom: 16 }}>No exact match found. Try again and listen carefully to each feature.</p>
+            {history.length > 0 && (
+              <button onClick={handleBack} style={{
+                background: "none", border: "none", color: "var(--sub)", fontSize: 13,
+                cursor: "pointer", fontFamily: "'DM Sans', sans-serif", padding: "6px 0",
+                fontWeight: 600, marginBottom: 8
+              }}
+                onMouseEnter={e => e.target.style.color = "var(--text)"}
+                onMouseLeave={e => e.target.style.color = "var(--sub)"}
+              >&larr; Go back</button>
+            )}
+            <br />
             <button onClick={handleReset} style={{
               padding: "12px 24px", background: "var(--accent)", color: "var(--accent-fg)", border: "none", borderRadius: 10,
               fontSize: 15, fontWeight: 700, cursor: "pointer", fontFamily: "'DM Sans', sans-serif"
             }}>Start Over</button>
           </div>
         ) : (
-          <CandidateList candidates={candidates} onReset={handleReset} />
+          <CandidateList candidates={candidates} onReset={handleReset} onBack={history.length > 0 ? handleBack : null} />
         )
       ) : currentQuestion ? (
         <QuestionCard
