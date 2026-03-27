@@ -44,13 +44,13 @@ export default function NavBar({ activePage, onHome, onDocs, onGuide, darkMode, 
             style={linkStyle(activePage === "guide")}
             onMouseEnter={e => { if (activePage !== "guide") e.target.style.color = "var(--text)"; }}
             onMouseLeave={e => { if (activePage !== "guide") e.target.style.color = "var(--sub)"; }}
-          >Guide</button>}
+          >Explore</button>}
           <button
-            onClick={onDocs}
+            onClick={() => onDocs()}
             style={linkStyle(activePage === "docs")}
             onMouseEnter={e => { if (activePage !== "docs") e.target.style.color = "var(--text)"; }}
             onMouseLeave={e => { if (activePage !== "docs") e.target.style.color = "var(--sub)"; }}
-          >Docs</button>
+          >Learn</button>
         </div>
         {toggleDark && (
           <button

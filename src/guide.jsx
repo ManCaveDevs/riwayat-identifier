@@ -323,7 +323,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
             fontSize: 28, fontFamily: "'Amiri', serif", fontWeight: 700,
             color: "var(--heading)", marginBottom: 2, direction: "rtl", cursor: "pointer"
           }}>{"\u0628\u0650\u0623\u064E\u064A\u0651\u0650 \u0631\u0650\u0648\u064E\u0627\u064A\u064E\u0629\u064D\u061F"}</div>
-          <p style={{ fontSize: 13, color: "var(--sub)", margin: 0 }}>Riwayah Guide</p>
+          <p style={{ fontSize: 13, color: "var(--sub)", margin: 0 }}>Explore</p>
         </div>
 
         {/* Tabs */}
@@ -564,12 +564,12 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
                   <span style={{ fontSize: 11, color: "var(--accent)", background: "var(--accent-bg)", padding: "2px 8px", borderRadius: 6, fontWeight: 600 }}>{ex.type}</span>
                 </div>
                 <div style={{ display: "flex", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
-                  <div style={{ flex: 1, minWidth: 140, textAlign: "center" }}>
+                  <div style={{ flex: 1, minWidth: 140 }}>
                     <div style={{ fontSize: 20, fontFamily: "'Amiri', serif", color: "var(--heading)", direction: "rtl", marginBottom: 2 }}>{ex.majority}</div>
                     <div style={{ fontSize: 12, fontWeight: 600, color: "var(--text)" }}>{ex.majorityLatin}</div>
                     <div style={{ fontSize: 11, color: "var(--sub)" }}>{ex.majorityReaders}</div>
                   </div>
-                  <div style={{ flex: 1, minWidth: 140, textAlign: "center" }}>
+                  <div style={{ flex: 1, minWidth: 140 }}>
                     <div style={{ fontSize: 20, fontFamily: "'Amiri', serif", color: "var(--heading)", direction: "rtl", marginBottom: 2 }}>{ex.variant}</div>
                     <div style={{ fontSize: 12, fontWeight: 600, color: "var(--text)" }}>{ex.variantLatin}</div>
                     <div style={{ fontSize: 11, color: "var(--sub)" }}>{ex.variantReaders}</div>
@@ -596,7 +596,7 @@ export default function GuidePage({ onHome, onDocs, onGuide, darkMode, toggleDar
             onMouseEnter={e => e.target.style.opacity = "0.85"}
             onMouseLeave={e => e.target.style.opacity = "1"}
           >
-            Back to Identifier
+            Back to Home
           </button>
         </div>
       </div>

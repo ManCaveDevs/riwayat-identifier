@@ -223,12 +223,12 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
 
   useEffect(() => {
     setActiveTab(initialTab || "about");
-  }, [initialTab]);
+  }, []);
 
   const tabs = [
-    { id: "about", label: "About" },
+    { id: "about", label: "Overview" },
     { id: "qiraat", label: "The 10 Qira'at" },
-    { id: "features", label: "Key Features" },
+    { id: "features", label: "Terms" },
     { id: "sources", label: "Sources" }
   ];
 
@@ -286,7 +286,7 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
             fontSize: 28, fontFamily: "'Amiri', serif", fontWeight: 700,
             color: "var(--heading)", marginBottom: 2, direction: "rtl", cursor: "pointer"
           }}>{"\u0628\u0650\u0623\u064E\u064A\u0651\u0650 \u0631\u0650\u0648\u064E\u0627\u064A\u064E\u0629\u064D\u061F"}</div>
-          <p style={{ fontSize: 13, color: "var(--sub)", margin: 0 }}>Documentation</p>
+          <p style={{ fontSize: 13, color: "var(--sub)", margin: 0 }}>Learn</p>
         </div>
 
         {/* Tabs */}
@@ -465,7 +465,7 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
           {/* ── FEATURES TAB ── */}
           {activeTab === "features" && (
             <div>
-              <h2 style={h2Style}>Key Distinguishing Features</h2>
+              <h2 style={h2Style}>Terms</h2>
               <p style={{ ...subStyle, marginBottom: 12 }}>
                 The 14 <strong>usul</strong> (systematic rules) the identifier uses, plus 6 supplementary features found in the <button onClick={onGuide} style={{ color: "var(--accent)", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: 3, background: "none", border: "none", padding: 0, font: "inherit", fontWeight: "inherit" }}>Guide</button>.
               </p>
@@ -673,7 +673,7 @@ export default function DocsPage({ onHome, onDocs, onGuide, darkMode, toggleDark
             onMouseEnter={e => e.target.style.opacity = "0.85"}
             onMouseLeave={e => e.target.style.opacity = "1"}
           >
-            Back to Identifier
+            Back to Home
           </button>
         </div>
       </div>
