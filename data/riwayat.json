@@ -335,7 +335,7 @@
         "silatMim": "yes",
         "waqfHamzah": "no"
       },
-      "notes": "Takbir between surahs from Al-Duha to Al-Nas. Madd munfasil = qasr (2 harakaat) per An-Nashr and scholarly consensus. Distinctive hamzah handling in some words (idkhal between two hamzahs)."
+      "notes": "Takbir between surahs from Al-Duha to Al-Nas. Madd munfasil = qasr (2 harakaat) per An-Nashr and scholarly consensus. Hamzah classified as 'clear' because Ibn Kathir's dominant approach is tahqiq — idkhal (inserting alif between two hamzahs) is a narrow exception on doubles only, not systemic softening like Qalun or Hisham who have broader tashil/ibdal patterns."
     },
     {
       "id": 13,
@@ -361,7 +361,7 @@
         "silatMim": "yes",
         "waqfHamzah": "no"
       },
-      "notes": "al-Sirat with Sin. No takbir (only Bazzi has takbir per nquran). Madd munfasil = qasr (2 harakaat), same as Bazzi. Connects hamzahs in certain double-hamzah constructions."
+      "notes": "al-Sirat with Sin. No takbir (only Bazzi has takbir per nquran). Madd munfasil = qasr (2 harakaat), same as Bazzi. Hamzah classified as 'clear' for same reason as Bazzi — idkhal on double hamzahs is a narrow exception within an otherwise fully tahqiq reading, unlike Qalun/Hisham whose softening is systemic."
     },
     {
       "id": 14,
