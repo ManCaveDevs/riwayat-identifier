@@ -245,6 +245,8 @@ export default function LearnPage({ onHome, onLearn, onExplore, darkMode, toggle
       background: "linear-gradient(180deg, var(--bg-top), var(--bg-bottom))",
     }}>
       <style>{`
+        html, body { background-color: #fafafa; }
+        html:has(.riwayat-root.dark), html:has(.riwayat-root.dark) body { background-color: #111114; }
         .riwayat-root {
           --heading: #1a1a1f;
           --text: #2d2d35;
