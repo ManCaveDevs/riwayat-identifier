@@ -298,7 +298,7 @@ export default function LearnPage({ onHome, onLearn, onExplore, darkMode, toggle
           border: "1.5px solid var(--border)"
         }}>
           {tabs.map(tab => (
-            <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{
+            <button key={tab.id} onClick={() => { window.goatcounter?.count?.({ path: `learn-tab/${tab.id}`, title: `Learn Tab: ${tab.id}`, event: true }); setActiveTab(tab.id); }} style={{
               flex: 1, padding: "10px 12px",
               background: activeTab === tab.id ? "var(--accent)" : "transparent",
               color: activeTab === tab.id ? "var(--accent-fg)" : "var(--sub)",
@@ -481,7 +481,7 @@ export default function LearnPage({ onHome, onLearn, onExplore, darkMode, toggle
                       background: "var(--card-bg)", border: "1.5px solid var(--border)",
                       borderRadius: 12, overflow: "hidden"
                     }}>
-                      <button onClick={() => setOpenFeatures(prev => { const next = new Set(prev); isOpen ? next.delete(key) : next.add(key); return next; })} style={{
+                      <button onClick={() => { if (!isOpen) window.goatcounter?.count?.({ path: `term-opened/${f.name}`, title: `Term: ${f.name}`, event: true }); setOpenFeatures(prev => { const next = new Set(prev); isOpen ? next.delete(key) : next.add(key); return next; }); }} style={{
                         width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center",
                         padding: "14px 18px", background: "none", border: "none", cursor: "pointer", gap: 12
                       }}>
@@ -516,7 +516,7 @@ export default function LearnPage({ onHome, onLearn, onExplore, darkMode, toggle
                       background: "var(--card-bg)", border: "1.5px solid var(--border)",
                       borderRadius: 12, overflow: "hidden"
                     }}>
-                      <button onClick={() => setOpenFeatures(prev => { const next = new Set(prev); isOpen ? next.delete(key) : next.add(key); return next; })} style={{
+                      <button onClick={() => { if (!isOpen) window.goatcounter?.count?.({ path: `term-opened/${f.name}`, title: `Term: ${f.name}`, event: true }); setOpenFeatures(prev => { const next = new Set(prev); isOpen ? next.delete(key) : next.add(key); return next; }); }} style={{
                         width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center",
                         padding: "14px 18px", background: "none", border: "none", cursor: "pointer", gap: 12
                       }}>

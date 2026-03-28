@@ -191,7 +191,7 @@ function RiwayahCard({ r, compareMode, isSelected, onToggleSelect }) {
           </button>
         )}
         <button
-          onClick={() => setOpen(!open)}
+          onClick={() => { if (!open) window.goatcounter?.count?.({ path: `riwayah-opened/${r.name}`, title: `Riwayah: ${r.name}`, event: true }); setOpen(!open); }}
           style={{
             flex: 1, background: "none", border: "none",
             padding: compareMode ? "14px 0 14px 6px" : "14px 18px",
@@ -335,7 +335,7 @@ export default function ExplorePage({ onHome, onLearn, onExplore, darkMode, togg
           border: "1.5px solid var(--border)"
         }}>
           {[{ id: "usul", label: "Usul" }, { id: "farsh", label: "Farsh" }].map(tab => (
-            <button key={tab.id} onClick={() => setActiveTab(tab.id)} style={{
+            <button key={tab.id} onClick={() => { window.goatcounter?.count?.({ path: `explore-tab/${tab.id}`, title: `Explore Tab: ${tab.id}`, event: true }); setActiveTab(tab.id); }} style={{
               flex: 1, padding: "10px 12px",
               background: activeTab === tab.id ? "var(--accent)" : "transparent",
               color: activeTab === tab.id ? "var(--accent-fg)" : "var(--sub)",
@@ -350,7 +350,7 @@ export default function ExplorePage({ onHome, onLearn, onExplore, darkMode, togg
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
           <h2 style={{ fontSize: 20, fontWeight: 800, color: "var(--heading)", margin: 0 }}>Usul per Riwayah</h2>
           <button
-            onClick={() => { setCompareMode(!compareMode); if (compareMode) setSelected([]); }}
+            onClick={() => { if (!compareMode) window.goatcounter?.count?.({ path: 'compare-mode', title: 'Compare Mode Opened', event: true }); setCompareMode(!compareMode); if (compareMode) setSelected([]); }}
             style={{
               padding: "8px 16px", borderRadius: 8, fontSize: 13, fontWeight: 700,
               fontFamily: "'DM Sans', sans-serif", cursor: "pointer", transition: "all 0.2s",

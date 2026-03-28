@@ -552,7 +552,7 @@ function RemainingBadge({ candidates }) {
   return (
     <div style={{ marginBottom: 16, textAlign: "center" }}>
       <button
-        onClick={() => setExpanded(!expanded)}
+        onClick={() => { if (!expanded) window.goatcounter?.count?.({ path: 'quiz-remaining-expanded', title: 'Remaining Badge Expanded', event: true }); setExpanded(!expanded); }}
         style={{
           display: "inline-flex",
           alignItems: "center",
@@ -836,19 +836,41 @@ export default function RiwayatIdentifier({ onHome, onLearn, onExplore, darkMode
     }
   };
 
+  // Track quiz result with GoatCounter
+  useEffect(() => {
+    if (finished && candidates.length === 1) {
+      window.goatcounter?.count?.({
+        path: `quiz-result/${candidates[0].name}`,
+        title: `Quiz Result: ${candidates[0].name}`,
+        event: true
+      });
+    } else if (finished && candidates.length > 1) {
+      window.goatcounter?.count?.({
+        path: 'quiz-result/multiple',
+        title: `Quiz Result: ${candidates.length} matches`,
+        event: true
+      });
+    }
+  }, [finished]);
+
   const handleSelect = (value) => {
     const q = QUESTIONS[questionIndex];
+    window.goatcounter?.count?.({ path: `quiz-answer/${q.id}/${value}`, title: `Answer: ${q.id} = ${value}`, event: true });
     const filtered = candidates.filter(r => r[q.feature] === value);
     setHistory(prev => [...prev, { candidates, questionIndex }]);
     advance(filtered.length > 0 ? filtered : candidates, questionIndex);
   };
 
   const handleSkip = () => {
+    const q = QUESTIONS[questionIndex];
+    window.goatcounter?.count?.({ path: `quiz-skip/${q.id}`, title: `Skipped: ${q.id}`, event: true });
     setHistory(prev => [...prev, { candidates, questionIndex }]);
     advance(candidates, questionIndex);
   };
 
   const handleBack = () => {
+    const fromQ = finished ? 'result' : QUESTIONS[questionIndex]?.id;
+    window.goatcounter?.count?.({ path: `quiz-back/${fromQ}`, title: `Back from: ${fromQ}`, event: true });
     const prev = [...history];
     const last = prev.pop();
     setHistory(prev);
@@ -987,7 +1009,7 @@ export default function RiwayatIdentifier({ onHome, onLearn, onExplore, darkMode
 
           <button
             className="hero-btn"
-            onClick={() => setStarted(true)}
+            onClick={() => { window.goatcounter?.count?.({ path: 'quiz-start', title: 'Quiz Started', event: true }); setStarted(true); }}
             style={{
               padding: "14px 36px",
               background: "linear-gradient(135deg, #3f3f46, #27272a)",
@@ -1009,7 +1031,7 @@ export default function RiwayatIdentifier({ onHome, onLearn, onExplore, darkMode
 
           <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "center", marginTop: 16 }}>
             <button
-              onClick={() => { window.scrollTo(0, 0); window.history.pushState(null, null, '/riwayat-identifier/learn'); window.dispatchEvent(new PopStateEvent('popstate')); }}
+              onClick={() => { window.goatcounter?.count?.({ path: 'hero-cta/learn', title: 'Hero CTA: Learn', event: true }); window.scrollTo(0, 0); window.history.pushState(null, null, '/riwayat-identifier/learn'); window.dispatchEvent(new PopStateEvent('popstate')); }}
               style={{
                 fontSize: 13,
                 fontWeight: 600,
@@ -1028,7 +1050,7 @@ export default function RiwayatIdentifier({ onHome, onLearn, onExplore, darkMode
               Learn about the Qira'at
             </button>
             <button
-              onClick={() => { window.scrollTo(0, 0); window.history.pushState(null, null, '/riwayat-identifier/explore'); window.dispatchEvent(new PopStateEvent('popstate')); }}
+              onClick={() => { window.goatcounter?.count?.({ path: 'hero-cta/compare', title: 'Hero CTA: Compare', event: true }); window.scrollTo(0, 0); window.history.pushState(null, null, '/riwayat-identifier/explore'); window.dispatchEvent(new PopStateEvent('popstate')); }}
               style={{
                 fontSize: 13,
                 fontWeight: 600,
@@ -1140,6 +1162,7 @@ export default function RiwayatIdentifier({ onHome, onLearn, onExplore, darkMode
             href="https://www.linkedin.com/in/wasique-iqbal/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => window.goatcounter?.count?.({ path: 'social/linkedin', title: 'Social: LinkedIn', event: true })}
             style={{ display: "inline-flex", opacity: 0.6, transition: "opacity 0.2s" }}
             onMouseEnter={e => e.currentTarget.style.opacity = "1"}
             onMouseLeave={e => e.currentTarget.style.opacity = "0.6"}
@@ -1152,6 +1175,7 @@ export default function RiwayatIdentifier({ onHome, onLearn, onExplore, darkMode
             href="https://www.instagram.com/wasique12/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => window.goatcounter?.count?.({ path: 'social/instagram', title: 'Social: Instagram', event: true })}
             style={{ display: "inline-flex", opacity: 0.6, transition: "opacity 0.2s" }}
             onMouseEnter={e => e.currentTarget.style.opacity = "1"}
             onMouseLeave={e => e.currentTarget.style.opacity = "0.6"}
