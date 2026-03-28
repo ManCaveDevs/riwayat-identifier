@@ -219,7 +219,7 @@ function InfoCard({ children, style }) {
 
 export default function LearnPage({ onHome, onLearn, onExplore, darkMode, toggleDark, initialTab }) {
   const [activeTab, setActiveTab] = useState(initialTab || "about");
-  const [openFeature, setOpenFeature] = useState(null);
+  const [openFeatures, setOpenFeatures] = useState(new Set());
 
   useEffect(() => {
     setActiveTab(initialTab || "about");
@@ -475,13 +475,13 @@ export default function LearnPage({ onHome, onLearn, onExplore, darkMode, toggle
               <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                 {FEATURES.filter(f => !f.supplementary).map((f, i) => {
                   const key = "core-" + i;
-                  const isOpen = openFeature === key;
+                  const isOpen = openFeatures.has(key);
                   return (
                     <div key={key} style={{
                       background: "var(--card-bg)", border: "1.5px solid var(--border)",
                       borderRadius: 12, overflow: "hidden"
                     }}>
-                      <button onClick={() => setOpenFeature(isOpen ? null : key)} style={{
+                      <button onClick={() => setOpenFeatures(prev => { const next = new Set(prev); isOpen ? next.delete(key) : next.add(key); return next; })} style={{
                         width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center",
                         padding: "14px 18px", background: "none", border: "none", cursor: "pointer", gap: 12
                       }}>
@@ -510,13 +510,13 @@ export default function LearnPage({ onHome, onLearn, onExplore, darkMode, toggle
               <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                 {FEATURES.filter(f => f.supplementary).map((f, i) => {
                   const key = "supp-" + i;
-                  const isOpen = openFeature === key;
+                  const isOpen = openFeatures.has(key);
                   return (
                     <div key={key} style={{
                       background: "var(--card-bg)", border: "1.5px solid var(--border)",
                       borderRadius: 12, overflow: "hidden"
                     }}>
-                      <button onClick={() => setOpenFeature(isOpen ? null : key)} style={{
+                      <button onClick={() => setOpenFeatures(prev => { const next = new Set(prev); isOpen ? next.delete(key) : next.add(key); return next; })} style={{
                         width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center",
                         padding: "14px 18px", background: "none", border: "none", cursor: "pointer", gap: 12
                       }}>
