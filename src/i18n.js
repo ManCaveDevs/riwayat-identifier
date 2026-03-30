@@ -25,7 +25,7 @@ const translations = {
       heroTitle: "Riwayah Identifier",
       heroP1: "The Qur'an is one Scripture, but it was revealed in multiple modes called ahruf, a divine concession to ease recitation for the ummah. Over time, these were preserved and systematized into recognized readings called qira'at, each transmitted through unbroken chains back to the Prophet \uFDFA.",
       heroP2: "Sometimes the differences are in pronunciation, like a vowel held longer or a letter softened, and sometimes even the words themselves differ slightly. All of these variations go back to authentic chains of transmission from the Prophet \uFDFA.",
-      heroP3: "There are 10 recognized readers (qurra'), each with 2 narrators (ruwat), giving us 20 riwayat (transmissions) in total. This tool helps you figure out which one you're listening to.",
+      heroP3: "There are 10 recognized readers, each with 2 narrators, giving us 20 riwayat in total. This tool helps you figure out which one you're listening to.",
       startIdentifying: "Start Identifying",
       learnQiraat: "Learn about the Qira'at",
       identifiedRiwayah: "Identified Riwayah",

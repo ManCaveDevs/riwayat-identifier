@@ -1003,7 +1003,7 @@ export default function RiwayatIdentifier({ onHome, onLearn, onExplore, darkMode
               margin: 0,
               lineHeight: 1.6
             }}>
-              There are <strong>10 recognized readers</strong> (qurra'), each with <strong>2 narrators</strong> (ruwat), giving us <strong>20 riwayat</strong> (transmissions) in total. This tool helps you figure out which one you're listening to.
+              There are <strong>10 recognized readers</strong>, each with <strong>2 narrators</strong>, giving us <strong>20 riwayat</strong> in total. This tool helps you figure out which one you're listening to.
             </p>
           </div>
 
