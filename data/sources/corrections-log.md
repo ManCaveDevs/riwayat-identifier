@@ -97,3 +97,5 @@
 | 2026-03-29 | Duri Abu 'Amr | traits text | "Medium madd munfasil (4-5 harakaat)" | "Medium madd munfasil (4 harakaat)" | Tawassut = 4 harakaat per sources, not 4-5 |
 | 2026-03-29 | (quiz question) | madd long label | "Long — 5 or 6 beats" | "Long — 6 beats" | All long riwayat are ishba' (6); no Tayyibah tariq uses 5 alone |
 | 2026-03-29 | (quiz question) | madd example | "5-6 = long" | "6 = long" | Same — consistent with label fix |
+| 2026-03-29 | Hisham | traits text | "Ha' al-Kinayah treated distinctly" | "Alters some final Hamzahs when stopping (waqf)" | haKinayah is "standard"; waqfHamzah="final_only" is the real distinction |
+| 2026-03-29 | Rawh | traits text + notes | "Fewer ishmam cases than Ruways" | "Clear hamzahs (no tashil)" | Neither has ishmam; real difference is hamzah (clear vs softened), idghamKabir, haKinayah |
