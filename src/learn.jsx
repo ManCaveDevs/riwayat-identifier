@@ -329,8 +329,8 @@ export default function LearnPage({ onHome, onLearn, onExplore, darkMode, toggle
               <InfoCard>
                 <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                   {[
-                    ["Qira'ah", "The method of recitation named after one of the 10 canonical Imams (readers). Each reader's approach was agreed upon by their students."],
-                    ["Riwayah", "A specific transmission from one of the reader's two primary narrators (ruwat). This is what our tool identifies."],
+                    ["Qira'ah", "The method of recitation named after one of the 10 canonical Imams. Each reader's approach was agreed upon by their students."],
+                    ["Riwayah", "A specific transmission from one of the reader's two primary narrators. This is what our tool identifies."],
                     ["Tariq", "A sub-transmission from the narrator's students onward. Multiple turuq can exist within one riwayah, with minor variations in detail."]
                   ].map(([title, desc], i) => (
                     <div key={i} style={{ padding: "8px 0", borderBottom: i < 2 ? "1px solid var(--border)" : "none" }}>
