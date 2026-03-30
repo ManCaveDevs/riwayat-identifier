@@ -92,3 +92,5 @@
 | 2026-03-26 | Rawh | basmalah | always | not_always | An-Nashr (باب البسملة): same qari-level rule as Ruways; Ya'qub has 3 basmalah options per An-Nashr |
 | 2026-03-27 | Al-Bazzi | notes | (added) | — | Documented hamzah='clear' classification: idkhal on double hamzahs is a narrow exception within tahqiq, not systemic softening like Qalun/Hisham. Deliberate choice for identifier accuracy. |
 | 2026-03-27 | Qunbul | notes | (added) | — | Same hamzah='clear' rationale as Bazzi: idkhal on doubles only, dominant approach is tahqiq. Explicitly noted to prevent future reclassification. |
+| 2026-03-29 | Hafs 'an 'Asim | traits text | "Short madd munfasil (2 harakaat)" | "Short madd munfasil (4 harakaat)" | Madd munfasil minimum is 4 harakaat; 2 is madd tabii, not munfasil |
+| 2026-03-29 | Qalun 'an Nafi' | traits text | "Short madd munfasil (2 harakaat)" | "Short madd munfasil (4 harakaat)" | Same correction — short munfasil = 4 harakaat |

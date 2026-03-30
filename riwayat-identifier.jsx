@@ -8,7 +8,7 @@ const RIWAYAT = [
     qari: "'Asim ibn Abi al-Najud",
     rawi: "Hafs ibn Sulayman",
     region: "Most of the Muslim world: Saudi Arabia, Egypt, South/Southeast Asia, Turkey",
-    traits: ["Maaliki with long Alif", "Short madd munfasil (2 harakaat)", "No imalah", "Clear hamzahs", "The most widely used riwayah globally"],
+    traits: ["Maaliki with long Alif", "Short madd munfasil (4 harakaat)", "No imalah", "Clear hamzahs", "The most widely used riwayah globally"],
     color: "#66BB6A",
     imalah: "none", maaliki: "maaliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
@@ -26,7 +26,7 @@ const RIWAYAT = [
     qari: "Nafi' al-Madani",
     rawi: "'Isa ibn Mina (Qalun)",
     region: "Libya, Tunisia, parts of Qatar",
-    traits: ["Maliki (short)", "Short madd munfasil (2 harakaat)", "No imalah", "Tashil on double hamzahs", "Same Qari' as Warsh but very different sound", "Silat Mim al-Jam' (connecting plural mim with a short vowel)"],
+    traits: ["Maliki (short)", "Short madd munfasil (4 harakaat)", "No imalah", "Tashil on double hamzahs", "Same Qari' as Warsh but very different sound", "Silat Mim al-Jam' (connecting plural mim with a short vowel)"],
     color: "#66BB6A",
     imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "optional", waqfHamzah: "no"
   },
