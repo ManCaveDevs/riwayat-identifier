@@ -89,7 +89,7 @@ const RIWAYAT = [
     qari: "'Abdullah ibn 'Amir al-Dimashqi",
     rawi: "Hisham ibn 'Ammar",
     region: "Historically Damascus (Syria)",
-    traits: ["Maliki (short)", "Medium madd munfasil", "Tashil on some double-Hamzahs", "Idgham of dhal and dal into following letters", "Ha' al-Kinayah treated distinctly"],
+    traits: ["Maliki (short)", "Medium madd munfasil", "Tashil on some double-Hamzahs", "Idgham of dhal and dal into following letters", "Alters some final Hamzahs when stopping (waqf)"],
     color: "#FFA726",
     imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "yes", haKinayah: "standard", silatMim: "no", waqfHamzah: "final_only"
   },
@@ -161,7 +161,7 @@ const RIWAYAT = [
     qari: "Ya'qub ibn Ishaq",
     rawi: "Rawh",
     region: "Historically Basra (Iraq)",
-    traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Basmalah, sakt, or wasl between surahs", "Standard ha' al-kinayah", "Fewer ishmam cases than Ruways"],
+    traits: ["Maliki (short)", "Additional Ya' on certain words", "Medium madd", "Basmalah, sakt, or wasl between surahs", "Clear hamzahs (no tashil)", "Standard ha' al-kinayah"],
     color: "#9575CD",
     imalah: "none", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "yes", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
