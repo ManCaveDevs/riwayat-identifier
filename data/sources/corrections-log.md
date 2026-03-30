@@ -99,3 +99,6 @@
 | 2026-03-29 | (quiz question) | madd example | "5-6 = long" | "6 = long" | Same — consistent with label fix |
 | 2026-03-29 | Hisham | traits text | "Ha' al-Kinayah treated distinctly" | "Alters some final Hamzahs when stopping (waqf)" | haKinayah is "standard"; waqfHamzah="final_only" is the real distinction |
 | 2026-03-29 | Rawh | traits text + notes | "Fewer ishmam cases than Ruways" | "Clear hamzahs (no tashil)" | Neither has ishmam; real difference is hamzah (clear vs softened), idghamKabir, haKinayah |
+| 2026-03-29 | (learn page) | Madd Munfasil desc | "5-6 beats (long)" | "6 beats (long)" | Consistency with quiz fix — all long = ishba' (6) |
+| 2026-03-29 | (learn page) | Madd Muttasil desc | "5 or 6" | "6" | Same — no 5-beat tier in Tayyibah |
+| 2026-03-29 | (learn page) | Madd Muttasil example | "4-5 beats" for Hafs | "4 beats" | Hafs muttasil = 4 harakaat (tawassut) per sources |

@@ -91,7 +91,7 @@ const FEATURES = [
   {
     name: "Madd Munfasil",
     arabic: "\u0645\u062F \u0645\u0646\u0641\u0635\u0644",
-    description: "The lengthening that occurs when a madd letter is followed by a hamzah in the next word. Different readings stretch this for 2 beats (short), 4 beats (medium), or 5-6 beats (long). The exact duration may vary by tariq.",
+    description: "The lengthening that occurs when a madd letter is followed by a hamzah in the next word. Different readings stretch this for 2 beats (short), 4 beats (medium), or 6 beats (long).",
     example: "In \u0628\u0650\u0645\u064E\u0627 \u0623\u064F\u0646\u0632\u0650\u0644\u064E (bimaa unzila), the Alif at the end of \u0645\u064E\u0627 meets the Hamzah of \u0623\u064F\u0646\u0632\u0650\u0644\u064E. Hafs keeps it short at 2 beats; Warsh stretches it to 6."
   },
   {
@@ -184,9 +184,9 @@ const FEATURES = [
   {
     name: "Madd Muttasil",
     arabic: "\u0645\u062F \u0645\u062A\u0635\u0644",
-    description: "The lengthening that occurs when a madd letter and a hamzah are in the same word. All readers stretch this to at least 4 harakaat, but some extend it to 5 or 6. Unlike madd munfasil, the minimum here is never 2 beats.",
+    description: "The lengthening that occurs when a madd letter and a hamzah are in the same word. All readers stretch this to at least 4 harakaat, but some extend it to 6. Unlike madd munfasil, the minimum here is never 2 beats.",
     supplementary: true,
-    example: "In \u062C\u064E\u0627\u0621\u064E (jaa'a), the Alif and Hamzah are in the same word. Hafs stretches the Alif for 4-5 beats; Warsh stretches it for 6 beats."
+    example: "In \u062C\u064E\u0627\u0621\u064E (jaa'a), the Alif and Hamzah are in the same word. Hafs stretches the Alif for 4 beats; Warsh stretches it for 6 beats."
   },
   {
     name: "Madd Badl",
