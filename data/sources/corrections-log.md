@@ -92,5 +92,8 @@
 | 2026-03-26 | Rawh | basmalah | always | not_always | An-Nashr (باب البسملة): same qari-level rule as Ruways; Ya'qub has 3 basmalah options per An-Nashr |
 | 2026-03-27 | Al-Bazzi | notes | (added) | — | Documented hamzah='clear' classification: idkhal on double hamzahs is a narrow exception within tahqiq, not systemic softening like Qalun/Hisham. Deliberate choice for identifier accuracy. |
 | 2026-03-27 | Qunbul | notes | (added) | — | Same hamzah='clear' rationale as Bazzi: idkhal on doubles only, dominant approach is tahqiq. Explicitly noted to prevent future reclassification. |
-| 2026-03-29 | Hafs 'an 'Asim | traits text | "Short madd munfasil (2 harakaat)" | "Short madd munfasil (4 harakaat)" | Madd munfasil minimum is 4 harakaat; 2 is madd tabii, not munfasil |
-| 2026-03-29 | Qalun 'an Nafi' | traits text | "Short madd munfasil (2 harakaat)" | "Short madd munfasil (4 harakaat)" | Same correction — short munfasil = 4 harakaat |
+| 2026-03-29 | Hafs 'an 'Asim | traits text | reverted | "Short madd munfasil (2 harakaat)" | Reverted: qasr = 2 harakaat is correct per Tayyibah (nquran 16696 confirms Hafs = qasr) |
+| 2026-03-29 | Qalun 'an Nafi' | traits text | reverted | "Short madd munfasil (2 harakaat)" | Reverted: same reason, qasr = 2 per nquran 16680 |
+| 2026-03-29 | Duri Abu 'Amr | traits text | "Medium madd munfasil (4-5 harakaat)" | "Medium madd munfasil (4 harakaat)" | Tawassut = 4 harakaat per sources, not 4-5 |
+| 2026-03-29 | (quiz question) | madd long label | "Long — 5 or 6 beats" | "Long — 6 beats" | All long riwayat are ishba' (6); no Tayyibah tariq uses 5 alone |
+| 2026-03-29 | (quiz question) | madd example | "5-6 = long" | "6 = long" | Same — consistent with label fix |

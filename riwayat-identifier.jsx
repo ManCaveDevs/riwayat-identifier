@@ -8,7 +8,7 @@ const RIWAYAT = [
     qari: "'Asim ibn Abi al-Najud",
     rawi: "Hafs ibn Sulayman",
     region: "Most of the Muslim world: Saudi Arabia, Egypt, South/Southeast Asia, Turkey",
-    traits: ["Maaliki with long Alif", "Short madd munfasil (4 harakaat)", "No imalah", "Clear hamzahs", "The most widely used riwayah globally"],
+    traits: ["Maaliki with long Alif", "Short madd munfasil (2 harakaat)", "No imalah", "Clear hamzahs", "The most widely used riwayah globally"],
     color: "#66BB6A",
     imalah: "none", maaliki: "maaliki", madd: "short", basmalah: "always", hamzah: "clear", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
@@ -26,7 +26,7 @@ const RIWAYAT = [
     qari: "Nafi' al-Madani",
     rawi: "'Isa ibn Mina (Qalun)",
     region: "Libya, Tunisia, parts of Qatar",
-    traits: ["Maliki (short)", "Short madd munfasil (4 harakaat)", "No imalah", "Tashil on double hamzahs", "Same Qari' as Warsh but very different sound", "Silat Mim al-Jam' (connecting plural mim with a short vowel)"],
+    traits: ["Maliki (short)", "Short madd munfasil (2 harakaat)", "No imalah", "Tashil on double hamzahs", "Same Qari' as Warsh but very different sound", "Silat Mim al-Jam' (connecting plural mim with a short vowel)"],
     color: "#66BB6A",
     imalah: "none", maaliki: "maliki", madd: "short", basmalah: "always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "optional", waqfHamzah: "no"
   },
@@ -35,7 +35,7 @@ const RIWAYAT = [
     qari: "Abu 'Amr ibn al-'Ala'",
     rawi: "Hafs ibn 'Umar al-Duri",
     region: "Sudan, parts of West Africa, Somalia",
-    traits: ["Partial imalah (taqlil) on some Alifs", "Some hamzah softening", "Medium madd munfasil (4-5 harakaat)"],
+    traits: ["Partial imalah (taqlil) on some Alifs", "Some hamzah softening", "Medium madd munfasil (4 harakaat)"],
     color: "#42A5F5",
     imalah: "partial", maaliki: "maliki", madd: "medium", basmalah: "not_always", hamzah: "softened", takbir: "no", sirat: "sad", ra: "standard", extraYa: "no", imalahScope: "none", idghamKabir: "no", haKinayah: "standard", silatMim: "no", waqfHamzah: "no"
   },
@@ -214,12 +214,12 @@ const QUESTIONS = [
     id: "madd",
     question: "How long is the Madd Munfasil?",
     description: "Madd Munfasil occurs when a madd letter (\u0627 \u0648 \u064A) is followed by a Hamzah in the next word, like \u0641\u0650\u064A \u0623\u064E\u0646\u0641\u064F\u0633\u0650\u0643\u064F\u0645\u0652. Count the beats.",
-    example: "2 beats = short (qasr), 4 = medium, 5-6 = long",
+    example: "2 beats = short (qasr), 4 = medium, 6 = long",
     feature: "madd",
     options: [
       { label: "Short \u2014 2 beats (Qasr)", value: "short" },
       { label: "Medium \u2014 4 beats", value: "medium" },
-      { label: "Long \u2014 5 or 6 beats", value: "long" }
+      { label: "Long \u2014 6 beats", value: "long" }
     ]
   },
   {
